@@ -12,8 +12,63 @@
 <main class="page">
 <header class="header">
     <div class="container">
-        <div class="header__row">
-
+        <div class="header__main-row">
+            <div class="header__column">
+                <a class="header__logo" href="#">
+                    <img src="img/logo-white.svg" alt="logo">
+                </a>
+                <div class="city">
+                    <div class="city__current">Москва</div>
+                </div>
+            </div>
+            <div class="header__column header__large">
+                <div class="header__row">
+                    <form action="#" class="search">
+                        <button class="search__submit" type="submit">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.7558 18.5775L14.0683 12.89C15.17 11.5292 15.8333 9.8 15.8333 7.91668C15.8333 3.55168 12.2816 0 7.91664 0C3.55164 0 0 3.55164 0 7.91664C0 12.2816 3.55168 15.8333 7.91668 15.8333C9.8 15.8333 11.5292 15.17 12.89 14.0683L18.5775 19.7558C18.74 19.9183 18.9533 20 19.1667 20C19.38 20 19.5934 19.9183 19.7559 19.7558C20.0817 19.43 20.0817 18.9033 19.7558 18.5775ZM7.91668 14.1666C4.47 14.1666 1.66668 11.3633 1.66668 7.91664C1.66668 4.46996 4.47 1.66664 7.91668 1.66664C11.3634 1.66664 14.1667 4.46996 14.1667 7.91664C14.1667 11.3633 11.3633 14.1666 7.91668 14.1666Z" fill="#21487B"/>
+                            </svg>
+                        </button>
+                        <div class="search__block">
+                            <input class="search__text" type="text" name="search" placeholder="Текст" required>
+                        </div>
+                    </form>
+                    <div class="header__social">
+                        <a class="header__link" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="header__link" href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <a class="header__cart" href="#">
+                        <span class="header__cart-text">Корзина</span>
+                        <div class="header__cart-item">
+                            <svg class="header__cart-icon" width="28" height="31" viewBox="0 0 28 31" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M27.3919 19.1429V8.01918L5.47837 4.06258V2.69505C5.47837 1.20902 4.26942 0 2.78338 0H0V1.82612H2.78332C3.26243 1.82612 3.65225 2.21594 3.65225 2.69505V19.5566C3.65225 21.5032 5.23586 23.0868 7.18245 23.0868H7.9132V25.1678C7.54012 25.0043 7.12852 24.9129 6.69579 24.9129C5.01758 24.9129 3.65225 26.2782 3.65225 27.9564C3.65225 29.6346 5.01758 31 6.69579 31C8.2713 31 9.5709 29.7966 9.72405 28.2608H9.73933V23.0868H25.5657V25.1678C25.1927 25.0043 24.781 24.9129 24.3483 24.9129C22.6701 24.9129 21.3048 26.2782 21.3048 27.9564C21.3048 29.6346 22.6701 31 24.3483 31C25.9238 31 27.2234 29.7966 27.3766 28.2608H27.3919V21.2606H7.18245C6.24279 21.2606 5.47837 20.4962 5.47837 19.5566V18.8385L27.3919 19.1429ZM6.69579 29.1738C6.0245 29.1738 5.47837 28.6277 5.47837 27.9564C5.47837 27.2851 6.0245 26.739 6.69579 26.739C7.36707 26.739 7.9132 27.2851 7.9132 27.9564C7.9132 28.6277 7.36707 29.1738 6.69579 29.1738ZM24.3483 29.1738C23.677 29.1738 23.1309 28.6277 23.1309 27.9564C23.1309 27.2851 23.677 26.739 24.3483 26.739C25.0196 26.739 25.5657 27.2851 25.5657 27.9564C25.5657 28.6277 25.0196 29.1738 24.3483 29.1738ZM14.609 17.1391L10.9567 17.0884V6.90737L14.609 7.56679V17.1391ZM16.4351 7.89652L19.783 8.50103V17.211L16.4351 17.1645V7.89652ZM9.13062 17.063L5.47837 17.0123V5.91822L9.13062 6.57764V17.063ZM25.5657 17.2913L21.6091 17.2363V8.83071L25.5657 9.54509V17.2913Z" fill="white"/>
+                            </svg>                                    
+                            <div class="header__cart-count">1</div>
+                        </div>
+                    </a>
+                    <div class="account">
+                        <a class="account__link" href="#">Вход/регистрация</a>
+                    </div>
+                </div>
+                <div class="header__row">
+                    <div class="header__left header__large">
+                        <nav class="nav">
+                            <ul class="nav__list">
+                                <li class="nav__list-item"><a class="nav__link" href="#">О воде</a></li>
+                                <li class="nav__list-item"><a class="nav__link" href="#">О нас</a></li>
+                                <li class="nav__list-item"><a class="nav__link" href="#">Каталог</a></li>
+                                <li class="nav__list-item"><a class="nav__link" href="#">Сотрудничество</a></li>
+                                <li class="nav__list-item"><a class="nav__link" href="#">Новости</a></li>
+                                <li class="nav__list-item"><a class="nav__link" href="#">Контакты</a></li>
+                                <li class="nav__list-item"><a class="nav__link" href="#">Акции</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__right header__short">
+                        <a class="header__phone" href="tel:+74959800400"><i class="fas fa-phone-alt"></i><span>+7 (495) 980-04-00</span></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </header>    <div class="content">
