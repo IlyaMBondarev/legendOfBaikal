@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: calc(100% + 30px);
+  height: calc(100% + 60px);
   background: linear-gradient(153deg, rgba(43, 42, 41, 0.05) -51.72%, rgba(43, 41, 43, 0) 74.68%, rgba(43, 41, 43, 0.0435) 125.22%), linear-gradient(0deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04)), url("../img/main-bg.jpg") no-repeat left top/100vw;
   filter: blur(10px);
 }
