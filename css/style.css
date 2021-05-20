@@ -816,6 +816,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   margin-top: 35px;
   margin-bottom: 30px;
+  transition: all 0.2s ease-in-out;
 }
 .main-catalog__link span {
   -webkit-text-decoration-line: underline;
@@ -823,6 +824,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 .main-catalog__link svg {
   margin-left: 24px;
+}
+.main-catalog__link svg * {
+  transition: all 0.2s ease-in-out;
+  fill: #464646;
+}
+.main-catalog__link:hover {
+  color: #0083C3;
+}
+.main-catalog__link:hover svg * {
+  fill: #0083C3;
 }
 
 .item {
