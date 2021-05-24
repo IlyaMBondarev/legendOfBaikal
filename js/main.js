@@ -230,3 +230,29 @@ var _loop = function _loop(i) {
 for (var i = 0; i < forms.length; i++) {
   _loop(i);
 }
+
+var selectSingle = popupPlan.querySelectorAll('.popup-plan__select');
+
+var _loop11 = function _loop(i) {
+  var selectSingle_title = selectSingle[i].querySelector('.__select__title');
+  var selectSingle_labels = selectSingle[i].querySelectorAll('.__select__label'); // Toggle menu
+
+  selectSingle_title.addEventListener('click', function () {
+    if ('active' === selectSingle[i].getAttribute('data-state')) {
+      selectSingle[i].setAttribute('data-state', '');
+    } else {
+      selectSingle[i].setAttribute('data-state', 'active');
+    }
+  }); // Close when click to option
+
+  for (var j = 0; j < selectSingle_labels.length; j++) {
+    selectSingle_labels[j].addEventListener('click', function (evt) {
+      selectSingle_title.textContent = evt.target.textContent;
+      selectSingle[i].setAttribute('data-state', '');
+    });
+  }
+};
+
+for (var i = 0; i < selectSingle.length; i++) {
+  _loop11(i);
+}

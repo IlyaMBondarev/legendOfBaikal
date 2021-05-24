@@ -45,24 +45,46 @@
                 <div class="popup-plan__block">
                     <div class="popup-plan__item">
                         <p class="popup-plan__content popup-plan__content-mobile">Indicate the type of your business</p>
-                        <select class="popup-plan__select _req" name="business">
-                            <option class="popup-plan__select_placeholder" value disabled selected>Type of your business</option>
-                            <option value="Helping with scientific matter search">Helping with scientific matter search</option>
-                            <option value="Establishing and supporting communities">Establishing and supporting communities</option>
-                            <option value="Offering research-related advice to employees and students">Offering research-related advice to employees and students</option>
-                        </select>
+                        <div class="popup-plan__select" data-state="">
+                            <div class="__select__title" data-default="Type of business:">Type of business:</div>
+                            <div class="__select__content">
+                              <input id="business0" class="__select__input" type="radio" name="business" value="" checked />
+                              <label for="business0" class="__select__label">Type of business:</label>
+                              <input id="business1" class="__select__input" type="radio" name="business" value="Public Library" />
+                              <label for="business1" class="__select__label">Public Library</label>
+                              <input id="business2" class="__select__input" type="radio" name="business" value="Online Library" />
+                              <label for="business2" class="__select__label">Online Library</label>
+                              <input id="business3" class="__select__input" type="radio" name="business" value="Educational institution" />
+                              <label for="business3" class="__select__label">Educational institution</label>
+                              <input id="business4" class="__select__input" type="radio" name="business" value="Offline Book Store" />
+                              <label for="business4" class="__select__label">Offline Book Store</label>
+                              <input id="business5" class="__select__input" type="radio" name="business" value="Online Book Store" />
+                              <label for="business5" class="__select__label">Online Book Store</label>
+                              <input id="business6" class="__select__input" type="radio" name="business" value="Just an avid reader" />
+                              <label for="business6" class="__select__label">Just an avid reader</label>
+                              <input id="business7" class="__select__input" type="radio" name="business" value="Other" />
+                              <label for="business7" class="__select__label">Other</label>
+                            </div>
+                        </div>
                     </div>
                     <div class="popup-plan__item">
                         <p class="popup-plan__content popup-plan__content-mobile">Enter type of service you would like to receive</p>
-                        <select class="popup-plan__select _req" name="service">
-                            <option class="popup-plan__select_placeholder" value disabled selected>Type of service</option>
-                            <option value="Helping with scientific matter search">Helping with scientific matter search</option>
-                            <option value="Establishing and supporting communities">Establishing and supporting communities</option>
-                            <option value="Offering research-related advice to employees and students">Offering research-related advice to employees and students</option>
-                        </select>
+                        <div class="popup-plan__select" data-state="">
+                            <div class="__select__title" data-default="Type of services:">Type of services:</div>
+                            <div class="__select__content">
+                              <input id="services0" class="__select__input" type="radio" name="services" value="" checked />
+                              <label for="services0" class="__select__label">Type of services:</label>
+                              <input id="services1" class="__select__input" type="radio" name="services" value="Helping with scientific matter search" />
+                              <label for="services1" class="__select__label">Helping with scientific matter search</label>
+                              <input id="services2" class="__select__input" type="radio" name="services" value="Establishing and supporting communities" />
+                              <label for="services2" class="__select__label">Establishing and supporting communities</label>
+                              <input id="services3" class="__select__input" type="radio" name="services" value="Offering research-related advice to employees and student" />
+                              <label for="services3" class="__select__label">Offering research-related advice to employees and student</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="popup-plan__item">
+                <div class="popup-plan__item popup-plan__item-big">
                     <p class="popup-plan__content">Please tell us about what you are doing. Tell us what you do, what kind of business you have, how much money you make. It is very important to tell in two lines</p>
                     <textarea class="popup-plan__textarea _req" name="message" placeholder="Your Message"></textarea>
                 </div>
