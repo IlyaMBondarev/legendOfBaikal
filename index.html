@@ -3,869 +3,554 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legend of Baikal</title>
-    <link rel="stylesheet" href="css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CLOBAL Electronic library</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+          integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Dosis:wght@400;500&family=Open+Sans:wght@400;700&family=Quattrocento+Sans:wght@400;700&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <main class="page">
-<header class="header">
-    <div class="header__container container">
-        <div class="header__main-row">
-            <div class="header__column">
-                <a class="header__logo" href="index.html">
-                    <img src="img/logo-white.svg" alt="logo">
-                </a>
-                <div class="city">
-                    <div class="city__current">Москва</div>
-                </div>
-            </div>
-            <div class="header__column header__large">
-                <div class="header__row">
-                    <form action="#" class="search">
-                        <button class="search__submit" type="submit">
-                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.7558 18.5775L14.0683 12.89C15.17 11.5292 15.8333 9.8 15.8333 7.91668C15.8333 3.55168 12.2816 0 7.91664 0C3.55164 0 0 3.55164 0 7.91664C0 12.2816 3.55168 15.8333 7.91668 15.8333C9.8 15.8333 11.5292 15.17 12.89 14.0683L18.5775 19.7558C18.74 19.9183 18.9533 20 19.1667 20C19.38 20 19.5934 19.9183 19.7559 19.7558C20.0817 19.43 20.0817 18.9033 19.7558 18.5775ZM7.91668 14.1666C4.47 14.1666 1.66668 11.3633 1.66668 7.91664C1.66668 4.46996 4.47 1.66664 7.91668 1.66664C11.3634 1.66664 14.1667 4.46996 14.1667 7.91664C14.1667 11.3633 11.3633 14.1666 7.91668 14.1666Z" fill="#21487B"/>
-                            </svg>
-                        </button>
-                        <div class="search__block">
-                            <input class="search__text" type="text" name="search" placeholder="Текст" required>
-                        </div>
-                    </form>
-                    <div class="header__social">
-                        <a class="header__link" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="header__link" href="#"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                    <a class="header__cart" href="#">
-                        <span class="header__cart-text">Корзина</span>
-                        <div class="header__cart-item">
-                            <svg class="header__cart-icon" width="28" height="31" viewBox="0 0 28 31" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M27.3919 19.1429V8.01918L5.47837 4.06258V2.69505C5.47837 1.20902 4.26942 0 2.78338 0H0V1.82612H2.78332C3.26243 1.82612 3.65225 2.21594 3.65225 2.69505V19.5566C3.65225 21.5032 5.23586 23.0868 7.18245 23.0868H7.9132V25.1678C7.54012 25.0043 7.12852 24.9129 6.69579 24.9129C5.01758 24.9129 3.65225 26.2782 3.65225 27.9564C3.65225 29.6346 5.01758 31 6.69579 31C8.2713 31 9.5709 29.7966 9.72405 28.2608H9.73933V23.0868H25.5657V25.1678C25.1927 25.0043 24.781 24.9129 24.3483 24.9129C22.6701 24.9129 21.3048 26.2782 21.3048 27.9564C21.3048 29.6346 22.6701 31 24.3483 31C25.9238 31 27.2234 29.7966 27.3766 28.2608H27.3919V21.2606H7.18245C6.24279 21.2606 5.47837 20.4962 5.47837 19.5566V18.8385L27.3919 19.1429ZM6.69579 29.1738C6.0245 29.1738 5.47837 28.6277 5.47837 27.9564C5.47837 27.2851 6.0245 26.739 6.69579 26.739C7.36707 26.739 7.9132 27.2851 7.9132 27.9564C7.9132 28.6277 7.36707 29.1738 6.69579 29.1738ZM24.3483 29.1738C23.677 29.1738 23.1309 28.6277 23.1309 27.9564C23.1309 27.2851 23.677 26.739 24.3483 26.739C25.0196 26.739 25.5657 27.2851 25.5657 27.9564C25.5657 28.6277 25.0196 29.1738 24.3483 29.1738ZM14.609 17.1391L10.9567 17.0884V6.90737L14.609 7.56679V17.1391ZM16.4351 7.89652L19.783 8.50103V17.211L16.4351 17.1645V7.89652ZM9.13062 17.063L5.47837 17.0123V5.91822L9.13062 6.57764V17.063ZM25.5657 17.2913L21.6091 17.2363V8.83071L25.5657 9.54509V17.2913Z" fill="white"/>
-                            </svg>                                    
-                            <div class="header__cart-count">1</div>
-                        </div>
-                    </a>
-                    <div class="account">
-                        <a class="account__link" href="#">Вход/регистрация</a>
-                    </div>
-                </div>
-                <div class="header__row">
-                    <div class="header__left header__large">
-                        <nav class="nav">
-                            <ul class="nav__list">
-                                <li class="nav__list-item"><a class="nav__link" href="#">О воде</a></li>
-                                <li class="nav__list-item"><a class="nav__link" href="#">О нас</a></li>
-                                <li class="nav__list-item"><a class="nav__link" href="#">Каталог</a></li>
-                                <li class="nav__list-item"><a class="nav__link" href="#">Сотрудничество</a></li>
-                                <li class="nav__list-item"><a class="nav__link" href="#">Новости</a></li>
-                                <li class="nav__list-item"><a class="nav__link" href="#">Контакты</a></li>
-                                <li class="nav__list-item"><a class="nav__link" href="#">Акции</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="header__right header__short">
-                        <a class="header__phone" href="tel:+74959800400"><i class="fas fa-phone-alt"></i><span>+7 (495) 980-04-00</span></a>
-                    </div>
-                </div>
-            </div>
+    <div class="thanks _thanks-closer">
+        <div class="thanks__main">
+            <h4 class="thanks__title">Thank you for your message!</h4>
+            <p class="thanks__content">Thank you for your interest in our company.<br>We will contact you very soon</p>
+            <button class="thanks__button _thanks-closer">Return to the GLOE</button>
         </div>
     </div>
-</header>    <div class="content">
-        <section class="main-banner screen">
-            <div class="main-banner__image">
-                <img src="img/main-bg.jpg" alt="">
-            </div>
-            <div class="main-banner__container container">
-                <div class="main-banner__block">
-                    <div class="main-banner__desc">о воде</div>
-                    <h1 class="main-banner__title"><span>ПОПРОБУЙ</span> БАЙКАЛ НА ВКУС</h1>
-                    <h4 class="main-banner__subtitle">Природная вода из сердца озера Байкал</h4>
-                    <p class="main-banner__content">Байкал - крупнейший природный резервуар чистой пресной воды. Учитывая глубокий неоэндемичный слой фауны озера, его возраст по некоторым подсчетам может составлять от 20 до 30 млн. лет. Вода Legend Of Baikal добывается из особых слоев озера, которые были на поверхности сотни лет назад, с глубины 400м.</p>
-                    <a class="main-banner__link" href="#">Заказать</a>
-                </div>
-            </div>
-        </section>
-        <section class="uniq screen">
-            <div class="container">
-                <div class="uniq__block">
-                    <h3 class="uniq__title title">Уникальность</h3>
-                    <p class="uniq__content">Legend Of Baikal - вода натуральной минерализации без добавления искусственных солей. Проходит бережную очистку, сохраняя при этом натуральную сверхлегкую минерализацию.</p>
-                    <p class="uniq__content uniq__content-half">Водородный показатель байкальской воды ph-7,6 и ph человеческого организма практически совпадают.</p>
-                    <div class="uniq__items">
-                        <div class="uniq__item">
-                            <div class="uniq__item-icon">
-                                <img src="img/uniq/item-bg.png" alt="">
-                                <span>60&nbsp;-&nbsp;100<br>мг/л</span>
-                            </div>
-                            <p class="uniq__item-content">Гидрокарбонаты</p>
-                        </div>
-                        <div class="uniq__item">
-                            <div class="uniq__item-icon">
-                                <img src="img/uniq/item-bg.png" alt="">
-                                <span>15&nbsp;-&nbsp;25<br>мг/л</span>
-                            </div>
-                            <p class="uniq__item-content">Кальций</p>
-                        </div>
-                        <div class="uniq__item">
-                            <div class="uniq__item-icon">
-                                <img src="img/uniq/item-bg.png" alt="">
-                                <span>3&nbsp;-&nbsp;5<br>мг/л</span>
-                            </div>
-                            <p class="uniq__item-content">Магний</p>
-                        </div>
-                        <div class="uniq__item">
-                            <div class="uniq__item-icon">
-                                <img src="img/uniq/item-bg.png" alt="">
-                                <span>1&nbsp;-&nbsp;3<br>мг/л</span>
-                            </div>
-                            <p class="uniq__item-content">Хлориды</p>
-                        </div>
-                        <div class="uniq__item">
-                            <div class="uniq__item-icon">
-                                <img src="img/uniq/item-bg.png" alt="">
-                                <span>2&nbsp;-&nbsp;6<br>мг/л</span>
-                            </div>
-                            <p class="uniq__item-content">Сульфаты</p>
-                        </div>
-                        <div class="uniq__item">
-                            <div class="uniq__item-icon">
-                                <img src="img/uniq/item-bg.png" alt="">
-                                <span>0,06-0,12<br>г/л</span>
-                            </div>
-                            <p class="uniq__item-content">Общая<br>минерализация</p>
-                        </div>
-                        <div class="uniq__item">
-                            <div class="uniq__item-icon">
-                                <img src="img/uniq/item-bg.png" alt="">
-                                <span>1&nbsp;-&nbsp;2<br>мг-экв/л</span>
-                            </div>
-                            <p class="uniq__item-content">Общая<br>жесткость</p>
-                        </div>
-                        <div class="uniq__item">
-                            <div class="uniq__item-icon">
-                                <img src="img/uniq/item-bg.png" alt="">
-                                <span>7,2&nbsp;-&nbsp;8,0<br>мг/л</span>
-                            </div>
-                            <p class="uniq__item-content">pH</p>
-                        </div>
+    <div class="popup-plan _popup-plan-closer">   
+        <div class="popup-plan__main">
+            <h4 class="popup-plan__title">You have chosen a <span id="planName">Premium</span> plan for <span id="switcherValue">Educational Establishments</span></h4>
+            <button class="popup-plan__close _popup-plan-closer">
+                <svg class="_popup-plan-closer" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="_popup-plan-closer" d="M6.99999 5.58623L11.95 0.63623L13.364 2.05023L8.41399 7.00023L13.364 11.9502L11.95 13.3642L6.99999 8.41423L2.04999 13.3642L0.635986 11.9502L5.58599 7.00023L0.635986 2.05023L2.04999 0.63623L6.99999 5.58623Z" fill="#75797C"/>
+                </svg>
+            </button>
+            <form class="popup-plan__form _form" action="#">
+                <p class="popup-plan__content popup-plan__content-mobile-not">Enter your Name and Email Address</p>
+                <div class="popup-plan__block">
+                    <div class="popup-plan__item">
+                        <p class="popup-plan__content popup-plan__content-mobile">Enter your Name</p>
+                        <input class="popup-plan__input _req" name="name" type="text" placeholder="Your Name">
+                    </div>
+                    <div class="popup-plan__item">
+                        <p class="popup-plan__content popup-plan__content-mobile">Enter your Email Address</p>
+                        <input class="popup-plan__input _req" name="email" type="email" placeholder="Email Address">
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="health screen">
-            <div class="health__top">
-                <div class="health__image">
-                    <div class="health__back">
-                        <img src="img/health/top-bg.jpg" alt="">
+                <p class="popup-plan__content popup-plan__content-mobile-not">Indicate the type of your business and type of service you would like to receive</p>
+                <div class="popup-plan__block">
+                    <div class="popup-plan__item">
+                        <p class="popup-plan__content popup-plan__content-mobile">Indicate the type of your business</p>
+                        <select class="popup-plan__select _req" name="business">
+                            <option class="popup-plan__select_placeholder" value disabled selected>Type of your business</option>
+                            <option value="Helping with scientific matter search">Helping with scientific matter search</option>
+                            <option value="Establishing and supporting communities">Establishing and supporting communities</option>
+                            <option value="Offering research-related advice to employees and students">Offering research-related advice to employees and students</option>
+                        </select>
                     </div>
-                    <div class="health__container container">
-                        <div class="health__left">
-                            <img src="img/health/bottles.png" alt="">
-                        </div>
-                        <div class="health__image-text">
-                            <h4 class="health__image-title title">Legend Of Baikal и ЗДОРОВЬЕ</h4>
-                            <p class="health__image-content">Чтобы поддерживать оптимальный уровень жидкости и минералов в нашем организме, нам необходимо постоянно их пополнять. Важно пить до того, как мы почувствуем жажду, чтобы избежать обезвоживания организма.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="health__container container">
-                    <p class="health__content">Legend Of Baikal  улучшает самочувствие, повышает работоспособность, восполняет и увеличивает энергетические ресурсы и способствует быстрому восстановлению организма после физических нагрузок.</p>
-                </div>
-            </div>
-            <div class="health__bottom">
-                <div class="health__bottom-container container">
-                    <div class="health__items">
-                        <h4 class="health__item-title">Активирует иммунную систему и обладает восстановительными свойствами для организма:</h4>
-                        <div class="health__item">
-                            <p class="health__item-number">01</p>
-                            <p class="health__item-content">Нормализует обмен веществ и артериальное давление</p>
-                        </div>
-                        <div class="health__item">
-                            <p class="health__item-number">02</p>
-                            <p class="health__item-content">Эффективно очищает организм от&nbsp;токсинов и шлаков</p>
-                        </div>
-                        <div class="health__item">
-                            <p class="health__item-number">03</p>
-                            <p class="health__item-content">Снижает уровень<br>сахара в крови</p>
-                        </div>
-                        <div class="health__item">
-                            <p class="health__item-number">04</p>
-                            <p class="health__item-content">Усиливает действие<br>лекарственных препаратов</p>
-                        </div>
-                        <div class="health__item">
-                            <p class="health__item-number">05</p>
-                            <p class="health__item-content">Способствует<br>коррекции веса</p>
-                        </div>
-                        <div class="health__item">
-                            <p class="health__item-number">06</p>
-                            <p class="health__item-content">Защищает клетки<br>от радиации</p>
-                        </div>
-                        <div class="health__item">
-                            <p class="health__item-number">07</p>
-                            <p class="health__item-content">Быстро устраняет признаки пост-алкогольной абстиненции</p>
-                        </div>
+                    <div class="popup-plan__item">
+                        <p class="popup-plan__content popup-plan__content-mobile">Enter type of service you would like to receive</p>
+                        <select class="popup-plan__select _req" name="service">
+                            <option class="popup-plan__select_placeholder" value disabled selected>Type of service</option>
+                            <option value="Helping with scientific matter search">Helping with scientific matter search</option>
+                            <option value="Establishing and supporting communities">Establishing and supporting communities</option>
+                            <option value="Offering research-related advice to employees and students">Offering research-related advice to employees and students</option>
+                        </select>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="main-banners screen">
-            <img src="img/banners/bg-1.jpg" alt="">
-        </section>
-        <section class="main-catalog screen">
-            <div class="container">
-                <h4 class="main-catalog__title title">Каталог</h4>
-                <p class="main-catalog__subtitle">В нашем магазине вы найдёте более 2000 наименований товара</p>
-                <section class="main-catalog__items">
-                    <article class="item">
-                        <div class="item__buttons">
-                            <button class="item__button">
-                                <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.14091 17.273C8.89155 17.273 8.65113 17.1778 8.46377 17.0049C7.75616 16.3529 7.07393 15.7402 6.47203 15.1997L6.46896 15.1969C4.70427 13.6122 3.18039 12.2437 2.12011 10.8956C0.934871 9.38857 0.382812 7.95965 0.382812 6.39865C0.382812 4.88201 0.876338 3.48281 1.77238 2.45861C2.67911 1.42231 3.92328 0.851562 5.2761 0.851562C6.28721 0.851562 7.21319 1.18841 8.02824 1.85266C8.43958 2.18796 8.81243 2.59831 9.14091 3.07696C9.46953 2.59831 9.84225 2.18796 10.2537 1.85266C11.0688 1.18841 11.9948 0.851562 13.0059 0.851562C14.3585 0.851562 15.6028 1.42231 16.5096 2.45861C17.4056 3.48281 17.899 4.88201 17.899 6.39865C17.899 7.95965 17.3471 9.38857 16.1619 10.8955C15.1016 12.2437 13.5778 13.6121 11.8134 15.1966C11.2104 15.7379 10.5271 16.3516 9.81792 17.0052C9.6307 17.1778 9.39015 17.273 9.14091 17.273ZM5.2761 1.93279C4.21328 1.93279 3.23692 2.37975 2.52663 3.19145C1.80579 4.01539 1.40875 5.15435 1.40875 6.39865C1.40875 7.71153 1.87181 8.88569 2.91004 10.2058C3.91353 11.4817 5.40613 12.8221 7.13434 14.3741L7.13755 14.3769C7.74172 14.9195 8.42662 15.5346 9.13944 16.1914C9.85655 15.5333 10.5425 14.9172 11.1479 14.3738C12.876 12.8218 14.3684 11.4817 15.3719 10.2058C16.41 8.88569 16.8731 7.71153 16.8731 6.39865C16.8731 5.15435 16.476 4.01539 15.7552 3.19145C15.045 2.37975 14.0685 1.93279 13.0059 1.93279C12.2273 1.93279 11.5125 2.19359 10.8813 2.70787C10.3188 3.16638 9.92697 3.746 9.69725 4.15157C9.57911 4.36012 9.37117 4.48461 9.14091 4.48461C8.91066 4.48461 8.70271 4.36012 8.58458 4.15157C8.35499 3.746 7.96316 3.16638 7.40055 2.70787C6.76937 2.19359 6.05454 1.93279 5.2761 1.93279Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                            <a class="item__button" href="#">
-                                <svg width="19" height="5" viewBox="0 0 19 5" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="2.21296" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="9.51374" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="16.8067" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                </svg>
-                            </a>
-                            <button class="item__button">
-                                <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M25.3002 7.38483C25.1005 7.09416 20.2998 0.286377 12.711 0.286377C6.19912 0.286377 0.39649 7.05507 0.152336 7.34361C-0.0135879 7.5402 -0.0135879 7.82875 0.152336 8.02638C0.39649 8.31493 6.19912 15.0836 12.711 15.0836C19.2228 15.0836 25.0254 8.31493 25.2695 8.02638C25.4228 7.8446 25.4366 7.58143 25.3002 7.38483ZM12.711 14.0267C7.49074 14.0267 2.52729 9.04848 1.26639 7.68502C2.52521 6.32052 7.48335 1.34335 12.711 1.34335C18.819 1.34335 23.1303 6.31418 24.183 7.65649C22.9675 8.97659 17.9756 14.0267 12.711 14.0267Z" fill="#C4C4C4"/>
-                                    <path d="M12.7173 3.45752C10.3857 3.45752 8.48956 5.35368 8.48956 7.68528C8.48956 10.0169 10.3857 11.913 12.7173 11.913C15.0489 11.913 16.9451 10.0169 16.9451 7.68528C16.9451 5.35368 15.0489 3.45752 12.7173 3.45752ZM12.7173 10.8562C10.9692 10.8562 9.54649 9.4335 9.54649 7.68533C9.54649 5.93716 10.9692 4.5145 12.7173 4.5145C14.4655 4.5145 15.8882 5.93716 15.8882 7.68533C15.8882 9.4335 14.4655 10.8562 12.7173 10.8562Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <a class="item__container" href="#">
-                            <div class="item__desc item__desc_new">НОВИНКА</div>
-                            <span class="item__image">
-                                <picture>
-                                    <img src="img/products/1.png" alt="" loading="lazy">
-                                </picture>
-                            </span>
-                            <p class="item__price">
-                                <span><strong>840 руб/упак</strong></span>
-                                <span>140 руб/шт</span>
-                            </p>
-                            <p class="item__name">Вода «Legend of Baikal» 0,75 л Стекло (упаковка 6 шт)</p>
-                        </a>
-                        <a class="item__buy" href="#">
-                            <span>Купить</span>
-                            <svg width="18" height="19" viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.7213 11.5174V4.85541L3.79689 2.48581V1.6668C3.79689 0.776812 3.02869 0.0527344 2.08442 0.0527344H0.315796V1.1464H2.08439C2.38883 1.1464 2.63653 1.37986 2.63653 1.6668V11.7651C2.63653 12.9309 3.64279 13.8794 4.8797 13.8794H5.34404V15.1257C5.10698 15.0278 4.84543 14.973 4.57047 14.973C3.50409 14.973 2.63653 15.7907 2.63653 16.7958C2.63653 17.8009 3.50409 18.6186 4.57047 18.6186C5.57159 18.6186 6.39738 17.8979 6.4947 16.9781H6.50441V13.8794H16.5609V15.1257C16.3238 15.0278 16.0623 14.973 15.7873 14.973C14.721 14.973 13.8534 15.7907 13.8534 16.7958C13.8534 17.8009 14.721 18.6186 15.7873 18.6186C16.7885 18.6186 17.6142 17.8979 17.7116 16.9781H17.7213V12.7857H4.8797C4.28262 12.7857 3.79689 12.3279 3.79689 11.7651V11.3351L17.7213 11.5174ZM4.57047 17.5249C4.14392 17.5249 3.79689 17.1978 3.79689 16.7958C3.79689 16.3938 4.14392 16.0667 4.57047 16.0667C4.99702 16.0667 5.34404 16.3938 5.34404 16.7958C5.34404 17.1978 4.99702 17.5249 4.57047 17.5249ZM15.7873 17.5249C15.3608 17.5249 15.0137 17.1978 15.0137 16.7958C15.0137 16.3938 15.3608 16.0667 15.7873 16.0667C16.2139 16.0667 16.5609 16.3938 16.5609 16.7958C16.5609 17.1978 16.2139 17.5249 15.7873 17.5249ZM9.59871 10.3173L7.27798 10.2869V4.18955L9.59871 4.58447V10.3173ZM10.7591 4.78195L12.8864 5.14399V10.3604L10.7591 10.3325V4.78195ZM6.11762 10.2717L3.79689 10.2414V3.59715L6.11762 3.99207V10.2717ZM16.5609 10.4084L14.0468 10.3755V5.34143L16.5609 5.76927V10.4084Z" fill="#008DD2"/>
-                            </svg>
-                        </a>
-                    </article>
-                    <article class="item">
-                        <div class="item__buttons">
-                            <button class="item__button">
-                                <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.14091 17.273C8.89155 17.273 8.65113 17.1778 8.46377 17.0049C7.75616 16.3529 7.07393 15.7402 6.47203 15.1997L6.46896 15.1969C4.70427 13.6122 3.18039 12.2437 2.12011 10.8956C0.934871 9.38857 0.382812 7.95965 0.382812 6.39865C0.382812 4.88201 0.876338 3.48281 1.77238 2.45861C2.67911 1.42231 3.92328 0.851562 5.2761 0.851562C6.28721 0.851562 7.21319 1.18841 8.02824 1.85266C8.43958 2.18796 8.81243 2.59831 9.14091 3.07696C9.46953 2.59831 9.84225 2.18796 10.2537 1.85266C11.0688 1.18841 11.9948 0.851562 13.0059 0.851562C14.3585 0.851562 15.6028 1.42231 16.5096 2.45861C17.4056 3.48281 17.899 4.88201 17.899 6.39865C17.899 7.95965 17.3471 9.38857 16.1619 10.8955C15.1016 12.2437 13.5778 13.6121 11.8134 15.1966C11.2104 15.7379 10.5271 16.3516 9.81792 17.0052C9.6307 17.1778 9.39015 17.273 9.14091 17.273ZM5.2761 1.93279C4.21328 1.93279 3.23692 2.37975 2.52663 3.19145C1.80579 4.01539 1.40875 5.15435 1.40875 6.39865C1.40875 7.71153 1.87181 8.88569 2.91004 10.2058C3.91353 11.4817 5.40613 12.8221 7.13434 14.3741L7.13755 14.3769C7.74172 14.9195 8.42662 15.5346 9.13944 16.1914C9.85655 15.5333 10.5425 14.9172 11.1479 14.3738C12.876 12.8218 14.3684 11.4817 15.3719 10.2058C16.41 8.88569 16.8731 7.71153 16.8731 6.39865C16.8731 5.15435 16.476 4.01539 15.7552 3.19145C15.045 2.37975 14.0685 1.93279 13.0059 1.93279C12.2273 1.93279 11.5125 2.19359 10.8813 2.70787C10.3188 3.16638 9.92697 3.746 9.69725 4.15157C9.57911 4.36012 9.37117 4.48461 9.14091 4.48461C8.91066 4.48461 8.70271 4.36012 8.58458 4.15157C8.35499 3.746 7.96316 3.16638 7.40055 2.70787C6.76937 2.19359 6.05454 1.93279 5.2761 1.93279Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                            <a class="item__button" href="#">
-                                <svg width="19" height="5" viewBox="0 0 19 5" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="2.21296" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="9.51374" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="16.8067" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                </svg>
-                            </a>
-                            <button class="item__button">
-                                <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M25.3002 7.38483C25.1005 7.09416 20.2998 0.286377 12.711 0.286377C6.19912 0.286377 0.39649 7.05507 0.152336 7.34361C-0.0135879 7.5402 -0.0135879 7.82875 0.152336 8.02638C0.39649 8.31493 6.19912 15.0836 12.711 15.0836C19.2228 15.0836 25.0254 8.31493 25.2695 8.02638C25.4228 7.8446 25.4366 7.58143 25.3002 7.38483ZM12.711 14.0267C7.49074 14.0267 2.52729 9.04848 1.26639 7.68502C2.52521 6.32052 7.48335 1.34335 12.711 1.34335C18.819 1.34335 23.1303 6.31418 24.183 7.65649C22.9675 8.97659 17.9756 14.0267 12.711 14.0267Z" fill="#C4C4C4"/>
-                                    <path d="M12.7173 3.45752C10.3857 3.45752 8.48956 5.35368 8.48956 7.68528C8.48956 10.0169 10.3857 11.913 12.7173 11.913C15.0489 11.913 16.9451 10.0169 16.9451 7.68528C16.9451 5.35368 15.0489 3.45752 12.7173 3.45752ZM12.7173 10.8562C10.9692 10.8562 9.54649 9.4335 9.54649 7.68533C9.54649 5.93716 10.9692 4.5145 12.7173 4.5145C14.4655 4.5145 15.8882 5.93716 15.8882 7.68533C15.8882 9.4335 14.4655 10.8562 12.7173 10.8562Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <a class="item__container" href="#">
-                            <div class="item__desc item__desc_promotion">Акция</div>
-                            <span class="item__image">
-                                <picture>
-                                    <img src="img/products/2.png" alt="" loading="lazy">
-                                </picture>
-                            </span>
-                            <p class="item__price">
-                                <span><strong>540 руб/упак</strong></span>
-                                <span>90 руб/шт</span>
-                            </p>
-                            <p class="item__name">Вода «Legend of Baikal» 1,5 л (упаковка 6 шт)</p>
-                        </a>
-                        <a class="item__buy" href="#">
-                            <span>Купить</span>
-                            <svg width="18" height="19" viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.7213 11.5174V4.85541L3.79689 2.48581V1.6668C3.79689 0.776812 3.02869 0.0527344 2.08442 0.0527344H0.315796V1.1464H2.08439C2.38883 1.1464 2.63653 1.37986 2.63653 1.6668V11.7651C2.63653 12.9309 3.64279 13.8794 4.8797 13.8794H5.34404V15.1257C5.10698 15.0278 4.84543 14.973 4.57047 14.973C3.50409 14.973 2.63653 15.7907 2.63653 16.7958C2.63653 17.8009 3.50409 18.6186 4.57047 18.6186C5.57159 18.6186 6.39738 17.8979 6.4947 16.9781H6.50441V13.8794H16.5609V15.1257C16.3238 15.0278 16.0623 14.973 15.7873 14.973C14.721 14.973 13.8534 15.7907 13.8534 16.7958C13.8534 17.8009 14.721 18.6186 15.7873 18.6186C16.7885 18.6186 17.6142 17.8979 17.7116 16.9781H17.7213V12.7857H4.8797C4.28262 12.7857 3.79689 12.3279 3.79689 11.7651V11.3351L17.7213 11.5174ZM4.57047 17.5249C4.14392 17.5249 3.79689 17.1978 3.79689 16.7958C3.79689 16.3938 4.14392 16.0667 4.57047 16.0667C4.99702 16.0667 5.34404 16.3938 5.34404 16.7958C5.34404 17.1978 4.99702 17.5249 4.57047 17.5249ZM15.7873 17.5249C15.3608 17.5249 15.0137 17.1978 15.0137 16.7958C15.0137 16.3938 15.3608 16.0667 15.7873 16.0667C16.2139 16.0667 16.5609 16.3938 16.5609 16.7958C16.5609 17.1978 16.2139 17.5249 15.7873 17.5249ZM9.59871 10.3173L7.27798 10.2869V4.18955L9.59871 4.58447V10.3173ZM10.7591 4.78195L12.8864 5.14399V10.3604L10.7591 10.3325V4.78195ZM6.11762 10.2717L3.79689 10.2414V3.59715L6.11762 3.99207V10.2717ZM16.5609 10.4084L14.0468 10.3755V5.34143L16.5609 5.76927V10.4084Z" fill="#008DD2"/>
-                            </svg>
-                        </a>
-                    </article>
-                    <article class="item">
-                        <div class="item__buttons">
-                            <button class="item__button">
-                                <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.14091 17.273C8.89155 17.273 8.65113 17.1778 8.46377 17.0049C7.75616 16.3529 7.07393 15.7402 6.47203 15.1997L6.46896 15.1969C4.70427 13.6122 3.18039 12.2437 2.12011 10.8956C0.934871 9.38857 0.382812 7.95965 0.382812 6.39865C0.382812 4.88201 0.876338 3.48281 1.77238 2.45861C2.67911 1.42231 3.92328 0.851562 5.2761 0.851562C6.28721 0.851562 7.21319 1.18841 8.02824 1.85266C8.43958 2.18796 8.81243 2.59831 9.14091 3.07696C9.46953 2.59831 9.84225 2.18796 10.2537 1.85266C11.0688 1.18841 11.9948 0.851562 13.0059 0.851562C14.3585 0.851562 15.6028 1.42231 16.5096 2.45861C17.4056 3.48281 17.899 4.88201 17.899 6.39865C17.899 7.95965 17.3471 9.38857 16.1619 10.8955C15.1016 12.2437 13.5778 13.6121 11.8134 15.1966C11.2104 15.7379 10.5271 16.3516 9.81792 17.0052C9.6307 17.1778 9.39015 17.273 9.14091 17.273ZM5.2761 1.93279C4.21328 1.93279 3.23692 2.37975 2.52663 3.19145C1.80579 4.01539 1.40875 5.15435 1.40875 6.39865C1.40875 7.71153 1.87181 8.88569 2.91004 10.2058C3.91353 11.4817 5.40613 12.8221 7.13434 14.3741L7.13755 14.3769C7.74172 14.9195 8.42662 15.5346 9.13944 16.1914C9.85655 15.5333 10.5425 14.9172 11.1479 14.3738C12.876 12.8218 14.3684 11.4817 15.3719 10.2058C16.41 8.88569 16.8731 7.71153 16.8731 6.39865C16.8731 5.15435 16.476 4.01539 15.7552 3.19145C15.045 2.37975 14.0685 1.93279 13.0059 1.93279C12.2273 1.93279 11.5125 2.19359 10.8813 2.70787C10.3188 3.16638 9.92697 3.746 9.69725 4.15157C9.57911 4.36012 9.37117 4.48461 9.14091 4.48461C8.91066 4.48461 8.70271 4.36012 8.58458 4.15157C8.35499 3.746 7.96316 3.16638 7.40055 2.70787C6.76937 2.19359 6.05454 1.93279 5.2761 1.93279Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                            <a class="item__button" href="#">
-                                <svg width="19" height="5" viewBox="0 0 19 5" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="2.21296" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="9.51374" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="16.8067" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                </svg>
-                            </a>
-                            <button class="item__button">
-                                <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M25.3002 7.38483C25.1005 7.09416 20.2998 0.286377 12.711 0.286377C6.19912 0.286377 0.39649 7.05507 0.152336 7.34361C-0.0135879 7.5402 -0.0135879 7.82875 0.152336 8.02638C0.39649 8.31493 6.19912 15.0836 12.711 15.0836C19.2228 15.0836 25.0254 8.31493 25.2695 8.02638C25.4228 7.8446 25.4366 7.58143 25.3002 7.38483ZM12.711 14.0267C7.49074 14.0267 2.52729 9.04848 1.26639 7.68502C2.52521 6.32052 7.48335 1.34335 12.711 1.34335C18.819 1.34335 23.1303 6.31418 24.183 7.65649C22.9675 8.97659 17.9756 14.0267 12.711 14.0267Z" fill="#C4C4C4"/>
-                                    <path d="M12.7173 3.45752C10.3857 3.45752 8.48956 5.35368 8.48956 7.68528C8.48956 10.0169 10.3857 11.913 12.7173 11.913C15.0489 11.913 16.9451 10.0169 16.9451 7.68528C16.9451 5.35368 15.0489 3.45752 12.7173 3.45752ZM12.7173 10.8562C10.9692 10.8562 9.54649 9.4335 9.54649 7.68533C9.54649 5.93716 10.9692 4.5145 12.7173 4.5145C14.4655 4.5145 15.8882 5.93716 15.8882 7.68533C15.8882 9.4335 14.4655 10.8562 12.7173 10.8562Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <a class="item__container" href="#">
-                            <div class="item__desc item__desc_discount">Скидки -20%</div>
-                            <span class="item__image">
-                                <picture>
-                                    <img src="img/products/3.png" alt="" loading="lazy">
-                                </picture>
-                            </span>
-                            <p class="item__price">
-                                <span><strong>588 руб/упак</strong></span>
-                                <span>49 руб/шт</span>
-                            </p>
-                            <p class="item__price-old">
-                                <span>588 руб/упак</span>
-                                <span>49 руб/шт</span>
-                            </p>
-                            <p class="item__name">Вода «Legend of Baikal» АЛ 0,33 л (упаковка 12 шт)</p>
-                        </a>
-                        <a class="item__buy" href="#">
-                            <span>Купить</span>
-                            <svg width="18" height="19" viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.7213 11.5174V4.85541L3.79689 2.48581V1.6668C3.79689 0.776812 3.02869 0.0527344 2.08442 0.0527344H0.315796V1.1464H2.08439C2.38883 1.1464 2.63653 1.37986 2.63653 1.6668V11.7651C2.63653 12.9309 3.64279 13.8794 4.8797 13.8794H5.34404V15.1257C5.10698 15.0278 4.84543 14.973 4.57047 14.973C3.50409 14.973 2.63653 15.7907 2.63653 16.7958C2.63653 17.8009 3.50409 18.6186 4.57047 18.6186C5.57159 18.6186 6.39738 17.8979 6.4947 16.9781H6.50441V13.8794H16.5609V15.1257C16.3238 15.0278 16.0623 14.973 15.7873 14.973C14.721 14.973 13.8534 15.7907 13.8534 16.7958C13.8534 17.8009 14.721 18.6186 15.7873 18.6186C16.7885 18.6186 17.6142 17.8979 17.7116 16.9781H17.7213V12.7857H4.8797C4.28262 12.7857 3.79689 12.3279 3.79689 11.7651V11.3351L17.7213 11.5174ZM4.57047 17.5249C4.14392 17.5249 3.79689 17.1978 3.79689 16.7958C3.79689 16.3938 4.14392 16.0667 4.57047 16.0667C4.99702 16.0667 5.34404 16.3938 5.34404 16.7958C5.34404 17.1978 4.99702 17.5249 4.57047 17.5249ZM15.7873 17.5249C15.3608 17.5249 15.0137 17.1978 15.0137 16.7958C15.0137 16.3938 15.3608 16.0667 15.7873 16.0667C16.2139 16.0667 16.5609 16.3938 16.5609 16.7958C16.5609 17.1978 16.2139 17.5249 15.7873 17.5249ZM9.59871 10.3173L7.27798 10.2869V4.18955L9.59871 4.58447V10.3173ZM10.7591 4.78195L12.8864 5.14399V10.3604L10.7591 10.3325V4.78195ZM6.11762 10.2717L3.79689 10.2414V3.59715L6.11762 3.99207V10.2717ZM16.5609 10.4084L14.0468 10.3755V5.34143L16.5609 5.76927V10.4084Z" fill="#008DD2"/>
-                            </svg>
-                        </a>
-                    </article>
-                    <article class="item">
-                        <div class="item__buttons">
-                            <button class="item__button">
-                                <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.14091 17.273C8.89155 17.273 8.65113 17.1778 8.46377 17.0049C7.75616 16.3529 7.07393 15.7402 6.47203 15.1997L6.46896 15.1969C4.70427 13.6122 3.18039 12.2437 2.12011 10.8956C0.934871 9.38857 0.382812 7.95965 0.382812 6.39865C0.382812 4.88201 0.876338 3.48281 1.77238 2.45861C2.67911 1.42231 3.92328 0.851562 5.2761 0.851562C6.28721 0.851562 7.21319 1.18841 8.02824 1.85266C8.43958 2.18796 8.81243 2.59831 9.14091 3.07696C9.46953 2.59831 9.84225 2.18796 10.2537 1.85266C11.0688 1.18841 11.9948 0.851562 13.0059 0.851562C14.3585 0.851562 15.6028 1.42231 16.5096 2.45861C17.4056 3.48281 17.899 4.88201 17.899 6.39865C17.899 7.95965 17.3471 9.38857 16.1619 10.8955C15.1016 12.2437 13.5778 13.6121 11.8134 15.1966C11.2104 15.7379 10.5271 16.3516 9.81792 17.0052C9.6307 17.1778 9.39015 17.273 9.14091 17.273ZM5.2761 1.93279C4.21328 1.93279 3.23692 2.37975 2.52663 3.19145C1.80579 4.01539 1.40875 5.15435 1.40875 6.39865C1.40875 7.71153 1.87181 8.88569 2.91004 10.2058C3.91353 11.4817 5.40613 12.8221 7.13434 14.3741L7.13755 14.3769C7.74172 14.9195 8.42662 15.5346 9.13944 16.1914C9.85655 15.5333 10.5425 14.9172 11.1479 14.3738C12.876 12.8218 14.3684 11.4817 15.3719 10.2058C16.41 8.88569 16.8731 7.71153 16.8731 6.39865C16.8731 5.15435 16.476 4.01539 15.7552 3.19145C15.045 2.37975 14.0685 1.93279 13.0059 1.93279C12.2273 1.93279 11.5125 2.19359 10.8813 2.70787C10.3188 3.16638 9.92697 3.746 9.69725 4.15157C9.57911 4.36012 9.37117 4.48461 9.14091 4.48461C8.91066 4.48461 8.70271 4.36012 8.58458 4.15157C8.35499 3.746 7.96316 3.16638 7.40055 2.70787C6.76937 2.19359 6.05454 1.93279 5.2761 1.93279Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                            <a class="item__button" href="#">
-                                <svg width="19" height="5" viewBox="0 0 19 5" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="2.21296" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="9.51374" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="16.8067" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                </svg>
-                            </a>
-                            <button class="item__button">
-                                <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M25.3002 7.38483C25.1005 7.09416 20.2998 0.286377 12.711 0.286377C6.19912 0.286377 0.39649 7.05507 0.152336 7.34361C-0.0135879 7.5402 -0.0135879 7.82875 0.152336 8.02638C0.39649 8.31493 6.19912 15.0836 12.711 15.0836C19.2228 15.0836 25.0254 8.31493 25.2695 8.02638C25.4228 7.8446 25.4366 7.58143 25.3002 7.38483ZM12.711 14.0267C7.49074 14.0267 2.52729 9.04848 1.26639 7.68502C2.52521 6.32052 7.48335 1.34335 12.711 1.34335C18.819 1.34335 23.1303 6.31418 24.183 7.65649C22.9675 8.97659 17.9756 14.0267 12.711 14.0267Z" fill="#C4C4C4"/>
-                                    <path d="M12.7173 3.45752C10.3857 3.45752 8.48956 5.35368 8.48956 7.68528C8.48956 10.0169 10.3857 11.913 12.7173 11.913C15.0489 11.913 16.9451 10.0169 16.9451 7.68528C16.9451 5.35368 15.0489 3.45752 12.7173 3.45752ZM12.7173 10.8562C10.9692 10.8562 9.54649 9.4335 9.54649 7.68533C9.54649 5.93716 10.9692 4.5145 12.7173 4.5145C14.4655 4.5145 15.8882 5.93716 15.8882 7.68533C15.8882 9.4335 14.4655 10.8562 12.7173 10.8562Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <a class="item__container" href="#">
-                            <span class="item__image">
-                                <picture>
-                                    <img src="img/products/4.png" alt="" loading="lazy">
-                                </picture>
-                            </span>
-                            <p class="item__price">
-                                <span><strong>351 руб/упак</strong></span>
-                                <span>58.50 руб/шт</span>
-                            </p>
-                            <p class="item__name">Газированная вода «Legend of Baikal» 1,5 л (упаковка 6 шт)</p>
-                        </a>
-                        <a class="item__buy" href="#">
-                            <span>Купить</span>
-                            <svg width="18" height="19" viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.7213 11.5174V4.85541L3.79689 2.48581V1.6668C3.79689 0.776812 3.02869 0.0527344 2.08442 0.0527344H0.315796V1.1464H2.08439C2.38883 1.1464 2.63653 1.37986 2.63653 1.6668V11.7651C2.63653 12.9309 3.64279 13.8794 4.8797 13.8794H5.34404V15.1257C5.10698 15.0278 4.84543 14.973 4.57047 14.973C3.50409 14.973 2.63653 15.7907 2.63653 16.7958C2.63653 17.8009 3.50409 18.6186 4.57047 18.6186C5.57159 18.6186 6.39738 17.8979 6.4947 16.9781H6.50441V13.8794H16.5609V15.1257C16.3238 15.0278 16.0623 14.973 15.7873 14.973C14.721 14.973 13.8534 15.7907 13.8534 16.7958C13.8534 17.8009 14.721 18.6186 15.7873 18.6186C16.7885 18.6186 17.6142 17.8979 17.7116 16.9781H17.7213V12.7857H4.8797C4.28262 12.7857 3.79689 12.3279 3.79689 11.7651V11.3351L17.7213 11.5174ZM4.57047 17.5249C4.14392 17.5249 3.79689 17.1978 3.79689 16.7958C3.79689 16.3938 4.14392 16.0667 4.57047 16.0667C4.99702 16.0667 5.34404 16.3938 5.34404 16.7958C5.34404 17.1978 4.99702 17.5249 4.57047 17.5249ZM15.7873 17.5249C15.3608 17.5249 15.0137 17.1978 15.0137 16.7958C15.0137 16.3938 15.3608 16.0667 15.7873 16.0667C16.2139 16.0667 16.5609 16.3938 16.5609 16.7958C16.5609 17.1978 16.2139 17.5249 15.7873 17.5249ZM9.59871 10.3173L7.27798 10.2869V4.18955L9.59871 4.58447V10.3173ZM10.7591 4.78195L12.8864 5.14399V10.3604L10.7591 10.3325V4.78195ZM6.11762 10.2717L3.79689 10.2414V3.59715L6.11762 3.99207V10.2717ZM16.5609 10.4084L14.0468 10.3755V5.34143L16.5609 5.76927V10.4084Z" fill="#008DD2"/>
-                            </svg>
-                        </a>
-                    </article>
-                    <article class="item">
-                        <div class="item__buttons">
-                            <button class="item__button">
-                                <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.14091 17.273C8.89155 17.273 8.65113 17.1778 8.46377 17.0049C7.75616 16.3529 7.07393 15.7402 6.47203 15.1997L6.46896 15.1969C4.70427 13.6122 3.18039 12.2437 2.12011 10.8956C0.934871 9.38857 0.382812 7.95965 0.382812 6.39865C0.382812 4.88201 0.876338 3.48281 1.77238 2.45861C2.67911 1.42231 3.92328 0.851562 5.2761 0.851562C6.28721 0.851562 7.21319 1.18841 8.02824 1.85266C8.43958 2.18796 8.81243 2.59831 9.14091 3.07696C9.46953 2.59831 9.84225 2.18796 10.2537 1.85266C11.0688 1.18841 11.9948 0.851562 13.0059 0.851562C14.3585 0.851562 15.6028 1.42231 16.5096 2.45861C17.4056 3.48281 17.899 4.88201 17.899 6.39865C17.899 7.95965 17.3471 9.38857 16.1619 10.8955C15.1016 12.2437 13.5778 13.6121 11.8134 15.1966C11.2104 15.7379 10.5271 16.3516 9.81792 17.0052C9.6307 17.1778 9.39015 17.273 9.14091 17.273ZM5.2761 1.93279C4.21328 1.93279 3.23692 2.37975 2.52663 3.19145C1.80579 4.01539 1.40875 5.15435 1.40875 6.39865C1.40875 7.71153 1.87181 8.88569 2.91004 10.2058C3.91353 11.4817 5.40613 12.8221 7.13434 14.3741L7.13755 14.3769C7.74172 14.9195 8.42662 15.5346 9.13944 16.1914C9.85655 15.5333 10.5425 14.9172 11.1479 14.3738C12.876 12.8218 14.3684 11.4817 15.3719 10.2058C16.41 8.88569 16.8731 7.71153 16.8731 6.39865C16.8731 5.15435 16.476 4.01539 15.7552 3.19145C15.045 2.37975 14.0685 1.93279 13.0059 1.93279C12.2273 1.93279 11.5125 2.19359 10.8813 2.70787C10.3188 3.16638 9.92697 3.746 9.69725 4.15157C9.57911 4.36012 9.37117 4.48461 9.14091 4.48461C8.91066 4.48461 8.70271 4.36012 8.58458 4.15157C8.35499 3.746 7.96316 3.16638 7.40055 2.70787C6.76937 2.19359 6.05454 1.93279 5.2761 1.93279Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                            <a class="item__button" href="#">
-                                <svg width="19" height="5" viewBox="0 0 19 5" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="2.21296" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="9.51374" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="16.8067" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                </svg>
-                            </a>
-                            <button class="item__button">
-                                <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M25.3002 7.38483C25.1005 7.09416 20.2998 0.286377 12.711 0.286377C6.19912 0.286377 0.39649 7.05507 0.152336 7.34361C-0.0135879 7.5402 -0.0135879 7.82875 0.152336 8.02638C0.39649 8.31493 6.19912 15.0836 12.711 15.0836C19.2228 15.0836 25.0254 8.31493 25.2695 8.02638C25.4228 7.8446 25.4366 7.58143 25.3002 7.38483ZM12.711 14.0267C7.49074 14.0267 2.52729 9.04848 1.26639 7.68502C2.52521 6.32052 7.48335 1.34335 12.711 1.34335C18.819 1.34335 23.1303 6.31418 24.183 7.65649C22.9675 8.97659 17.9756 14.0267 12.711 14.0267Z" fill="#C4C4C4"/>
-                                    <path d="M12.7173 3.45752C10.3857 3.45752 8.48956 5.35368 8.48956 7.68528C8.48956 10.0169 10.3857 11.913 12.7173 11.913C15.0489 11.913 16.9451 10.0169 16.9451 7.68528C16.9451 5.35368 15.0489 3.45752 12.7173 3.45752ZM12.7173 10.8562C10.9692 10.8562 9.54649 9.4335 9.54649 7.68533C9.54649 5.93716 10.9692 4.5145 12.7173 4.5145C14.4655 4.5145 15.8882 5.93716 15.8882 7.68533C15.8882 9.4335 14.4655 10.8562 12.7173 10.8562Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <a class="item__container" href="#">
-                            <span class="item__image">
-                                <picture>
-                                    <img src="img/products/5.png" alt="" loading="lazy">
-                                </picture>
-                            </span>
-                            <p class="item__price">
-                                <span><strong>428 руб/упак</strong></span>
-                                <span>214 руб/шт</span>
-                            </p>
-                            <p class="item__name">Вода «Legend of Baikal» 4,9 л (упаковка 2 шт)</p>
-                        </a>
-                        <a class="item__buy" href="#">
-                            <span>Купить</span>
-                            <svg width="18" height="19" viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.7213 11.5174V4.85541L3.79689 2.48581V1.6668C3.79689 0.776812 3.02869 0.0527344 2.08442 0.0527344H0.315796V1.1464H2.08439C2.38883 1.1464 2.63653 1.37986 2.63653 1.6668V11.7651C2.63653 12.9309 3.64279 13.8794 4.8797 13.8794H5.34404V15.1257C5.10698 15.0278 4.84543 14.973 4.57047 14.973C3.50409 14.973 2.63653 15.7907 2.63653 16.7958C2.63653 17.8009 3.50409 18.6186 4.57047 18.6186C5.57159 18.6186 6.39738 17.8979 6.4947 16.9781H6.50441V13.8794H16.5609V15.1257C16.3238 15.0278 16.0623 14.973 15.7873 14.973C14.721 14.973 13.8534 15.7907 13.8534 16.7958C13.8534 17.8009 14.721 18.6186 15.7873 18.6186C16.7885 18.6186 17.6142 17.8979 17.7116 16.9781H17.7213V12.7857H4.8797C4.28262 12.7857 3.79689 12.3279 3.79689 11.7651V11.3351L17.7213 11.5174ZM4.57047 17.5249C4.14392 17.5249 3.79689 17.1978 3.79689 16.7958C3.79689 16.3938 4.14392 16.0667 4.57047 16.0667C4.99702 16.0667 5.34404 16.3938 5.34404 16.7958C5.34404 17.1978 4.99702 17.5249 4.57047 17.5249ZM15.7873 17.5249C15.3608 17.5249 15.0137 17.1978 15.0137 16.7958C15.0137 16.3938 15.3608 16.0667 15.7873 16.0667C16.2139 16.0667 16.5609 16.3938 16.5609 16.7958C16.5609 17.1978 16.2139 17.5249 15.7873 17.5249ZM9.59871 10.3173L7.27798 10.2869V4.18955L9.59871 4.58447V10.3173ZM10.7591 4.78195L12.8864 5.14399V10.3604L10.7591 10.3325V4.78195ZM6.11762 10.2717L3.79689 10.2414V3.59715L6.11762 3.99207V10.2717ZM16.5609 10.4084L14.0468 10.3755V5.34143L16.5609 5.76927V10.4084Z" fill="#008DD2"/>
-                            </svg>
-                        </a>
-                    </article>
-                    <article class="item">
-                        <div class="item__buttons">
-                            <button class="item__button">
-                                <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.14091 17.273C8.89155 17.273 8.65113 17.1778 8.46377 17.0049C7.75616 16.3529 7.07393 15.7402 6.47203 15.1997L6.46896 15.1969C4.70427 13.6122 3.18039 12.2437 2.12011 10.8956C0.934871 9.38857 0.382812 7.95965 0.382812 6.39865C0.382812 4.88201 0.876338 3.48281 1.77238 2.45861C2.67911 1.42231 3.92328 0.851562 5.2761 0.851562C6.28721 0.851562 7.21319 1.18841 8.02824 1.85266C8.43958 2.18796 8.81243 2.59831 9.14091 3.07696C9.46953 2.59831 9.84225 2.18796 10.2537 1.85266C11.0688 1.18841 11.9948 0.851562 13.0059 0.851562C14.3585 0.851562 15.6028 1.42231 16.5096 2.45861C17.4056 3.48281 17.899 4.88201 17.899 6.39865C17.899 7.95965 17.3471 9.38857 16.1619 10.8955C15.1016 12.2437 13.5778 13.6121 11.8134 15.1966C11.2104 15.7379 10.5271 16.3516 9.81792 17.0052C9.6307 17.1778 9.39015 17.273 9.14091 17.273ZM5.2761 1.93279C4.21328 1.93279 3.23692 2.37975 2.52663 3.19145C1.80579 4.01539 1.40875 5.15435 1.40875 6.39865C1.40875 7.71153 1.87181 8.88569 2.91004 10.2058C3.91353 11.4817 5.40613 12.8221 7.13434 14.3741L7.13755 14.3769C7.74172 14.9195 8.42662 15.5346 9.13944 16.1914C9.85655 15.5333 10.5425 14.9172 11.1479 14.3738C12.876 12.8218 14.3684 11.4817 15.3719 10.2058C16.41 8.88569 16.8731 7.71153 16.8731 6.39865C16.8731 5.15435 16.476 4.01539 15.7552 3.19145C15.045 2.37975 14.0685 1.93279 13.0059 1.93279C12.2273 1.93279 11.5125 2.19359 10.8813 2.70787C10.3188 3.16638 9.92697 3.746 9.69725 4.15157C9.57911 4.36012 9.37117 4.48461 9.14091 4.48461C8.91066 4.48461 8.70271 4.36012 8.58458 4.15157C8.35499 3.746 7.96316 3.16638 7.40055 2.70787C6.76937 2.19359 6.05454 1.93279 5.2761 1.93279Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                            <a class="item__button" href="#">
-                                <svg width="19" height="5" viewBox="0 0 19 5" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="2.21296" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="9.51374" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="16.8067" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                </svg>
-                            </a>
-                            <button class="item__button">
-                                <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M25.3002 7.38483C25.1005 7.09416 20.2998 0.286377 12.711 0.286377C6.19912 0.286377 0.39649 7.05507 0.152336 7.34361C-0.0135879 7.5402 -0.0135879 7.82875 0.152336 8.02638C0.39649 8.31493 6.19912 15.0836 12.711 15.0836C19.2228 15.0836 25.0254 8.31493 25.2695 8.02638C25.4228 7.8446 25.4366 7.58143 25.3002 7.38483ZM12.711 14.0267C7.49074 14.0267 2.52729 9.04848 1.26639 7.68502C2.52521 6.32052 7.48335 1.34335 12.711 1.34335C18.819 1.34335 23.1303 6.31418 24.183 7.65649C22.9675 8.97659 17.9756 14.0267 12.711 14.0267Z" fill="#C4C4C4"/>
-                                    <path d="M12.7173 3.45752C10.3857 3.45752 8.48956 5.35368 8.48956 7.68528C8.48956 10.0169 10.3857 11.913 12.7173 11.913C15.0489 11.913 16.9451 10.0169 16.9451 7.68528C16.9451 5.35368 15.0489 3.45752 12.7173 3.45752ZM12.7173 10.8562C10.9692 10.8562 9.54649 9.4335 9.54649 7.68533C9.54649 5.93716 10.9692 4.5145 12.7173 4.5145C14.4655 4.5145 15.8882 5.93716 15.8882 7.68533C15.8882 9.4335 14.4655 10.8562 12.7173 10.8562Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <a class="item__container" href="#">
-                            <span class="item__image">
-                                <picture>
-                                    <img src="img/products/6.png" alt="" loading="lazy">
-                                </picture>
-                            </span>
-                            <p class="item__price">
-                                <span><strong>312 руб/упак</strong></span>
-                                <span>26 руб/шт</span>
-                            </p>
-                            <p class="item__name">Газированная вода «Legend of Baikal» 0,33 л (упаковка 12 шт)</p>
-                        </a>
-                        <a class="item__buy" href="#">
-                            <span>Купить</span>
-                            <svg width="18" height="19" viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.7213 11.5174V4.85541L3.79689 2.48581V1.6668C3.79689 0.776812 3.02869 0.0527344 2.08442 0.0527344H0.315796V1.1464H2.08439C2.38883 1.1464 2.63653 1.37986 2.63653 1.6668V11.7651C2.63653 12.9309 3.64279 13.8794 4.8797 13.8794H5.34404V15.1257C5.10698 15.0278 4.84543 14.973 4.57047 14.973C3.50409 14.973 2.63653 15.7907 2.63653 16.7958C2.63653 17.8009 3.50409 18.6186 4.57047 18.6186C5.57159 18.6186 6.39738 17.8979 6.4947 16.9781H6.50441V13.8794H16.5609V15.1257C16.3238 15.0278 16.0623 14.973 15.7873 14.973C14.721 14.973 13.8534 15.7907 13.8534 16.7958C13.8534 17.8009 14.721 18.6186 15.7873 18.6186C16.7885 18.6186 17.6142 17.8979 17.7116 16.9781H17.7213V12.7857H4.8797C4.28262 12.7857 3.79689 12.3279 3.79689 11.7651V11.3351L17.7213 11.5174ZM4.57047 17.5249C4.14392 17.5249 3.79689 17.1978 3.79689 16.7958C3.79689 16.3938 4.14392 16.0667 4.57047 16.0667C4.99702 16.0667 5.34404 16.3938 5.34404 16.7958C5.34404 17.1978 4.99702 17.5249 4.57047 17.5249ZM15.7873 17.5249C15.3608 17.5249 15.0137 17.1978 15.0137 16.7958C15.0137 16.3938 15.3608 16.0667 15.7873 16.0667C16.2139 16.0667 16.5609 16.3938 16.5609 16.7958C16.5609 17.1978 16.2139 17.5249 15.7873 17.5249ZM9.59871 10.3173L7.27798 10.2869V4.18955L9.59871 4.58447V10.3173ZM10.7591 4.78195L12.8864 5.14399V10.3604L10.7591 10.3325V4.78195ZM6.11762 10.2717L3.79689 10.2414V3.59715L6.11762 3.99207V10.2717ZM16.5609 10.4084L14.0468 10.3755V5.34143L16.5609 5.76927V10.4084Z" fill="#008DD2"/>
-                            </svg>
-                        </a>
-                    </article>
-                    <article class="item">
-                        <div class="item__buttons">
-                            <button class="item__button">
-                                <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.14091 17.273C8.89155 17.273 8.65113 17.1778 8.46377 17.0049C7.75616 16.3529 7.07393 15.7402 6.47203 15.1997L6.46896 15.1969C4.70427 13.6122 3.18039 12.2437 2.12011 10.8956C0.934871 9.38857 0.382812 7.95965 0.382812 6.39865C0.382812 4.88201 0.876338 3.48281 1.77238 2.45861C2.67911 1.42231 3.92328 0.851562 5.2761 0.851562C6.28721 0.851562 7.21319 1.18841 8.02824 1.85266C8.43958 2.18796 8.81243 2.59831 9.14091 3.07696C9.46953 2.59831 9.84225 2.18796 10.2537 1.85266C11.0688 1.18841 11.9948 0.851562 13.0059 0.851562C14.3585 0.851562 15.6028 1.42231 16.5096 2.45861C17.4056 3.48281 17.899 4.88201 17.899 6.39865C17.899 7.95965 17.3471 9.38857 16.1619 10.8955C15.1016 12.2437 13.5778 13.6121 11.8134 15.1966C11.2104 15.7379 10.5271 16.3516 9.81792 17.0052C9.6307 17.1778 9.39015 17.273 9.14091 17.273ZM5.2761 1.93279C4.21328 1.93279 3.23692 2.37975 2.52663 3.19145C1.80579 4.01539 1.40875 5.15435 1.40875 6.39865C1.40875 7.71153 1.87181 8.88569 2.91004 10.2058C3.91353 11.4817 5.40613 12.8221 7.13434 14.3741L7.13755 14.3769C7.74172 14.9195 8.42662 15.5346 9.13944 16.1914C9.85655 15.5333 10.5425 14.9172 11.1479 14.3738C12.876 12.8218 14.3684 11.4817 15.3719 10.2058C16.41 8.88569 16.8731 7.71153 16.8731 6.39865C16.8731 5.15435 16.476 4.01539 15.7552 3.19145C15.045 2.37975 14.0685 1.93279 13.0059 1.93279C12.2273 1.93279 11.5125 2.19359 10.8813 2.70787C10.3188 3.16638 9.92697 3.746 9.69725 4.15157C9.57911 4.36012 9.37117 4.48461 9.14091 4.48461C8.91066 4.48461 8.70271 4.36012 8.58458 4.15157C8.35499 3.746 7.96316 3.16638 7.40055 2.70787C6.76937 2.19359 6.05454 1.93279 5.2761 1.93279Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                            <a class="item__button" href="#">
-                                <svg width="19" height="5" viewBox="0 0 19 5" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="2.21296" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="9.51374" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="16.8067" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                </svg>
-                            </a>
-                            <button class="item__button">
-                                <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M25.3002 7.38483C25.1005 7.09416 20.2998 0.286377 12.711 0.286377C6.19912 0.286377 0.39649 7.05507 0.152336 7.34361C-0.0135879 7.5402 -0.0135879 7.82875 0.152336 8.02638C0.39649 8.31493 6.19912 15.0836 12.711 15.0836C19.2228 15.0836 25.0254 8.31493 25.2695 8.02638C25.4228 7.8446 25.4366 7.58143 25.3002 7.38483ZM12.711 14.0267C7.49074 14.0267 2.52729 9.04848 1.26639 7.68502C2.52521 6.32052 7.48335 1.34335 12.711 1.34335C18.819 1.34335 23.1303 6.31418 24.183 7.65649C22.9675 8.97659 17.9756 14.0267 12.711 14.0267Z" fill="#C4C4C4"/>
-                                    <path d="M12.7173 3.45752C10.3857 3.45752 8.48956 5.35368 8.48956 7.68528C8.48956 10.0169 10.3857 11.913 12.7173 11.913C15.0489 11.913 16.9451 10.0169 16.9451 7.68528C16.9451 5.35368 15.0489 3.45752 12.7173 3.45752ZM12.7173 10.8562C10.9692 10.8562 9.54649 9.4335 9.54649 7.68533C9.54649 5.93716 10.9692 4.5145 12.7173 4.5145C14.4655 4.5145 15.8882 5.93716 15.8882 7.68533C15.8882 9.4335 14.4655 10.8562 12.7173 10.8562Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <a class="item__container" href="#">
-                            <span class="item__image">
-                                <picture>
-                                    <img src="img/products/7.png" alt="" loading="lazy">
-                                </picture>
-                            </span>
-                            <p class="item__price">
-                                <span><strong>503 руб/упак</strong></span>
-                                <span>503 руб/шт</span>
-                            </p>
-                            <p class="item__name">Вода «Legend of Baikal» 11,3 л</p>
-                        </a>
-                        <a class="item__buy" href="#">
-                            <span>Купить</span>
-                            <svg width="18" height="19" viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.7213 11.5174V4.85541L3.79689 2.48581V1.6668C3.79689 0.776812 3.02869 0.0527344 2.08442 0.0527344H0.315796V1.1464H2.08439C2.38883 1.1464 2.63653 1.37986 2.63653 1.6668V11.7651C2.63653 12.9309 3.64279 13.8794 4.8797 13.8794H5.34404V15.1257C5.10698 15.0278 4.84543 14.973 4.57047 14.973C3.50409 14.973 2.63653 15.7907 2.63653 16.7958C2.63653 17.8009 3.50409 18.6186 4.57047 18.6186C5.57159 18.6186 6.39738 17.8979 6.4947 16.9781H6.50441V13.8794H16.5609V15.1257C16.3238 15.0278 16.0623 14.973 15.7873 14.973C14.721 14.973 13.8534 15.7907 13.8534 16.7958C13.8534 17.8009 14.721 18.6186 15.7873 18.6186C16.7885 18.6186 17.6142 17.8979 17.7116 16.9781H17.7213V12.7857H4.8797C4.28262 12.7857 3.79689 12.3279 3.79689 11.7651V11.3351L17.7213 11.5174ZM4.57047 17.5249C4.14392 17.5249 3.79689 17.1978 3.79689 16.7958C3.79689 16.3938 4.14392 16.0667 4.57047 16.0667C4.99702 16.0667 5.34404 16.3938 5.34404 16.7958C5.34404 17.1978 4.99702 17.5249 4.57047 17.5249ZM15.7873 17.5249C15.3608 17.5249 15.0137 17.1978 15.0137 16.7958C15.0137 16.3938 15.3608 16.0667 15.7873 16.0667C16.2139 16.0667 16.5609 16.3938 16.5609 16.7958C16.5609 17.1978 16.2139 17.5249 15.7873 17.5249ZM9.59871 10.3173L7.27798 10.2869V4.18955L9.59871 4.58447V10.3173ZM10.7591 4.78195L12.8864 5.14399V10.3604L10.7591 10.3325V4.78195ZM6.11762 10.2717L3.79689 10.2414V3.59715L6.11762 3.99207V10.2717ZM16.5609 10.4084L14.0468 10.3755V5.34143L16.5609 5.76927V10.4084Z" fill="#008DD2"/>
-                            </svg>
-                        </a>
-                    </article>
-                    <article class="item">
-                        <div class="item__buttons">
-                            <button class="item__button">
-                                <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.14091 17.273C8.89155 17.273 8.65113 17.1778 8.46377 17.0049C7.75616 16.3529 7.07393 15.7402 6.47203 15.1997L6.46896 15.1969C4.70427 13.6122 3.18039 12.2437 2.12011 10.8956C0.934871 9.38857 0.382812 7.95965 0.382812 6.39865C0.382812 4.88201 0.876338 3.48281 1.77238 2.45861C2.67911 1.42231 3.92328 0.851562 5.2761 0.851562C6.28721 0.851562 7.21319 1.18841 8.02824 1.85266C8.43958 2.18796 8.81243 2.59831 9.14091 3.07696C9.46953 2.59831 9.84225 2.18796 10.2537 1.85266C11.0688 1.18841 11.9948 0.851562 13.0059 0.851562C14.3585 0.851562 15.6028 1.42231 16.5096 2.45861C17.4056 3.48281 17.899 4.88201 17.899 6.39865C17.899 7.95965 17.3471 9.38857 16.1619 10.8955C15.1016 12.2437 13.5778 13.6121 11.8134 15.1966C11.2104 15.7379 10.5271 16.3516 9.81792 17.0052C9.6307 17.1778 9.39015 17.273 9.14091 17.273ZM5.2761 1.93279C4.21328 1.93279 3.23692 2.37975 2.52663 3.19145C1.80579 4.01539 1.40875 5.15435 1.40875 6.39865C1.40875 7.71153 1.87181 8.88569 2.91004 10.2058C3.91353 11.4817 5.40613 12.8221 7.13434 14.3741L7.13755 14.3769C7.74172 14.9195 8.42662 15.5346 9.13944 16.1914C9.85655 15.5333 10.5425 14.9172 11.1479 14.3738C12.876 12.8218 14.3684 11.4817 15.3719 10.2058C16.41 8.88569 16.8731 7.71153 16.8731 6.39865C16.8731 5.15435 16.476 4.01539 15.7552 3.19145C15.045 2.37975 14.0685 1.93279 13.0059 1.93279C12.2273 1.93279 11.5125 2.19359 10.8813 2.70787C10.3188 3.16638 9.92697 3.746 9.69725 4.15157C9.57911 4.36012 9.37117 4.48461 9.14091 4.48461C8.91066 4.48461 8.70271 4.36012 8.58458 4.15157C8.35499 3.746 7.96316 3.16638 7.40055 2.70787C6.76937 2.19359 6.05454 1.93279 5.2761 1.93279Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                            <a class="item__button" href="#">
-                                <svg width="19" height="5" viewBox="0 0 19 5" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="2.21296" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="9.51374" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                    <circle cx="16.8067" cy="2.5157" r="2.18953" fill="#C4C4C4"/>
-                                </svg>
-                            </a>
-                            <button class="item__button">
-                                <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M25.3002 7.38483C25.1005 7.09416 20.2998 0.286377 12.711 0.286377C6.19912 0.286377 0.39649 7.05507 0.152336 7.34361C-0.0135879 7.5402 -0.0135879 7.82875 0.152336 8.02638C0.39649 8.31493 6.19912 15.0836 12.711 15.0836C19.2228 15.0836 25.0254 8.31493 25.2695 8.02638C25.4228 7.8446 25.4366 7.58143 25.3002 7.38483ZM12.711 14.0267C7.49074 14.0267 2.52729 9.04848 1.26639 7.68502C2.52521 6.32052 7.48335 1.34335 12.711 1.34335C18.819 1.34335 23.1303 6.31418 24.183 7.65649C22.9675 8.97659 17.9756 14.0267 12.711 14.0267Z" fill="#C4C4C4"/>
-                                    <path d="M12.7173 3.45752C10.3857 3.45752 8.48956 5.35368 8.48956 7.68528C8.48956 10.0169 10.3857 11.913 12.7173 11.913C15.0489 11.913 16.9451 10.0169 16.9451 7.68528C16.9451 5.35368 15.0489 3.45752 12.7173 3.45752ZM12.7173 10.8562C10.9692 10.8562 9.54649 9.4335 9.54649 7.68533C9.54649 5.93716 10.9692 4.5145 12.7173 4.5145C14.4655 4.5145 15.8882 5.93716 15.8882 7.68533C15.8882 9.4335 14.4655 10.8562 12.7173 10.8562Z" fill="#C4C4C4"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <a class="item__container" href="#">
-                            <span class="item__image">
-                                <picture>
-                                    <img src="img/products/8.png" alt="" loading="lazy">
-                                </picture>
-                            </span>
-                            <p class="item__price">
-                                <span><strong>799 руб/упак</strong></span>
-                                <span>799 руб/шт</span>
-                            </p>
-                            <p class="item__name">Вода «Legend of Baikal» 18,9 л</p>
-                        </a>
-                        <a class="item__buy" href="#">
-                            <span>Купить</span>
-                            <svg width="18" height="19" viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.7213 11.5174V4.85541L3.79689 2.48581V1.6668C3.79689 0.776812 3.02869 0.0527344 2.08442 0.0527344H0.315796V1.1464H2.08439C2.38883 1.1464 2.63653 1.37986 2.63653 1.6668V11.7651C2.63653 12.9309 3.64279 13.8794 4.8797 13.8794H5.34404V15.1257C5.10698 15.0278 4.84543 14.973 4.57047 14.973C3.50409 14.973 2.63653 15.7907 2.63653 16.7958C2.63653 17.8009 3.50409 18.6186 4.57047 18.6186C5.57159 18.6186 6.39738 17.8979 6.4947 16.9781H6.50441V13.8794H16.5609V15.1257C16.3238 15.0278 16.0623 14.973 15.7873 14.973C14.721 14.973 13.8534 15.7907 13.8534 16.7958C13.8534 17.8009 14.721 18.6186 15.7873 18.6186C16.7885 18.6186 17.6142 17.8979 17.7116 16.9781H17.7213V12.7857H4.8797C4.28262 12.7857 3.79689 12.3279 3.79689 11.7651V11.3351L17.7213 11.5174ZM4.57047 17.5249C4.14392 17.5249 3.79689 17.1978 3.79689 16.7958C3.79689 16.3938 4.14392 16.0667 4.57047 16.0667C4.99702 16.0667 5.34404 16.3938 5.34404 16.7958C5.34404 17.1978 4.99702 17.5249 4.57047 17.5249ZM15.7873 17.5249C15.3608 17.5249 15.0137 17.1978 15.0137 16.7958C15.0137 16.3938 15.3608 16.0667 15.7873 16.0667C16.2139 16.0667 16.5609 16.3938 16.5609 16.7958C16.5609 17.1978 16.2139 17.5249 15.7873 17.5249ZM9.59871 10.3173L7.27798 10.2869V4.18955L9.59871 4.58447V10.3173ZM10.7591 4.78195L12.8864 5.14399V10.3604L10.7591 10.3325V4.78195ZM6.11762 10.2717L3.79689 10.2414V3.59715L6.11762 3.99207V10.2717ZM16.5609 10.4084L14.0468 10.3755V5.34143L16.5609 5.76927V10.4084Z" fill="#008DD2"/>
-                            </svg>
-                        </a>
-                    </article>
-                </section>
-                <a href="#" class="main-catalog__link">
-                    <span>Показать больше</span>
-                    <svg width="42" height="20" viewBox="0 0 42 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M41.5188 8.85831C41.5183 8.85782 41.5179 8.85726 41.5173 8.85677L32.9447 0.469672C32.3025 -0.158634 31.2637 -0.156296 30.6245 0.475156C29.9853 1.10653 29.9877 2.12774 30.63 2.75612L36.3856 8.3871H1.64062C0.734508 8.3871 0 9.10919 0 10C0 10.8908 0.734508 11.6129 1.64062 11.6129H36.3855L30.63 17.2439C29.9878 17.8723 29.9854 18.8935 30.6245 19.5248C31.2638 20.1564 32.3027 20.1586 32.9448 19.5303L41.5174 11.1432C41.5179 11.1427 41.5183 11.1422 41.5189 11.1417C42.1614 10.5112 42.1594 9.48669 41.5188 8.85831Z" fill="#464646"/>
-                    </svg>                        
+                <div class="popup-plan__item">
+                    <p class="popup-plan__content">Please tell us about what you are doing. Tell us what you do, what kind of business you have, how much money you make. It is very important to tell in two lines</p>
+                    <textarea class="popup-plan__textarea _req" name="message" placeholder="Your Message"></textarea>
+                </div>
+                <button class="popup-plan__submit" type="submit">Send the message</button>
+            </form>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#">
+                    <picture>
+                        <source srcset="img/logo_desktop.svg" type="image/svg+xml" media="(min-width: 768px)">
+                        <img src="img/logo_mobile.svg" alt="GLOE">
+                    </picture>
                 </a>
+                <button class="header__link _scrollToFooter">CONTACT</button>
             </div>
-        </section>
-        <section class="main-promotions screen">
-            <div class="container">
-                <h4 class="main-promotions__title title">Акции</h4>
-                <div class="main-promotions__items">
-                    <div class="main-promotions__row">
-                        <div class="main-promotions__left">
-                            <a class="main-promotions__item main-promotions__item-big" href="#">
-                                <div class="main-promotions__item-image">
-                                    <img src="img/promotions/big.jpg" alt="">
-                                </div>
-                                <p class="main-promotions__item-name">Бери больше, плати меньше</p>
-                            </a>
-                        </div>
-                        <div class="main-promotions__right">
-                            <div class="main-promotions__row">
-                                <a class="main-promotions__item" href="#">
-                                    <div class="main-promotions__item-image">
-                                        <img src="img/promotions/medium-1.jpg" alt="">
-                                    </div>
-                                    <p class="main-promotions__item-name">Приведи друга</p>
-                                </a>
-                                <a class="main-promotions__item" href="#">
-                                    <div class="main-promotions__item-image">
-                                        <img src="img/promotions/medium-2.jpg" alt="">
-                                    </div>
-                                    <p class="main-promotions__item-name">День рождения</p>
-                                </a>
-                            </div>
-                            <div class="main-promotions__row">
-                                <a class="main-promotions__item main-promotions__item-large" href="#">
-                                    <div class="main-promotions__item-image">
-                                        <img src="img/promotions/large.jpg" alt="">
-                                    </div>
-                                    <p class="main-promotions__item-name">Скидка Яндекс Маркет</p>
-                                </a>
-                                <a class="main-promotions__item" href="#">
-                                    <div class="main-promotions__item-image">
-                                        <img src="img/promotions/short.jpg" alt="">
-                                    </div>
-                                    <p class="main-promotions__item-name">Честные бонусы</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+    </header>
+    <div class="content">
+        <section class="main-screen">
+            <div class="main-screen__container container">
+                <h1 class="main-screen__title">GLOE</h1>
+                <h3 class="main-screen__subtitle">GLOBAL Electronic library</h3>
+                <button class="main-screen__button _scrollToInfo"><span>Get started</span><img
+                        src="img/icons/chevron_right_white.svg" alt=""></button>
+                <div class="main-screen__image">
+                    <img src="img/main-screen.svg" alt="">
                 </div>
             </div>
         </section>
-        <section class="main-news screen">
+        <section class="info">
             <div class="container">
-                <div class="main-news__top">
-                    <h4 class="main-news__title title">Новости</h4>
-                </div>
-                <section class="main-news__slider">
-                    <div class="main-news__arrows">
-                        <button class="main-news__arrow main-news__arrow-left">
-                            <svg width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M-2.43188e-06 12C-2.41308e-06 11.5698 0.168064 11.1398 0.503489 10.8118L11.0639 0.49234C11.7357 -0.164114 12.8249 -0.164113 13.4964 0.49234C14.1679 1.14853 14.1679 2.21264 13.4964 2.86915L4.15191 12L13.496 21.1308C14.1675 21.7873 14.1675 22.8513 13.496 23.5074C12.8245 24.1642 11.7354 24.1642 11.0636 23.5074L0.503163 13.1881C0.167682 12.86 -2.45068e-06 12.4299 -2.43188e-06 12Z" fill="#0083C3"/>
-                            </svg>                                
-                        </button>
-                        <button class="main-news__arrow main-news__arrow-right">
-                            <svg width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14 12C14 12.4302 13.8319 12.8602 13.4965 13.1882L2.93607 23.5077C2.2643 24.1641 1.17513 24.1641 0.503627 23.5077C-0.167876 22.8515 -0.167875 21.7874 0.503628 21.1309L9.84809 12L0.503956 2.86918C-0.167547 2.21273 -0.167546 1.14872 0.503957 0.492582C1.17546 -0.164188 2.26463 -0.164188 2.9364 0.492583L13.4968 10.8119C13.8323 11.14 14 11.5701 14 12Z" fill="#0083C3"/>
-                            </svg>                                
-                        </button>
+                <h4 class="info__title">What are we doing</h4>
+                <div class="info__line"></div>
+                <p class="info__subtitle">We are for world peace. Our services are targeted at a wide range of
+                    consumers. We will help everyone, even those who do not need help</p>
+                <section class="row info__items">
+                    <div class="col-12 col-lg-6">
+                        <article class="info__item _toLibraries">
+                            <img class="info__icon" src="img/info/icon1.svg" alt="icon">
+                            <div class="info__content">
+                                <h5>For libraries</h5>
+                                <p>Helping you to go online</p>
+                                <p>Digitalizing books</p>
+                                <p>Offering library-card-based advice</p>
+                                <p>Establishing a dedicated community of fellow thinkers</p>
+                            </div>
+                        </article>
                     </div>
-                    <div class="main-news__items">
-                        <article class="main-news__item">
-                            <a class="main-news__item-title" href="#">Вода «Legend of Baikal» стала спонсором творческого</a>
-                            <p class="main-news__item-content">Olkhon Ice Fest — это масштабный Фестиваль, который проходит в самом сердце Байкала, на острове Ольхон</p>
-                            <a class="main-news__item-link" href="#">подробнее</a>
+                    <div class="col-12 col-lg-6">
+                        <article class="info__item _toEducationalEstablishments">
+                            <img class="info__icon" src="img/info/icon2.svg" alt="icon">
+                            <div class="info__content">
+                                <h5>For Educational Establishments</h5>
+                                <p>Helping with scientific matter search</p>
+                                <p>Establishing and supporting communities</p>
+                                <p>Offering research-related advice to employees and students</p>
+                            </div>
                         </article>
-                        <article class="main-news__item">
-                            <a class="main-news__item-title" href="#">Вода «Legend of Baikal» стала спонсором творческого</a>
-                            <p class="main-news__item-content">Olkhon Ice Fest — это масштабный Фестиваль, который проходит в самом сердце Байкала, на острове Ольхон</p>
-                            <a class="main-news__item-link" href="#">подробнее</a>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <article class="info__item _toReaders">
+                            <img class="info__icon" src="img/info/icon3.svg" alt="icon">
+                            <div class="info__content">
+                                <h5>For Readers</h5>
+                                <p>Digitalizing your library</p>
+                                <p>Uploading your books to the cloud</p>
+                                <p>Preserving your offline library</p>
+                                <p>Making personal reading advice for you</p>
+                            </div>
                         </article>
-                        <article class="main-news__item">
-                            <a class="main-news__item-title" href="#">Вода «Legend of Baikal» стала спонсором творческого</a>
-                            <p class="main-news__item-content">Olkhon Ice Fest — это масштабный Фестиваль, который проходит в самом сердце Байкала, на острове Ольхон</p>
-                            <a class="main-news__item-link" href="#">подробнее</a>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <article class="info__item _toBookStories">
+                            <img class="info__icon" src="img/info/icon4.svg" alt="icon">
+                            <div class="info__content">
+                                <h5>For Book Stores </h5>
+                                <p>Offering personal advice to your buyers</p>
+                                <p>Offering a keyword-based book search</p>
+                                <p>Offering an online platform</p>
+                            </div>
                         </article>
                     </div>
                 </section>
             </div>
         </section>
-        <section class="main-partners screen">
+        <section class="services">
             <div class="container">
-                <h4 class="main-partners__title title">Где купить?</h4>
-                <p class="main-partners__subtitle">Приобрести нашу продукцию можно у официальных партнеров</p>
-                <div class="main-partners__slider">
-                    <button class="main-partners__arrow main-partners__arrow-left">
-                        <svg width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M-2.43188e-06 12C-2.41308e-06 11.5698 0.168064 11.1398 0.503489 10.8118L11.0639 0.49234C11.7357 -0.164114 12.8249 -0.164113 13.4964 0.49234C14.1679 1.14853 14.1679 2.21264 13.4964 2.86915L4.15191 12L13.496 21.1308C14.1675 21.7873 14.1675 22.8513 13.496 23.5074C12.8245 24.1642 11.7354 24.1642 11.0636 23.5074L0.503163 13.1881C0.167682 12.86 -2.45068e-06 12.4299 -2.43188e-06 12Z" fill="#0083C3"/>
-                        </svg> 
-                    </button>
-                    <button class="main-partners__arrow main-partners__arrow-right">
-                        <svg width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 12C14 12.4302 13.8319 12.8602 13.4965 13.1882L2.93607 23.5077C2.2643 24.1641 1.17513 24.1641 0.503627 23.5077C-0.167876 22.8515 -0.167875 21.7874 0.503628 21.1309L9.84809 12L0.503956 2.86918C-0.167547 2.21273 -0.167546 1.14872 0.503957 0.492582C1.17546 -0.164188 2.26463 -0.164188 2.9364 0.492583L13.4968 10.8119C13.8323 11.14 14 11.5701 14 12Z" fill="#0083C3"/>
-                        </svg> 
-                    </button>
-                    <div class="main-partners__items">
-                        <div class="main-partners__item">
-                            <img src="img/partners/1.png" alt="">
+                <article class="services__block row align-items-center _libraries">
+                    <div class="col-12 col-lg-8">
+                        <h4 class="services__title">Services for Libraries</h4>
+                        <div class="services__item">
+                            <h5>Helping you to go online</h5>
+                            <p>We can help you at the new stage of your library’s development and arrange a library
+                                service online. Thanks to that, you will be able to render services to library readers
+                                remotely, as well as contact online your colleagues from other libraries throughout the
+                                world. With the round-the-clock access and user-friendly search engine, users will
+                                quickly find anything they need – from anywhere and at any time. You can also get
+                                feedback and systemize it to see what fields of your work require enhancement</p>
                         </div>
-                        <div class="main-partners__item">
-                            <img src="img/partners/2.png" alt="">
+                        <div class="services__item">
+                            <h5>Digitalizing books</h5>
+                            <p>We can convert your books to the digital – fast and in the required resolution. We use
+                                high-tech scanners capable of 1,000+ pages per hour. To speed up your going online even
+                                further, you can use our extensive digital book base. We scan rare and illustrated books
+                                with high resolution, saving all the printing details</p>
                         </div>
-                        <div class="main-partners__item">
-                            <img src="img/partners/3.png" alt="">
+                        <div class="services__item">
+                            <h5>Offering library-card-based advice </h5>
+                            <p>We can compile a base of your offline and online readers. Using their reading history, we
+                                can offer online service users and librarians reading selection advice. This can help
+                                find the appropriate literature in mere minutes</p>
                         </div>
-                        <div class="main-partners__item">
-                            <img src="img/partners/4.png" alt="">
-                        </div>
-                        <div class="main-partners__item">
-                            <img src="img/partners/5.png" alt="">
-                        </div>
-                        <div class="main-partners__item">
-                            <img src="img/partners/6.png" alt="">
-                        </div>
-                        <div class="main-partners__item">
-                            <img src="img/partners/7.png" alt="">
-                        </div>
-                        <div class="main-partners__item">
-                            <img src="img/partners/8.png" alt="">
+                        <div class="services__item">
+                            <h5>Establishing a dedicated community of fellow thinkers</h5>
+                            <p>Harry Potter fans and admirers of Terry Pratchett, contemporary poetry lovers and
+                                adherers of historic memoirs – all of them are there, attending your library. We know
+                                how to find and bring them together, as well as to setup an event schedule for their
+                                community for them to share their thoughts about books they have read, give personal
+                                advice, and discuss novelties. Thus, your library will have its own book club</p>
                         </div>
                     </div>
-                    <div class="main-partners__pagination">
-                        <span class="main-partners__pagination-active"></span><span></span><span></span><span></span><span></span>
+                    <div class="col-12 col-lg-4">
+                        <div class="row align-items-center">
+                            <div class="services__image col-6 col-lg-12">
+                                <img src="img/services/image1.png" alt="">
+                            </div>
+                            <div class="services__view col-6 col-lg-12">
+                                <button>
+                                    <label for="libraries">
+                                        <span>View pricing details</span>
+                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.78132 4.99999L0.481323 1.69999L1.42399 0.757324L5.66666 4.99999L1.42399 9.24266L0.481323 8.29999L3.78132 4.99999Z"
+                                                  fill="#357ABD"/>
+                                        </svg>
+                                    </label>
+                                </button>
+                                <p>from <strong>$290/month</strong> for premium account</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="services__block row align-items-center _bookStories">
+                    <div class="col-12 col-lg-8">
+                        <h4 class="services__title">Services for Book Stores</h4>
+                        <div class="services__item">
+                            <h5>Offering personal advice to your buyers</h5>
+                            <p>We can design a unique book rating system for you and engage clubs of readers and
+                                literary professionals. Visitors of online book stores will be offered purchase advice
+                                based on assortment renewal and actions of other buyers. We do not just offer world
+                                bestsellers but also collector’s pieces and dedicated literature. Apart from displaying
+                                novelties and popular goods, you will be able to customize pop-up windows offering books
+                                that you need to sell first along with campaign products</p>
+                        </div>
+                        <div class="services__item">
+                            <h5>Offering a keyword-based book search</h5>
+                            <p>With it, buyers will be able to find any book they need even if they do not know its
+                                author or full name. We can develop keyword selection recommendations for you based on
+                                literary genre names, fields of reference, names of central characters, book publication
+                                times, and many other parameters for the search to take mere seconds. This will save
+                                your buyers’ time, and they will feel pleased about attending your store</p>
+                        </div>
+                        <div class="services__item">
+                            <h5>Offering an online platform</h5>
+                            <p>We can make a virtual copy of your book store – an Internet platform with book notes,
+                                readers’ ratings and opinions, a user-friendly payment engine, and anything else you
+                                might need to succeed. Your audience will go beyond your city, and thousands of buyers
+                                will be able to purchase your books regardless the distance</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="row align-items-center">
+                            <div class="services__image col-6 col-lg-12">
+                                <img src="img/services/image2.png" alt="">
+                            </div>
+                            <div class="services__view col-6 col-lg-12">
+                                <button>
+                                    <label for="bookStories">
+                                        <span>View pricing details</span>
+                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.78132 4.99999L0.481323 1.69999L1.42399 0.757324L5.66666 4.99999L1.42399 9.24266L0.481323 8.29999L3.78132 4.99999Z"
+                                                  fill="#357ABD"/>
+                                        </svg>
+                                    </label>
+                                </button>
+                                <p>from <strong>$290/month</strong> for premium account</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="services__block row align-items-center _educationalEstablishments">
+                    <div class="col-12 col-lg-8">
+                        <h4 class="services__title">Services for Educational Establishments</h4>
+                        <div class="services__item">
+                            <h5>Helping with scientific matter search</h5>
+                            <p>With our united search system, which covers publications by various publishers, searching
+                                for scientific matters will be easier. Our company makes sure information is updated on
+                                time, and we are ready to offer you the most recent matters specially selected in the
+                                field of your research</p>
+                        </div>
+                        <div class="services__item">
+                            <h5>Establishing and supporting communities</h5>
+                            <p>We can establish an expert community that will help with finding answers to scientific
+                                matter search questions. Moreover, we can support communities of student and teachers
+                                established within your university by offering you a user-friendly platform for sharing
+                                information, hosting conferences as well as other education and entertainment events</p>
+                        </div>
+                        <div class="services__item">
+                            <h5>Offering research-related advice to employees and students</h5>
+                            <p>Offering research-related advice to employees and students
+                                Our flexible and multifunctional search engine will guide you through many millions of
+                                issues in our scientific matter base and help you find the most dedicated publications,
+                                articles, and monographs. Personal advice will keep you posted on publication of new
+                                materials on the subject you are interested in</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="row align-items-center">
+                            <div class="services__image col-6 col-lg-12">
+                                <img src="img/services/image3.png" alt="">
+                            </div>
+                            <div class="services__view col-6 col-lg-12">
+                                <button>
+                                    <label for="educationalEstablishments">
+                                        <span>View pricing details</span>
+                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.78132 4.99999L0.481323 1.69999L1.42399 0.757324L5.66666 4.99999L1.42399 9.24266L0.481323 8.29999L3.78132 4.99999Z"
+                                                  fill="#357ABD"/>
+                                        </svg>
+                                    </label>
+                                </button>
+                                <p>from <strong>$290/month</strong> for premium account</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="services__block row align-items-center _readers">
+                    <div class="col-12 col-lg-8">
+                        <h4 class="services__title">Services for Readers</h4>
+                        <div class="services__item">
+                            <h5>Digitalizing your library</h5>
+                            <p>With our united search system, which covers publications by various publishers, searching
+                                for scientific matters will be easier. Our company makes sure information is updated on
+                                time, and we are ready to offer you the most recent matters specially selected in the
+                                field of your research</p>
+                        </div>
+                        <div class="services__item">
+                            <h5>Uploading your books to the cloud</h5>
+                            <p>We can establish an expert community that will help with finding answers to scientific
+                                matter search questions. Moreover, we can support communities of student and teachers
+                                established within your university by offering you a user-friendly platform for sharing
+                                information, hosting conferences as well as other education and entertainment events</p>
+                        </div>
+                        <div class="services__item">
+                            <h5>Digitalizing your library</h5>
+                            <p>Offering research-related advice to employees and students. Our flexible and
+                                multifunctional search engine will guide you through many millions of issues in our
+                                scientific matter base and help you find the most dedicated publications, articles, and
+                                monographs. Personal advice will keep you posted on publication of new materials on the
+                                subject you are interested in</p>
+                        </div>
+                        <div class="services__item">
+                            <h5>Uploading your books to the cloud </h5>
+                            <p>We can offer you a place to upload your library and arrange it into catalogues for you.
+                                All your family members will have access to the cloud storage and be able to update the
+                                collection. Your home library will be available from anywhere globally. Access it from
+                                your mobile, tablet, or PC</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="row align-items-center">
+                            <div class="services__image col-6 col-lg-12">
+                                <img src="img/services/image4.png" alt="">
+                            </div>
+                            <div class="services__view col-6 col-lg-12">
+                                <button>
+                                    <label for="readers">
+                                        <span>View pricing details</span>
+                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.78132 4.99999L0.481323 1.69999L1.42399 0.757324L5.66666 4.99999L1.42399 9.24266L0.481323 8.29999L3.78132 4.99999Z"
+                                                  fill="#357ABD"/>
+                                        </svg>
+                                    </label>
+                                </button>
+                                <p>from <strong>$290/month</strong> for premium account</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="plan">
+            <h4 class="plan__title">Get the right plan for future product</h4>
+            <div class="plan__switcher">
+                <div class="plan__switcher-container">
+                    <div class="plan__inner">
+                        <div class="plan__switch">
+                            <input type="radio" name="plan" value="Libraries" id="libraries" checked>
+                            <label for="libraries">for Libraries</label>
+                        </div>
+                        <div class="plan__switch">
+                            <input type="radio" name="plan" value="Book Stores" id="bookStories">
+                            <label for="bookStories">for Book Stores</label>
+                        </div>
+                        <div class="plan__switch">
+                            <input type="radio" name="plan" value="Educational Establishments"
+                                   id="educationalEstablishments">
+                            <label for="educationalEstablishments">for Educational Establishments</label>
+                        </div>
+                        <div class="plan__switch">
+                            <input type="radio" name="plan" value="Readers" id="readers">
+                            <label for="readers">for Readers</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="plan__items _plan-libraries plan__items-active">
+                <div class="plan__items-container">
+                    <div class="plan__inner">
+                        <div class="plan__item item">
+                            <p class="item__name" data-planName="Starter">Starter</p>
+                            <p class="item__price"><span>Free</span></p>
+                            <p class="item__content">1 Website</p>
+                            <p class="item__content">5 GB Hosting</p>
+                            <p class="item__content">Limited Support</p>
+                            <button class="item__submit _popup-plan-opener" data-title="Starter" type="submit">Get Started</button>
+                        </div>
+                        <div class="plan__item item item-active">
+                            <p class="item__name" data-planName="Premium">Premium</p>
+                            <p class="item__price"><span>$29</span>/month</p>
+                            <p class="item__content">10 Website</p>
+                            <p class="item__content">15 GB Hosting</p>
+                            <p class="item__content">Premium Support</p>
+                            <button class="item__submit _popup-plan-opener" data-title="Premium" type="submit">Get Started</button>
+                        </div>
+                        <div class="plan__item item">
+                            <p class="item__name" data-planName="Enterprise">Enterprise</p>
+                            <p class="item__price"><span>$49</span>/month</p>
+                            <p class="item__content">Unlimited Website</p>
+                            <p class="item__content">50 GB Hosting</p>
+                            <p class="item__content">Premium Support</p>
+                            <button class="item__submit _popup-plan-opener" data-title="Enterprise" type="submit">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="plan__items _plan-bookStories">
+                <div class="plan__items-container">
+                    <div class="plan__inner">
+                        <div class="plan__item item">
+                            <p class="item__name" data-planName="Starter">Starter</p>
+                            <p class="item__price"><span>Free</span></p>
+                            <p class="item__content">1 Website</p>
+                            <p class="item__content">5 GB Hosting</p>
+                            <p class="item__content">Limited Support</p>
+                            <button class="item__submit _popup-plan-opener" data-title="Starter" type="submit">Get Started</button>
+                        </div>
+                        <div class="plan__item item item-active">
+                            <p class="item__name" data-planName="Premium">Premium</p>
+                            <p class="item__price"><span>$29</span>/month</p>
+                            <p class="item__content">10 Website</p>
+                            <p class="item__content">15 GB Hosting</p>
+                            <p class="item__content">Premium Support</p>
+                            <button class="item__submit _popup-plan-opener" data-title="Premium" type="submit">Get Started</button>
+                        </div>
+                        <div class="plan__item item">
+                            <p class="item__name" data-planName="Enterprise">Enterprise</p>
+                            <p class="item__price"><span>$49</span>/month</p>
+                            <p class="item__content">Unlimited Website</p>
+                            <p class="item__content">50 GB Hosting</p>
+                            <p class="item__content">Premium Support</p>
+                            <button class="item__submit _popup-plan-opener" data-title="Enterprise" type="submit">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="plan__items _plan-educationalEstablishments">
+                <div class="plan__items-container">
+                    <div class="plan__inner">
+                        <div class="plan__item item">
+                            <p class="item__name" data-planName="Starter">Starter</p>
+                            <p class="item__price"><span>Free</span></p>
+                            <p class="item__content">1 Website</p>
+                            <p class="item__content">5 GB Hosting</p>
+                            <p class="item__content">Limited Support</p>
+                            <button class="item__submit _popup-plan-opener" data-title="Starter" type="submit">Get Started</button>
+                        </div>
+                        <div class="plan__item item item-active">
+                            <p class="item__name" data-planName="Premium">Premium</p>
+                            <p class="item__price"><span>$29</span>/month</p>
+                            <p class="item__content">10 Website</p>
+                            <p class="item__content">15 GB Hosting</p>
+                            <p class="item__content">Premium Support</p>
+                            <button class="item__submit _popup-plan-opener" data-title="Premium" type="submit">Get Started</button>
+                        </div>
+                        <div class="plan__item item">
+                            <p class="item__name" data-planName="Enterprise">Enterprise</p>
+                            <p class="item__price"><span>$49</span>/month</p>
+                            <p class="item__content">Unlimited Website</p>
+                            <p class="item__content">50 GB Hosting</p>
+                            <p class="item__content">Premium Support</p>
+                            <button class="item__submit _popup-plan-opener" data-title="Enterprise" type="submit">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="plan__items _plan-readers">
+                <div class="plan__items-container">
+                    <div class="plan__inner">
+                        <div class="plan__item item">
+                            <p class="item__name">Starter</p>
+                            <p class="item__price"><span>Free</span></p>
+                            <p class="item__content">1 Website</p>
+                            <p class="item__content">5 GB Hosting</p>
+                            <p class="item__content">Limited Support</p>
+                            <button class="item__submit _popup-plan-opener" data-title="Starter" type="submit">Get Started</button>
+                        </div>
+                        <div class="plan__item item item-active">
+                            <p class="item__name">Premium</p>
+                            <p class="item__price"><span>$29</span>/month</p>
+                            <p class="item__content">10 Website</p>
+                            <p class="item__content">15 GB Hosting</p>
+                            <p class="item__content">Premium Support</p>
+                            <button class="item__submit _popup-plan-opener" data-title="Premium" type="submit">Get Started</button>
+                        </div>
+                        <div class="plan__item item">
+                            <p class="item__name">Enterprise</p>
+                            <p class="item__price"><span>$49</span>/month</p>
+                            <p class="item__content">Unlimited Website</p>
+                            <p class="item__content">50 GB Hosting</p>
+                            <p class="item__content">Premium Support</p>
+                            <button class="item__submit _popup-plan-opener" data-title="Enterprise" type="submit">Get Started</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="main-videos screen">
+        <section class="message">
             <div class="container">
-                <div class="main-videos__slider">
-                    <button class="main-videos__arrow main-videos__arrow-left">
-                        <svg width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M-2.43188e-06 12C-2.41308e-06 11.5698 0.168064 11.1398 0.503489 10.8118L11.0639 0.49234C11.7357 -0.164114 12.8249 -0.164113 13.4964 0.49234C14.1679 1.14853 14.1679 2.21264 13.4964 2.86915L4.15191 12L13.496 21.1308C14.1675 21.7873 14.1675 22.8513 13.496 23.5074C12.8245 24.1642 11.7354 24.1642 11.0636 23.5074L0.503163 13.1881C0.167682 12.86 -2.45068e-06 12.4299 -2.43188e-06 12Z" fill="#0083C3"/>
-                        </svg> 
-                    </button>
-                    <button class="main-videos__arrow main-videos__arrow-right">
-                        <svg width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 12C14 12.4302 13.8319 12.8602 13.4965 13.1882L2.93607 23.5077C2.2643 24.1641 1.17513 24.1641 0.503627 23.5077C-0.167876 22.8515 -0.167875 21.7874 0.503628 21.1309L9.84809 12L0.503956 2.86918C-0.167547 2.21273 -0.167546 1.14872 0.503957 0.492582C1.17546 -0.164188 2.26463 -0.164188 2.9364 0.492583L13.4968 10.8119C13.8323 11.14 14 11.5701 14 12Z" fill="#0083C3"/>
-                        </svg> 
-                    </button>
-                    <div class="main-videos__items">
-                        <div class="main-videos__item">
-                            <img class="main-videos__item-video" src="img/videos/1.jpg" alt="">
-                            <button class="main-videos__item-play">
-                                <svg width="33" height="40" viewBox="0 0 33 40" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M33 20L2.02023e-06 39.0526L3.68586e-06 0.94744L33 20Z" fill="#FEFEFE"/>
-                                </svg>                                    
-                            </button>
-                        </div>
-                    </div>
-                    <div class="main-videos__pagination">
-                        <span class="main-videos__pagination-active"></span><span></span><span></span><span></span><span></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="main-replies screen">
-            <div class="container">
-                <h4 class="main-replies__title title">Отзывы</h4>
-                <p class="main-replies__subtitle">За долгие годы работы мы смогли собрать множетсво отзывов о нашей продукции</p>
-                <div class="main-replies__slider">
-                    <button class="main-replies__arrow main-replies__arrow-left">
-                        <svg width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M-2.43188e-06 12C-2.41308e-06 11.5698 0.168064 11.1398 0.503489 10.8118L11.0639 0.49234C11.7357 -0.164114 12.8249 -0.164113 13.4964 0.49234C14.1679 1.14853 14.1679 2.21264 13.4964 2.86915L4.15191 12L13.496 21.1308C14.1675 21.7873 14.1675 22.8513 13.496 23.5074C12.8245 24.1642 11.7354 24.1642 11.0636 23.5074L0.503163 13.1881C0.167682 12.86 -2.45068e-06 12.4299 -2.43188e-06 12Z" fill="#0083C3"/>
-                        </svg> 
-                    </button>
-                    <button class="main-replies__arrow main-replies__arrow-right">
-                        <svg width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 12C14 12.4302 13.8319 12.8602 13.4965 13.1882L2.93607 23.5077C2.2643 24.1641 1.17513 24.1641 0.503627 23.5077C-0.167876 22.8515 -0.167875 21.7874 0.503628 21.1309L9.84809 12L0.503956 2.86918C-0.167547 2.21273 -0.167546 1.14872 0.503957 0.492582C1.17546 -0.164188 2.26463 -0.164188 2.9364 0.492583L13.4968 10.8119C13.8323 11.14 14 11.5701 14 12Z" fill="#0083C3"/>
-                        </svg> 
-                    </button>
-                    <div class="main-replies__items">
-                        <div class="main-replies__item">
-                            <div class="main-replies__item-image">
-                                <img src="img/replies/1.png" alt="">
+                <div class="row">
+                    <div class="col-8 offset-2 col-lg-6 offset-lg-3">
+                        <h4 class="message__title">Is it interesting for you?</h4>
+                        <form action="#" class="form _form">
+                            <div class="form__block">
+                                <input class="_req" type="email" placeholder="Email Address" name="email" required>
                             </div>
-                            <p class="main-replies__item-title">Виктор</p>
-                            <p class="main-replies__item-title">26 лет, Москва</p>
-                            <p class="main-replies__item-content">Отличная вода и сервис. Надеюсь, что ещё долгое время буду заказывать там воду.</p>
-                        </div>
-                        <div class="main-replies__item">
-                            <div class="main-replies__item-image">
-                                <img src="img/replies/2.png" alt="">
+                            <div class="form__block">
+                                <textarea class="_req" placeholder="Your Message" name="message" required></textarea>
                             </div>
-                            <p class="main-replies__item-title">Антон</p>
-                            <p class="main-replies__item-title">32 года, Москва</p>
-                            <p class="main-replies__item-content">Качество, оперативность вкус воды</p>
-                        </div>
-                        <div class="main-replies__item">
-                            <div class="main-replies__item-image">
-                                <img src="img/replies/3.png" alt="">
-                            </div>
-                            <p class="main-replies__item-title">Матвей</p>
-                            <p class="main-replies__item-title">30 лет, Сызрань</p>
-                            <p class="main-replies__item-content">Качество, оперативность вкус воды</p>
-                        </div>
-                        <div class="main-replies__item">
-                            <div class="main-replies__item-image">
-                                <img src="img/replies/4.png" alt="">
-                            </div>
-                            <p class="main-replies__item-title">Вероника</p>
-                            <p class="main-replies__item-title">19 лет, Санкт-Петербург</p>
-                            <p class="main-replies__item-content">Качество самой воды в первую очередь</p>
-                        </div>
-                    </div>
-                    <div class="main-replies__pagination">
-                        <span class="main-replies__pagination-active"></span><span></span><span></span><span></span><span></span>
+                            <button type="submit" class="form__submit"><span>Let’s Talk</span></button>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__top">
-            <div class="footer__left">
-                <p class="footer__content">Задать&nbsp;вопрос по&nbsp;почте:</p>
-                <a class="footer__link-mail" href="mailto:shop@tkbaikalaqua.com">shop@tkbaikalaqua.com</a>
-            </div>
-            <div class="footer__center">
-                <a class="footer__logo" href="index.html">
-                    <img src="img/logo-blue.svg" alt="">
-                </a>
-                <div class="footer__social">
-                    <a class="footer__social-link" href="#">
-                        <svg width="20" height="40" viewBox="0 0 20 40" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.0891 6.64215H19.6825V0.282155C19.0626 0.195488 16.9305 0.000488281 14.4474 0.000488281C9.26642 0.000488281 5.7173 3.31215 5.7173 9.39882V15.0005H0V22.1105H5.7173V40.0005H12.727V22.1122H18.213L19.0839 15.0022H12.7253V10.1038C12.727 8.04882 13.2715 6.64215 16.0891 6.64215Z" fill="#008DD2"/>
-                        </svg>                            
-                    </a>
-                    <a class="footer__social-link" href="#">
-                        <svg width="37" height="38" viewBox="0 0 37 38" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.86548 0.904785H32.2385C34.8391 0.904785 36.9651 3.0315 36.9651 5.63207V33.0051C36.9651 35.6049 34.8391 37.7302 32.2385 37.7302H4.86548C2.26491 37.7302 0.136719 35.6048 0.136719 33.0051V5.63207C0.136719 3.0315 2.26491 0.904785 4.86548 0.904785ZM26.9657 4.99482C26.0526 4.99482 25.3078 5.74256 25.3078 6.65516V10.6221C25.3078 11.535 26.0526 12.2811 26.9657 12.2811H31.1276C32.0393 12.2811 32.7857 11.535 32.7857 10.6221V6.65516C32.7857 5.74256 32.0393 4.99482 31.1276 4.99482H26.9657ZM32.8015 16.4778H29.5611C29.8684 17.4813 30.0349 18.5397 30.0349 19.64C30.0349 25.7635 24.9077 30.7302 18.5855 30.7302C12.2649 30.7302 7.13754 25.7635 7.13754 19.64C7.13754 18.5397 7.30572 17.4813 7.61152 16.4778H4.2308V32.0355C4.2308 32.8412 4.88868 33.4966 5.69362 33.4966H31.3393C32.145 33.4966 32.8015 32.8412 32.8015 32.0355V16.4778ZM18.5856 12.0719C14.5026 12.0719 11.1905 15.2794 11.1905 19.2397C11.1905 23.1959 14.5026 26.4058 18.5856 26.4058C22.6709 26.4058 25.9831 23.1959 25.9831 19.2397C25.9831 15.2793 22.6709 12.0719 18.5856 12.0719Z" fill="#008DD2"/>
-                        </svg>                            
-                    </a>
-                    <a class="footer__social-link" href="#">
-                        <svg width="45" height="37" viewBox="0 0 45 37" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M44.5166 5.11823C42.8874 5.83287 41.1514 6.30656 39.3416 6.53656C41.2035 5.42489 42.6245 3.67799 43.2926 1.57239C41.5567 2.60739 39.64 3.33846 37.5974 3.74644C35.9491 1.99132 33.5998 0.904297 31.0369 0.904297C26.0645 0.904297 22.0614 4.94025 22.0614 9.88799C22.0614 10.5999 22.1217 11.2844 22.2695 11.9361C14.8027 11.5719 8.19572 7.99323 3.75727 2.54168C2.98239 3.88608 2.52786 5.42489 2.52786 7.08144C2.52786 10.1919 4.12965 12.9492 6.51727 14.5455C5.07429 14.5181 3.6587 14.0992 2.45941 13.4393C2.45941 13.4667 2.45941 13.5023 2.45941 13.5379C2.45941 17.9024 5.57263 21.5276 9.65513 22.3627C8.92406 22.5626 8.12727 22.6585 7.30036 22.6585C6.72536 22.6585 6.14489 22.6256 5.60001 22.5051C6.7637 26.0619 10.0658 28.6768 13.9923 28.7617C10.9366 31.152 7.05667 32.5923 2.85644 32.5923C2.11989 32.5923 1.41346 32.5594 0.707031 32.4691C4.68548 35.0347 9.40048 36.4995 14.4851 36.4995C31.0123 36.4995 40.048 22.8091 40.048 10.9422C40.048 10.5451 40.0343 10.1618 40.0151 9.7812C41.7976 8.5162 43.2954 6.93632 44.5166 5.11823Z" fill="#008DD2"/>
-                        </svg>                            
-                    </a>
+    <footer class="footer">
+        <div class="container h-100">
+            <div class="row flex-column justify-content-between flex-lg-row h-100">
+                <div class="col-7 col-lg-4 order-lg-1">
+                    <p class="text-lg-right">Unit&nbsp;617, 6/F, 131&nbsp;-&nbsp;132 Connaught&nbsp;Road&nbsp;West, Solo&nbsp;Workshops</p>
+                </div>
+                <div class="col-7 col-lg-4">
+                    <p>&copy; 2021 GLOE. All rights reserved</p>
+                </div>
+                <div class="h-100 col-5 col-lg-4">
+                    <ul class="h-100 d-flex flex-column justify-content-between align-items-end flex-lg-row justify-content-lg-start align-items-lg-start">
+                        <li class="footer__list-item"><a href="terms.html" target="_blank">Terms of Conditions</a></li>
+                        <li class="footer__list-item"><a href="privacy.html" target="_blank">Policy</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer__right">
-                <p class="footer__content">Позвонить&nbsp;на горячую&nbsp;линию</p>
-                <a class="footer__link-phone" href="tel:+74959800400">+7 (495) 980-04-00</a>
-            </div>
         </div>
-        <div class="footer__bottom">
-            <div class="footer__column">
-                <a class="footer__title-link" href="#">О воде</a>
-                <ul class="footer__list">
-                    <li class="footer__list-item"><a class="footer__link" href="#">Миссия</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">История</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Статьи</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Новости</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Вопросы и ответы</a></li>
-                </ul>
-            </div>
-            <div class="footer__column">
-                <a class="footer__title-link" href="#">О нас</a>
-                <ul class="footer__list">
-                    <li class="footer__list-item"><a class="footer__link" href="#">Оплата</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Доставка</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Документы</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Безопасность</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Контакты</a></li>
-                </ul>
-            </div>
-            <div class="footer__column">
-                <a class="footer__title-link" href="#">Каталог</a>
-                <ul class="footer__list">
-                    <li class="footer__list-item"><a class="footer__link" href="#">Байкальская вода</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Аренда кулеров</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Орехи/Крекеры</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Напитки</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Масла</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Мёд/Варенье</a></li>
-                </ul>
-            </div>
-            <div class="footer__column">
-                <a class="footer__title-link" href="#">Сотрудничество</a>
-                <ul class="footer__list">
-                    <li class="footer__list-item"><a class="footer__link" href="#">Скидки</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Условия</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Оптовые цены</a></li>
-                </ul>
-            </div>
-            <div class="footer__column">
-                <a class="footer__title-link" href="#">Новости</a>
-                <ul class="footer__list">
-                    <li class="footer__list-item"><a class="footer__link" href="#">Ноябрь</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Кандидаты</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Торговые условия</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Розничная торговля</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Доставка</a></li>
-                </ul>
-            </div>
-            <div class="footer__column">
-                <a class="footer__title-link" href="#">Контакты</a>
-                <ul class="footer__list">
-                    <li class="footer__list-item"><a class="footer__link" href="#">Адрес склада</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Номера телефонов</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Отдел продаж</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Документы</a></li>
-                    <li class="footer__list-item"><a class="footer__link" href="#">Рекомендации</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer></main>
-<script src="js/main.js"></script></body>
+    </footer>
+</main>
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+</body>
 </html>
