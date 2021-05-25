@@ -11,10 +11,10 @@
 </head>
 <body>
 <main class="page">
-<header class="hidden header">
+<header class="header">
     <div class="header__container container">
         <div class="header__main-row">
-            <div class="header__column">
+            <div class="header__column hidden">
                 <a class="header__logo" href="index.html">
                     <img src="img/logo-white.svg" alt="logo">
                 </a>
@@ -22,7 +22,7 @@
                     <div class="city__current">Москва</div>
                 </div>
             </div>
-            <div class="header__column header__large">
+            <div class="header__column header__large hidden">
                 <div class="header__row">
                     <form action="#" class="search">
                         <button class="search__submit" type="submit">
@@ -74,9 +74,13 @@
     </div>
 </header>    <div class="content">
 
-        <section class="hidden main-banner screen">
+        <section class="main-banner screen">
             <div class="main-banner__image">
-                <img src="img/main-bg.jpg" alt="">
+                <picture>
+                    <source srcset="img/banner/main-bg-mobile.jpg" media="(max-width: 480px)">
+                    <source srcset="img/banner/main-bg-tablet.jpg" media="(max-width: 1000px)">
+                    <img src="img/banner/main-bg.jpg" alt="">
+                </picture>
             </div>
             <div class="main-banner__container container">
                 <div class="main-banner__block">
