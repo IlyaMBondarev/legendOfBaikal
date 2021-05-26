@@ -1,7 +1,29 @@
 
 document.querySelector('.page').classList.add('loaded');
 
+// burger
 
+let burger = document.querySelector('.burger');
+let burgerOpeners = document.querySelectorAll('._burger-opener');
+let burgerClosers = document.querySelectorAll('._burger-closer');
+
+burgerOpeners.forEach(opener => {
+    opener.addEventListener('click', () => {
+        document.body.style.top = `-${window.scrollY}px`;
+        document.body.style.position = 'fixed';
+        burger.classList.add('active');
+    })
+})
+
+burgerClosers.forEach(closer => {
+    closer.addEventListener('click', () => {
+        burger.classList.remove('active');
+        let scrollY = document.body.style.top;
+        document.body.style.position = '';
+        document.body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    })
+})
 if (document.querySelector('.main-news__slider')) {
     const mainNewsSlider = new Swiper('.main-news__slider', {
         navigation: {
