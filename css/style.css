@@ -457,8 +457,17 @@ h1, h2, h3, h4, h5, h6 {
 .city {
   position: relative;
   padding-bottom: 10px;
+  width: 100%;
+  max-width: 143px;
+}
+@media screen and (max-width: 1230px) {
+  .city {
+    max-width: 93px;
+  }
 }
 .city__current {
+  display: block;
+  width: 100%;
   font-size: 18px;
   line-height: 21px;
   font-weight: 600;

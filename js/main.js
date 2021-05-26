@@ -24,6 +24,18 @@ burgerClosers.forEach(closer => {
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
     })
 })
+
+// city
+
+let cityBlock = document.querySelector('.city');
+let cityCurrent = cityBlock.querySelector('.city__current');
+let cityLists = cityBlock.querySelectorAll('.city__item');
+
+cityLists.forEach(city => {
+    city.addEventListener('click', () => {
+        cityCurrent.textContent = city.textContent;
+    })
+})
 if (document.querySelector('.main-news__slider')) {
     const mainNewsSlider = new Swiper('.main-news__slider', {
         navigation: {
