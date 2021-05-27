@@ -36,6 +36,68 @@ cityLists.forEach(city => {
         cityCurrent.textContent = city.textContent;
     })
 })
+if (document.querySelector('.main-banners__slider')) {
+    const mainBannersSlider = new Swiper('.main-banners__slider', {
+        navigation: {
+            nextEl: '.main-banners__arrow-right',
+            prevEl: '.main-banners__arrow-left'
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction'
+        },
+        simulateTouch: false,
+        watchOverflow: true,
+        slidesPerView: 1,
+        effect: 'fade',
+        touchMoveStopPropagation: true
+    });
+    let mainBannersPaginationItems = document.querySelectorAll('.main-banners__slider + .main-banners__right .main-banners__right-item');
+    let activeBanner = document.querySelector('.main-banners__slider + .main-banners__right .main-banners__right-item.active');
+
+    mainBannersPaginationItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            activeBanner.classList.remove('active');
+            item.classList.add('active');
+            activeBanner = item;
+            mainBannersSlider.slideTo(index);
+        })
+    })
+
+    if (document.querySelector('.main-banners__left-slider-container')) {
+        const mainBannersInnerSlider = new Swiper('.main-banners__left-slider-container', {
+            navigation: {
+                nextEl: '.main-banners__left-slider-arrow-right',
+                prevEl: '.main-banners__left-slider-arrow-left'
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true
+            },
+            watchOverflow: true,
+            spaceBetween: 50,
+            breakpoints: {
+                320: {
+                    slidesPerView: 3,
+                },
+                380: {
+                    slidesPerView: 4,
+                },
+                600: {
+                    slidesPerView: 5,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1230: {
+                    slidesPerView: 3,
+                }
+            }
+        })
+    }
+}
+
 if (document.querySelector('.main-news__slider')) {
     const mainNewsSlider = new Swiper('.main-news__slider', {
         navigation: {
