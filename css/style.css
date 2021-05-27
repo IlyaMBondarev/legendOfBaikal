@@ -197,11 +197,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 50;
+  position: relative;
   white-space: nowrap;
 }
 .header::before {
@@ -1198,8 +1194,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-banner {
   position: relative;
+  margin-top: -150px;
   height: 58.75vw;
   min-height: 830px;
+}
+@media screen and (max-width: 767px) {
+  .main-banner {
+    margin-top: -74px;
+  }
 }
 @media screen and (max-width: 480px) {
   .main-banner {
@@ -3910,8 +3912,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .breadscrumb {
-  margin-top: 35px;
-  margin-bottom: 35px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 .breadscrumb__items {
   display: flex;

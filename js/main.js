@@ -66,7 +66,11 @@ if (mainPagination && screens.length) {
             bullets[indexOfActiveSlide].classList.remove('active');
             bullet.classList.add('active');
             indexOfActiveSlide = index;
-            screens[indexOfActiveSlide].scrollIntoView({behavior: 'smooth'});
+            if (indexOfActiveSlide === 0) {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            } else {
+                screens[indexOfActiveSlide].scrollIntoView({behavior: 'smooth'});
+            }
         })
     })
 
@@ -77,7 +81,11 @@ if (mainPagination && screens.length) {
             bullets[indexOfActiveSlide].classList.remove('active');
             indexOfActiveSlide--;
             bullets[indexOfActiveSlide].classList.add('active');
-            screens[indexOfActiveSlide].scrollIntoView({behavior: 'smooth'});
+            if (indexOfActiveSlide === 0) {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            } else {
+                screens[indexOfActiveSlide].scrollIntoView({behavior: 'smooth'});
+            }
         }
     })
 

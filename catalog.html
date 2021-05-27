@@ -10,15 +10,23 @@
 </head>
 <body>
 <main class="page">
-<header class="hidden header">
+<header class="header">
     <div class="header__container container">
-        <div class="header__main-row">
+        <div class="header__main-row not-mobile">
             <div class="header__column">
                 <a class="header__logo" href="index.html">
                     <img src="img/logo-white.svg" alt="logo">
                 </a>
-                <div class="city">
-                    <div class="city__current">Москва</div>
+                <div class="city dropdown">
+                    <a class="city__current" href="#">Москва</a>
+                    <div class="dropdown__menu">
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Москва</a></li>
+                            <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Санкт-Петербург</a></li>
+                            <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Казань</a></li>
+                            <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Новороссийск</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="header__column header__large">
@@ -37,12 +45,12 @@
                         <a class="header__link" href="#"><i class="fab fa-instagram"></i></a>
                         <a class="header__link" href="#"><i class="fab fa-facebook-f"></i></a>
                     </div>
-                    <a class="header__cart" href="#">
+                    <a class="header__cart not-tablet" href="#">
                         <span class="header__cart-text">Корзина</span>
                         <div class="header__cart-item">
                             <svg class="header__cart-icon" width="28" height="31" viewBox="0 0 28 31" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M27.3919 19.1429V8.01918L5.47837 4.06258V2.69505C5.47837 1.20902 4.26942 0 2.78338 0H0V1.82612H2.78332C3.26243 1.82612 3.65225 2.21594 3.65225 2.69505V19.5566C3.65225 21.5032 5.23586 23.0868 7.18245 23.0868H7.9132V25.1678C7.54012 25.0043 7.12852 24.9129 6.69579 24.9129C5.01758 24.9129 3.65225 26.2782 3.65225 27.9564C3.65225 29.6346 5.01758 31 6.69579 31C8.2713 31 9.5709 29.7966 9.72405 28.2608H9.73933V23.0868H25.5657V25.1678C25.1927 25.0043 24.781 24.9129 24.3483 24.9129C22.6701 24.9129 21.3048 26.2782 21.3048 27.9564C21.3048 29.6346 22.6701 31 24.3483 31C25.9238 31 27.2234 29.7966 27.3766 28.2608H27.3919V21.2606H7.18245C6.24279 21.2606 5.47837 20.4962 5.47837 19.5566V18.8385L27.3919 19.1429ZM6.69579 29.1738C6.0245 29.1738 5.47837 28.6277 5.47837 27.9564C5.47837 27.2851 6.0245 26.739 6.69579 26.739C7.36707 26.739 7.9132 27.2851 7.9132 27.9564C7.9132 28.6277 7.36707 29.1738 6.69579 29.1738ZM24.3483 29.1738C23.677 29.1738 23.1309 28.6277 23.1309 27.9564C23.1309 27.2851 23.677 26.739 24.3483 26.739C25.0196 26.739 25.5657 27.2851 25.5657 27.9564C25.5657 28.6277 25.0196 29.1738 24.3483 29.1738ZM14.609 17.1391L10.9567 17.0884V6.90737L14.609 7.56679V17.1391ZM16.4351 7.89652L19.783 8.50103V17.211L16.4351 17.1645V7.89652ZM9.13062 17.063L5.47837 17.0123V5.91822L9.13062 6.57764V17.063ZM25.5657 17.2913L21.6091 17.2363V8.83071L25.5657 9.54509V17.2913Z" fill="white"/>
-                            </svg>                                    
+                            </svg>
                             <div class="header__cart-count">1</div>
                         </div>
                     </a>
@@ -55,23 +63,120 @@
                         <nav class="nav">
                             <ul class="nav__list">
                                 <li class="nav__list-item"><a class="nav__link" href="#">О воде</a></li>
-                                <li class="nav__list-item"><a class="nav__link" href="#">О нас</a></li>
+                                <li class="nav__list-item dropdown">
+                                    <a class="nav__link" href="#">О нас</a>
+                                    <div class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <input class="dropdown__item-check" id="dropdown0" type="checkbox">
+                                                <label class="dropdown__item-label" for="dropdown0">
+                                                    Новости индустрии
+                                                    <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6 4.50001C6 4.66131 5.92797 4.82259 5.78422 4.94557L1.25832 8.81537C0.970413 9.06154 0.503627 9.06154 0.21584 8.81537C-0.0719468 8.5693 -0.0719468 8.17026 0.21584 7.92407L4.22061 4.50001L0.21598 1.07594C-0.0718072 0.829771 -0.0718073 0.430768 0.21598 0.184717C0.503767 -0.0615721 0.970553 -0.0615721 1.25846 0.184717L5.78436 4.05446C5.92814 4.1775 6 4.33878 6 4.50001Z" fill="#0083C3"/>
+                                                    </svg>
+                                                    </label>
+                                                <ul class="dropdown__list">
+                                                    <li class="dropdown__item"><a href="#" class="dropdown__link">Новость</a></li>
+                                                    <li class="dropdown__item"><a href="#" class="dropdown__link">Новость</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <input class="dropdown__item-check" id="dropdown1" type="checkbox">
+                                                <label class="dropdown__item-label" for="dropdown1">
+                                                    Статьи и обзоры
+                                                    <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6 4.50001C6 4.66131 5.92797 4.82259 5.78422 4.94557L1.25832 8.81537C0.970413 9.06154 0.503627 9.06154 0.21584 8.81537C-0.0719468 8.5693 -0.0719468 8.17026 0.21584 7.92407L4.22061 4.50001L0.21598 1.07594C-0.0718072 0.829771 -0.0718073 0.430768 0.21598 0.184717C0.503767 -0.0615721 0.970553 -0.0615721 1.25846 0.184717L5.78436 4.05446C5.92814 4.1775 6 4.33878 6 4.50001Z" fill="#0083C3"/>
+                                                    </svg>
+                                                </label>
+                                                <ul class="dropdown__list">
+                                                    <li class="dropdown__item"><a href="#" class="dropdown__link">Статья</a></li>
+                                                    <li class="dropdown__item"><a href="#" class="dropdown__link">Обзор</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
                                 <li class="nav__list-item"><a class="nav__link" href="#">Каталог</a></li>
                                 <li class="nav__list-item"><a class="nav__link" href="#">Сотрудничество</a></li>
-                                <li class="nav__list-item"><a class="nav__link" href="#">Новости</a></li>
-                                <li class="nav__list-item"><a class="nav__link" href="#">Контакты</a></li>
-                                <li class="nav__list-item"><a class="nav__link" href="#">Акции</a></li>
+                                <li class="nav__list-item not-tablet"><a class="nav__link" href="#">Новости</a></li>
+                                <li class="nav__list-item not-tablet"><a class="nav__link" href="#">Контакты</a></li>
+                                <li class="nav__list-item not-tablet"><a class="nav__link" href="#">Акции</a></li>
+                                <li class="nav__list-item tablet dropdown">
+                                    <a class="nav__link" href="#">Ещё...</a>
+                                    <div class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item"><a class="dropdown__item-label" href="#">Новости</a></li>
+                                            <li class="dropdown__item"><a class="dropdown__item-label" href="#">Контакты</a></li>
+                                            <li class="dropdown__item"><a class="dropdown__item-label" href="#">Акции</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
                             </ul>
                         </nav>
                     </div>
-                    <div class="header__right header__short">
+                    <div class="header__right header__short not-tablet">
                         <a class="header__phone" href="tel:+74959800400"><i class="fas fa-phone-alt"></i><span>+7 (495) 980-04-00</span></a>
                     </div>
+                    <a class="header__cart tablet not-mobile" href="#">
+                        <div class="header__cart-item">
+                            <svg class="header__cart-icon" width="28" height="31" viewBox="0 0 28 31" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M27.3919 19.1429V8.01918L5.47837 4.06258V2.69505C5.47837 1.20902 4.26942 0 2.78338 0H0V1.82612H2.78332C3.26243 1.82612 3.65225 2.21594 3.65225 2.69505V19.5566C3.65225 21.5032 5.23586 23.0868 7.18245 23.0868H7.9132V25.1678C7.54012 25.0043 7.12852 24.9129 6.69579 24.9129C5.01758 24.9129 3.65225 26.2782 3.65225 27.9564C3.65225 29.6346 5.01758 31 6.69579 31C8.2713 31 9.5709 29.7966 9.72405 28.2608H9.73933V23.0868H25.5657V25.1678C25.1927 25.0043 24.781 24.9129 24.3483 24.9129C22.6701 24.9129 21.3048 26.2782 21.3048 27.9564C21.3048 29.6346 22.6701 31 24.3483 31C25.9238 31 27.2234 29.7966 27.3766 28.2608H27.3919V21.2606H7.18245C6.24279 21.2606 5.47837 20.4962 5.47837 19.5566V18.8385L27.3919 19.1429ZM6.69579 29.1738C6.0245 29.1738 5.47837 28.6277 5.47837 27.9564C5.47837 27.2851 6.0245 26.739 6.69579 26.739C7.36707 26.739 7.9132 27.2851 7.9132 27.9564C7.9132 28.6277 7.36707 29.1738 6.69579 29.1738ZM24.3483 29.1738C23.677 29.1738 23.1309 28.6277 23.1309 27.9564C23.1309 27.2851 23.677 26.739 24.3483 26.739C25.0196 26.739 25.5657 27.2851 25.5657 27.9564C25.5657 28.6277 25.0196 29.1738 24.3483 29.1738ZM14.609 17.1391L10.9567 17.0884V6.90737L14.609 7.56679V17.1391ZM16.4351 7.89652L19.783 8.50103V17.211L16.4351 17.1645V7.89652ZM9.13062 17.063L5.47837 17.0123V5.91822L9.13062 6.57764V17.063ZM25.5657 17.2913L21.6091 17.2363V8.83071L25.5657 9.54509V17.2913Z" fill="white"/>
+                            </svg>                                    
+                            <div class="header__cart-count">1</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header__main-row mobile">
+            <div class="header__column">
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo-white.svg" alt="logo">
+                </a>
+            </div>
+            <div class="header__column">
+                <div class="header__row">
+                    <a class="header__cart mobile" href="#">
+                        <div class="header__cart-item">
+                            <svg class="header__cart-icon" width="28" height="31" viewBox="0 0 28 31" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M27.3919 19.1429V8.01918L5.47837 4.06258V2.69505C5.47837 1.20902 4.26942 0 2.78338 0H0V1.82612H2.78332C3.26243 1.82612 3.65225 2.21594 3.65225 2.69505V19.5566C3.65225 21.5032 5.23586 23.0868 7.18245 23.0868H7.9132V25.1678C7.54012 25.0043 7.12852 24.9129 6.69579 24.9129C5.01758 24.9129 3.65225 26.2782 3.65225 27.9564C3.65225 29.6346 5.01758 31 6.69579 31C8.2713 31 9.5709 29.7966 9.72405 28.2608H9.73933V23.0868H25.5657V25.1678C25.1927 25.0043 24.781 24.9129 24.3483 24.9129C22.6701 24.9129 21.3048 26.2782 21.3048 27.9564C21.3048 29.6346 22.6701 31 24.3483 31C25.9238 31 27.2234 29.7966 27.3766 28.2608H27.3919V21.2606H7.18245C6.24279 21.2606 5.47837 20.4962 5.47837 19.5566V18.8385L27.3919 19.1429ZM6.69579 29.1738C6.0245 29.1738 5.47837 28.6277 5.47837 27.9564C5.47837 27.2851 6.0245 26.739 6.69579 26.739C7.36707 26.739 7.9132 27.2851 7.9132 27.9564C7.9132 28.6277 7.36707 29.1738 6.69579 29.1738ZM24.3483 29.1738C23.677 29.1738 23.1309 28.6277 23.1309 27.9564C23.1309 27.2851 23.677 26.739 24.3483 26.739C25.0196 26.739 25.5657 27.2851 25.5657 27.9564C25.5657 28.6277 25.0196 29.1738 24.3483 29.1738ZM14.609 17.1391L10.9567 17.0884V6.90737L14.609 7.56679V17.1391ZM16.4351 7.89652L19.783 8.50103V17.211L16.4351 17.1645V7.89652ZM9.13062 17.063L5.47837 17.0123V5.91822L9.13062 6.57764V17.063ZM25.5657 17.2913L21.6091 17.2363V8.83071L25.5657 9.54509V17.2913Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <button class="header__burger _burger-opener">
+                        <span></span>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-</header>    <div class="content">
+</header>
+
+<div class="burger mobile">
+    <button class="burger__close _burger-closer">
+        <span></span>
+        <span></span>
+    </button>
+    <div class="burger__main">
+        <div class="account">
+            <a class="account__link" href="#">Вход/регистрация</a>
+        </div>
+        <ul class="burger__list">
+            <li class="burger__item"><a class="burger__link" href="#">О воде</a></li>
+            <li class="burger__item"><a class="burger__link" href="#">О нас</a></li>
+            <li class="burger__item"><a class="burger__link" href="#">Каталог</a></li>
+            <li class="burger__item"><a class="burger__link" href="#">Сотрудничество</a></li>
+            <li class="burger__item"><a class="burger__link" href="#">Новости</a></li>
+            <li class="burger__item"><a class="burger__link" href="#">Контакты</a></li>
+            <li class="burger__item"><a class="burger__link" href="#">Акции</a></li>
+        </ul>
+        <div class="burger__social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <a class="burger__phone" href="tel:+74959800400"><i class="fas fa-phone-alt"></i><span>+7 (495) 980-04-00</span></a>
+    </div>
+    </div>    <div class="content">
         <section class="catalog-category-desc">
             <div class="catalog-category-desc__container container">
                 <div class="catalog-category-desc__left">
