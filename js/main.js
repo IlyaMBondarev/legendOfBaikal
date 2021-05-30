@@ -27,13 +27,16 @@ burgerClosers.forEach(closer => {
 
 // city
 
-let cityBlock = document.querySelector('.city');
-let cityCurrent = cityBlock.querySelector('.city__current');
-let cityLists = cityBlock.querySelectorAll('.city__item');
+let cityBlocks = document.querySelectorAll('.city');
 
-cityLists.forEach(city => {
-    city.addEventListener('click', () => {
-        cityCurrent.textContent = city.textContent;
+cityBlocks.forEach(cityBlock => {
+    let cityCurrent = cityBlock.querySelector('.city__current');
+    let cityLists = cityBlock.querySelectorAll('.city__item');
+
+    cityLists.forEach(city => {
+        city.addEventListener('click', () => {
+            cityCurrent.textContent = city.textContent;
+        })
     })
 })
 
@@ -390,13 +393,7 @@ if (document.querySelector('.catalog-viewed__slider')) {
         spaceBetween: 15,
         breakpoints: {
             320: {
-                slidesPerView: 2,
-            },
-            450: {
-                slidesPerView: 3,
-            },
-            630: {
-                slidesPerView: 4,
+                slidesPerView: 'auto',
             },
             767: {
                 slidesPerView: 5,

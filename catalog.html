@@ -155,27 +155,60 @@
 
 <div class="burger mobile">
     <button class="burger__close _burger-closer">
-        <span></span>
-        <span></span>
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="27.2817" height="1.94869" rx="0.974345" transform="matrix(0.695598 0.718431 -0.695598 0.718431 1.35547 0)" fill="white"/>
+            <rect width="27.2817" height="1.94869" rx="0.974345" transform="matrix(-0.695598 0.718431 0.695598 0.718431 19.6445 0)" fill="white"/>
+        </svg>
     </button>
+    <div class="burger__social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+    </div>
     <div class="burger__main">
-        <div class="account">
-            <a class="account__link" href="#">Вход/регистрация</a>
+        <div class="burger__column">
+            <a class="burger__logo" href="index.html">
+                <img src="img/logo-white.svg" alt="logo">
+            </a>
+            <div class="city dropdown">
+                <a class="city__current" href="#">Москва</a>
+                <div class="dropdown__menu">
+                    <ul class="dropdown__list">
+                        <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Москва</a></li>
+                        <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Санкт-Петербург</a></li>
+                        <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Казань</a></li>
+                        <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Новороссийск</a></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
+        <div class="burger__row">
+            <a class="burger__phone" href="tel:+74959800400"><i class="fas fa-phone-alt"></i><span>+7 (495) 980-04-00</span></a>
+            <div class="account">
+                <a class="account__link" href="#">Вход/регистрация</a>
+            </div>
+        </div>
+
+        <form action="#" class="search">
+            <div class="search__block">
+                <input class="search__text" type="text" name="search" placeholder="Текст" required>
+            </div>
+            <button class="search__submit" type="submit">
+                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.7558 18.5775L14.0683 12.89C15.17 11.5292 15.8333 9.8 15.8333 7.91668C15.8333 3.55168 12.2816 0 7.91664 0C3.55164 0 0 3.55164 0 7.91664C0 12.2816 3.55168 15.8333 7.91668 15.8333C9.8 15.8333 11.5292 15.17 12.89 14.0683L18.5775 19.7558C18.74 19.9183 18.9533 20 19.1667 20C19.38 20 19.5934 19.9183 19.7559 19.7558C20.0817 19.43 20.0817 18.9033 19.7558 18.5775ZM7.91668 14.1666C4.47 14.1666 1.66668 11.3633 1.66668 7.91664C1.66668 4.46996 4.47 1.66664 7.91668 1.66664C11.3634 1.66664 14.1667 4.46996 14.1667 7.91664C14.1667 11.3633 11.3633 14.1666 7.91668 14.1666Z" fill="#21487B"/>
+                </svg>
+            </button>
+        </form>
+
         <ul class="burger__list">
             <li class="burger__item"><a class="burger__link" href="#">О воде</a></li>
             <li class="burger__item"><a class="burger__link" href="#">О нас</a></li>
             <li class="burger__item"><a class="burger__link" href="#">Каталог</a></li>
-            <li class="burger__item"><a class="burger__link" href="#">Сотрудничество</a></li>
             <li class="burger__item"><a class="burger__link" href="#">Новости</a></li>
+            <li class="burger__item"><a class="burger__link" href="#">Сотрудничество</a></li>
             <li class="burger__item"><a class="burger__link" href="#">Контакты</a></li>
             <li class="burger__item"><a class="burger__link" href="#">Акции</a></li>
         </ul>
-        <div class="burger__social">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </div>
-        <a class="burger__phone" href="tel:+74959800400"><i class="fas fa-phone-alt"></i><span>+7 (495) 980-04-00</span></a>
     </div>
     </div>    <div class="content">
         <section class="catalog-category-desc container">
