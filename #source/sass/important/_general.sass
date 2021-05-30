@@ -1,0 +1,127 @@
+//<шрифты>
+
+//<подключаем шрифты>
+
+@font-face
+  font-family: 'Gilroy'
+  src: url('../fonts/Gilroy-Regular.eot')
+  src: local('Gilroy Regular'), local('Gilroy-Regular'), url('../fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy-Regular.woff2') format('woff2'), url('../fonts/Gilroy-Regular.woff') format('woff'), url('../fonts/Gilroy-Regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Gilroy'
+  src: url('../fonts/Gilroy-Semibold.eot')
+  src: local('Gilroy Semibold'), local('Gilroy-Semibold'), url('../fonts/Gilroy-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy-Semibold.woff2') format('woff2'), url('../fonts/Gilroy-Semibold.woff') format('woff'), url('../fonts/Gilroy-Semibold.ttf') format('truetype')
+  font-weight: 600
+  font-style: normal
+
+@font-face
+  font-family: 'Gilroy'
+  src: url('../fonts/Gilroy-Bold.eot')
+  src: local('Gilroy Bold'), local('Gilroy-Bold'), url('../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy-Bold.woff2') format('woff2'), url('../fonts/Gilroy-Bold.woff') format('woff'), url('../fonts/Gilroy-Bold.ttf') format('truetype')
+  font-weight: 700
+  font-style: normal
+
+@font-face
+  font-family: 'Gilroy'
+  src: url('../fonts/Gilroy-Black.eot')
+  src: local('Gilroy Black'), local('Gilroy-Black'), url('../fonts/Gilroy-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy-Black.woff2') format('woff2'), url('../fonts/Gilroy-Black.woff') format('woff'), url('../fonts/Gilroy-Black.ttf') format('truetype')
+  font-weight: 900
+  font-style: normal
+
+//</подключаем шрифты>
+
+//<шрифт по умолчанию>
+$fontfamily: 'Gilroy'
+//</шрифт по умолчанию>
+
+//</шрифты>
+
+//<переменные>
+$minwidth: 320px
+$white: #ffffff
+$black: #000000
+$grey: #5C5C5C
+$blue: #0083C3
+$hover: #008DD2
+//</переменные>
+
+//<общие параметры>
+
+.hidden
+  display: none !important
+
+body
+  width: 100%
+  font-family: $fontfamily
+  font-size: 10px
+  color: $grey
+
+.tablet
+  @media screen and ( min-width: 1230.1px )
+    display: none !important
+
+.not-tablet
+  @media screen and ( max-width: 1230px )
+    display: none !important
+
+.mobile
+  @media screen and ( min-width: 767.1px )
+    display: none !important
+
+.not-mobile
+  @media screen and ( max-width: 767px )
+    display: none !important
+
+a
+  color: $grey
+
+.page
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  overflow-anchor: none
+
+.content
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+  overflow: hidden
+  background-color: $white
+  position: relative
+  & > *
+    width: 100%
+
+.container
+  max-width: 1230px
+  padding: 0 30px
+  margin: 0 auto
+  @media screen and ( max-width: 767px )
+    padding: 0 15px
+  @media screen and ( max-width: 480px )
+    padding: 0 5px
+
+.hidden
+  display: none
+
+.title
+  font-size: 50px
+  line-height: 60px
+  font-weight: 700
+  text-transform: uppercase
+  color: $blue
+  @media screen and ( max-width: 1230px )
+    font-size: 35px
+    line-height: 42px
+  @media screen and ( max-width: 767px )
+    font-size: 24px
+    line-height: 30px
+
+//<общие параметры>
+
+
+//<основной блок>
+
+//</основной блок>
+
