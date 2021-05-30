@@ -159,45 +159,136 @@ if (document.querySelector('.catalog-items__dropdown')) {
         sortDropdowns.forEach(dropdown => {
 
             let list = dropdown.querySelector('.catalog-items__dropdown-list');
+
             if (event.target === list || list.contains(event.target)) {
 
             }
+
             dropdown.classList.contains('active') ?
                 dropdown.classList.remove('active') :
-                event.target === dropdown || dropdown.contains(event.target) ?
-                    dropdown.classList.add('active') :
-                    ''
+                    event.target === dropdown || dropdown.contains(event.target) ?
+                        dropdown.classList.add('active') :
+                        ''
         })
     })
 }
 
-// double range inputs
+// filters
 
-if (document.querySelector('.range')) {
-    let ranges = document.querySelectorAll('.range');
+if (document.querySelector('.catalog-filters')) {
+    let filterBlock = document.querySelector('.catalog-filters');
+    let filters = filterBlock.querySelectorAll('.catalog-filters__item');
 
-    ranges.forEach(range => {
-        let rangeBlock = range.querySelector('.range__block');
-        let minButton = range.querySelector('.range__min');
-        let maxButton = range.querySelector('.range__max');
-        let rangeLine = range.querySelector('.range__center');
+    filters.forEach(filter => {
+        let openers = filter.querySelectorAll('.catalog-filters__item-title > *');
+        let info = filter.querySelector('.catalog-filters__item-info');
 
-        let minInput = range.querySelector('.range__curr-min');
-        let maxInput = range.querySelector('.range__curr-max');
-        /*
-        minButton.addEventListener('mousedown', (event) => {
+        openers.forEach(opener => {
+            filter.classList.contains('active') 
+                ? info.style.maxHeight = `${info.scrollHeight}px`: '';
 
-            let rangemove = document.addEventListener('mousemove', function rangemove(event) {
-                minButton.left = `${event.pageX - rangeBlock.pageX}px`;
+            opener.addEventListener('click', () => {
+                filter.classList.toggle('active');
+                info.style.maxHeight = info.style.maxHeight ? '' : `${info.scrollHeight}px`;
             })
-
-            let rangemoveStop = document.addEventListener('mouseup', function rangemoveStop() {
-                document.removeEventListener('mousemove', rangemove);
-                document.removeEventListener('mouseup', rangemoveStop);
-            })
-
-        })*/
+        })
     })
+
+
+    // mobile
+
+    if (document.querySelector('._filters-opener')) {
+
+        let filterOpener = document.querySelector('._filters-opener');
+        
+        document.addEventListener('click', (event) => {
+            if (filterBlock.classList.contains('active') && !(filterBlock.contains(event.target) || filterBlock === event.target) && !(filterOpener.contains(event.target) || filterOpener === event.target) ) {
+                filterBlock.classList.remove('active');
+                let scrollY = document.body.style.top;
+                document.body.style.position = '';
+                document.body.style.top = '';
+                window.scrollTo(0, parseInt(scrollY || '0') * -1);
+            }
+        })
+
+        filterOpener.addEventListener('click', () => {
+            document.body.style.top = `-${window.scrollY}px`;
+            document.body.style.position = 'fixed';
+            filterBlock.classList.add('active');
+        })
+    }
+
+    // double range inputs
+
+    if (document.querySelector('.range')) {
+        
+        let ranges = document.querySelectorAll('.range');
+
+        ranges.forEach(range => {
+            let rangeBlock = range.querySelector('.range__block');
+            let minButton = range.querySelector('.range__min');
+            let maxButton = range.querySelector('.range__max');
+            let rangeLine = range.querySelector('.range__center');
+
+            let minInput = range.querySelector('.range__curr-min');
+            let maxInput = range.querySelector('.range__curr-max');
+
+            let min = minInput.dataset.min;
+            let max = maxInput.dataset.max;
+            let rangeLength = max - min;
+
+            let minPressed = false;
+            let maxPressed = false;
+
+            minButton.addEventListener('mousedown', () => {
+                minPressed = true;
+            })
+
+            maxButton.addEventListener('mousedown', () => {
+                maxPressed = true;
+            })
+
+            document.addEventListener('mousemove', (event) => {
+                if (minPressed) {
+                    if (event.pageX - rangeBlock.offsetLeft >= 0 && event.pageX - rangeBlock.offsetLeft <= maxButton.offsetLeft) {
+                        minButton.style.left = `${event.pageX - rangeBlock.offsetLeft}px`;
+                        rangeLine.style.left = `${event.pageX - rangeBlock.offsetLeft}px`;
+                        rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
+                        minInput.value = Math.round(minButton.offsetLeft * rangeLength / rangeBlock.offsetWidth);
+                    } else if (event.pageX - rangeBlock.offsetLeft < 0) {
+                        minButton.style.left = `0px`;
+                        rangeLine.style.left = `0px`;
+                        rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
+                        minInput.value = min;
+                    } else if (event.pageX - rangeBlock.offsetLeft > maxButton.offsetLeft) {
+                        minButton.style.left = `${maxButton.offsetLeft}px`;
+                        rangeLine.style.left = `${maxButton.offsetLeft}px`;
+                        rangeLine.style.width = `0px`;
+                        minInput.value = maxInput.value;
+                    }
+                } else if (maxPressed) {
+                    if (event.pageX - rangeBlock.offsetLeft >= minButton.offsetLeft && event.pageX - rangeBlock.offsetLeft <= rangeBlock.offsetWidth) {
+                        maxButton.style.left = `${event.pageX - rangeBlock.offsetLeft}px`;
+                        rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
+                        maxInput.value = Math.round(maxButton.offsetLeft * rangeLength / rangeBlock.offsetWidth);
+                    } else if (event.pageX - rangeBlock.offsetLeft > rangeBlock.offsetWidth) {
+                        maxButton.style.left = `${rangeBlock.offsetWidth}px`;
+                        rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
+                        maxInput.value = max;
+                    } else if (event.pageX - rangeBlock.offsetLeft < minButton.offsetLeft) {
+                        maxButton.style.left = `${minButton.offsetLeft}px`;
+                        rangeLine.style.width = `0px`;
+                        maxInput.value = minInput.value;
+                    }
+                }
+            })
+
+            document.addEventListener('mouseup', function rangemoveStop() {
+                minPressed = false;
+                maxPressed = false;
+            })
+        })
+    }
 }
 
 // product images
@@ -210,10 +301,37 @@ if (document.querySelector('.product-main__left')) {
     images.forEach(image => {
         image.addEventListener('click', () => {
             bigImage.src = image.querySelector('img').src;
+            bigImage.alt = image.querySelector('img').alt;
             images.forEach(image => {
                 image.classList.remove('active');
             })
             image.classList.add('active');
+        })
+    })
+
+    bigImage.addEventListener('click', () => {
+        let popup = document.createElement('div');
+
+        popup.classList.add('popup-image');
+
+        let popupImage = document.createElement('img');
+
+        popupImage.setAttribute('src', bigImage.src);
+        popupImage.setAttribute('alt', bigImage.alt);
+
+        popup.appendChild(popupImage);
+        document.querySelector('body').appendChild(popup);
+
+        popup = document.querySelector('body .popup-image');
+        setTimeout(() => {
+            popup.classList.add('active');
+        }, 0)
+
+        popup.addEventListener('click', () => {
+            popup.classList.remove('active');
+            setTimeout(() => {
+                popup.parentNode.removeChild(popup);
+            }, 300)
         })
     })
 }
@@ -395,7 +513,7 @@ if (document.querySelector('.catalog-viewed__slider')) {
             320: {
                 slidesPerView: 'auto',
             },
-            767: {
+            768: {
                 slidesPerView: 5,
             }
         }
@@ -410,7 +528,19 @@ if (document.querySelector('.product-also__slider')) {
         },
         simulateTouch: false,
         watchOverflow: true,
-        slidesPerView: 4,
-        spaceBetween: 30,
+        breakpoints: {
+            320: {
+                slidesPerView: 'auto',
+                spaceBetween: 40,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+            1023: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            }
+        }
     });
 }

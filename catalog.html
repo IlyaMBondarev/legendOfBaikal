@@ -229,17 +229,17 @@
             </div>
             <button class="catalog-category-desc__more hidden">Читать далее</button>
         </section>
-        <section class="breadscrumb">
+        <section class="breadcrumbs">
             <div class="container">
-                <div class="breadscrumb__items">
-                    <div class="breadscrumb__item">
-                        <a class="breadscrumb__link" href="#">Главная</a>
+                <div class="breadcrumbs__items">
+                    <div class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Главная</a>
                     </div>
-                    <div class="breadscrumb__item">
-                        <a class="breadscrumb__link" href="#">Каталог товаров</a>
+                    <div class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Каталог товаров</a>
                     </div>
-                    <div class="breadscrumb__item">
-                        <a class="breadscrumb__link" href="#">Байкальская вода</a>
+                    <div class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Байкальская вода</a>
                     </div>
                 </div>
             </div>
@@ -285,9 +285,15 @@
                                 <rect y="15.3337" width="10" height="4" rx="2" fill="#0083C3"/>
                             </svg>
                         </div>
+                        <div class="catalog-filters__icon mobile">
+                            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="27.2857" height="27.2857" rx="4.5" stroke="#008DD2"/>
+                                <path d="M5.73238 5H21.2678C21.5418 4.9995 21.793 5.14883 21.9183 5.38665C22.0452 5.62768 22.0229 5.91792 21.8607 6.13804L16.1692 13.9601C16.1673 13.9628 16.1652 13.9653 16.1633 13.968C15.9565 14.2404 15.8447 14.5702 15.8441 14.9093V21.2865C15.8453 21.4755 15.7692 21.6568 15.6328 21.7908C15.4963 21.9248 15.3107 22 15.1172 22C15.0188 22 14.9215 21.9808 14.8306 21.944L11.6324 20.7543C11.3458 20.669 11.1556 20.4052 11.1556 20.0875V14.9093C11.1551 14.5704 11.0431 14.2404 10.8365 13.968C10.8346 13.9653 10.8325 13.9628 10.8306 13.9601L5.13928 6.13771C4.97705 5.91775 4.95477 5.62768 5.08175 5.38665C5.207 5.14883 5.4582 4.9995 5.73238 5ZM11.5497 13.4568C11.8676 13.8776 12.0395 14.3865 12.0405 14.9093V19.9826L14.9595 21.0684V14.9093C14.9605 14.3865 15.1324 13.8776 15.4505 13.4568L20.976 5.86297H6.024L11.5497 13.4568Z" fill="#008DD2"/>
+                            </svg>
+                        </div>
                         <p class="catalog-filters__title">Фильтры</p>
                     </div>
-                    <div class="catalog-filters__item active">
+                    <div class="catalog-filters__item">
                         <div class="catalog-filters__item-title">
                             <span>Розничная цена</span>
                             <div>
@@ -327,7 +333,20 @@
                         </div>
                         <div class="catalog-filters__item-info">
                             <div class="catalog-filters__checks">
-
+                                <input id="volume33" type="checkbox" name="volume33">
+                                <label class="catalog-filters__check catalog-filters__check-25" for="volume33">0.33 л</label>
+                                <input id="volume50" type="checkbox" name="volume50">
+                                <label class="catalog-filters__check catalog-filters__check-25" for="volume50">0.5 л</label>
+                                <input id="volume75" type="checkbox" name="volume75">
+                                <label class="catalog-filters__check catalog-filters__check-25" for="volume75">0.75 л</label>
+                                <input id="volume150" type="checkbox" name="volume150">
+                                <label class="catalog-filters__check catalog-filters__check-25" for="volume150">1.5 л</label>
+                                <input id="volume1130" type="checkbox" name="volume1130">
+                                <label class="catalog-filters__check catalog-filters__check-25" for="volume1130">11.3 л</label>
+                                <input id="volume1890" type="checkbox" name="volume1890">
+                                <label class="catalog-filters__check catalog-filters__check-25" for="volume1890">18.9 л</label>
+                                <input id="volume490" type="checkbox" name="volume490">
+                                <label class="catalog-filters__check catalog-filters__check-25" for="volume490">4.9 л</label>
                             </div>
                         </div>
                     </div>
@@ -340,7 +359,22 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="catalog-filters__item-info"></div>
+                        <div class="catalog-filters__item-info">
+                            <div class="catalog-filters__checks">
+                                <input id="packaging1" type="checkbox" name="packaging1">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="packaging1">1 бутылка</label>
+                                <input id="packaging12jars" type="checkbox" name="packaging12jars">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="packaging12jars">12 банок</label>
+                                <input id="packaging12" type="checkbox" name="packaging12">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="packaging12">12 бутылок</label>
+                                <input id="packaging2" type="checkbox" name="packaging2">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="packaging2">2 бутылки</label>
+                                <input id="packaging6" type="checkbox" name="packaging6">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="packaging6">6 бутылок</label>
+                                <input id="packaging9" type="checkbox" name="packaging9">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="packaging9">9 бутылок</label>
+                            </div>
+                        </div>
                     </div>
                     <div class="catalog-filters__item">
                         <div class="catalog-filters__item-title">
@@ -351,7 +385,16 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="catalog-filters__item-info"></div>
+                        <div class="catalog-filters__item-info">
+                            <div class="catalog-filters__checks">
+                                <input id="containerAluminumСan" type="checkbox" name="containerAluminumСan">
+                                <label class="catalog-filters__check catalog-filters__check-65" for="containerAluminumСan">Алюминиевая банка</label>
+                                <input id="containerPAT" type="checkbox" name="containerPAT">
+                                <label class="catalog-filters__check catalog-filters__check-30" for="containerPAT">ПЭТ</label>
+                                <input id="containerGlass" type="checkbox" name="containerGlass">
+                                <label class="catalog-filters__check catalog-filters__check-100" for="containerGlass">Стекло</label>
+                            </div>
+                        </div>
                     </div>
                     <div class="catalog-filters__item">
                         <div class="catalog-filters__item-title">
@@ -362,7 +405,14 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="catalog-filters__item-info"></div>
+                        <div class="catalog-filters__item-info">
+                            <div class="catalog-filters__checks">
+                                <input id="typeOfWaterWithoutGas" type="checkbox" name="typeOfWaterWithoutGas">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="typeOfWaterWithoutGas">Без газа</label>
+                                <input id="typeOfWaterWithGas" type="checkbox" name="typeOfWaterWithGas">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="typeOfWaterWithGas">С газом</label>
+                            </div>
+                        </div>
                     </div>
                     <div class="catalog-filters__item">
                         <div class="catalog-filters__item-title">
@@ -373,7 +423,14 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="catalog-filters__item-info"></div>
+                        <div class="catalog-filters__item-info">
+                            <div class="catalog-filters__checks">
+                                <input id="TypeOfPackagingPackage" type="checkbox" name="TypeOfPackagingPackage">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="TypeOfPackagingPackage">Упаковка</label>
+                                <input id="TypeOfPackagingThing" type="checkbox" name="TypeOfPackagingThing">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="TypeOfPackagingThing">Штука</label>
+                            </div>
+                        </div>
                     </div>
                     <button class="catalog-filters__clear" type="reset">
                         <span>Очистить</span>
@@ -388,7 +445,7 @@
 
                 <div class="catalog-items">
                     <div class="catalog-items__top">
-                        <button class="catalog-items__filters-opener mobile">
+                        <button class="catalog-items__filters-opener _filters-opener mobile">
                             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.732378 1.28006e-06H16.2678C16.5418 -0.000504368 16.793 0.14883 16.9183 0.386652C17.0452 0.627677 17.0229 0.917918 16.8607 1.13804L11.1692 8.96005C11.1673 8.96275 11.1652 8.96528 11.1633 8.96798C10.9565 9.24035 10.8447 9.5702 10.8441 9.90932V16.2865C10.8453 16.4755 10.7692 16.6568 10.6328 16.7908C10.4963 16.9248 10.3107 17 10.1172 17C10.0188 17 9.9215 16.9808 9.83063 16.944L6.63243 15.7543C6.34581 15.669 6.1556 15.4052 6.1556 15.0875V9.90932C6.15508 9.57037 6.04313 9.24035 5.8365 8.96798C5.8346 8.96528 5.83253 8.96275 5.83063 8.96005L0.13928 1.13771C-0.0229454 0.917749 -0.0452309 0.627677 0.081749 0.386652C0.207003 0.14883 0.458202 -0.000504368 0.732378 1.28006e-06ZM6.54967 8.45677C6.86756 8.87763 7.03946 9.38648 7.04049 9.90932V14.9826L9.95951 16.0684V9.90932C9.96054 9.38648 10.1324 8.87763 10.4505 8.45677L15.976 0.862971H1.024L6.54967 8.45677Z" fill="white"/>
                             </svg>

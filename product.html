@@ -211,20 +211,25 @@
         </ul>
     </div>
     </div>    <div class="content">
-        <section class="breadscrumb">
+        <section class="breadcrumbs">
             <div class="container">
-                <div class="breadscrumb__items">
-                    <div class="breadscrumb__item">
-                        <a class="breadscrumb__link" href="#">Главная</a>
+                <div class="breadcrumbs__items">
+                    <div class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Главная</a>
                     </div>
-                    <div class="breadscrumb__item">
-                        <a class="breadscrumb__link" href="#">Каталог товаров</a>
+                    <div class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Каталог товаров</a>
                     </div>
-                    <div class="breadscrumb__item">
-                        <a class="breadscrumb__link" href="#">Байкальская вода</a>
+                    <div class="breadcrumbs__item dropdown">
+                        <a class="breadcrumbs__link" href="#">Байкальская вода</a>
+                        <div class="dropdown__menu">
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item"><a class="breadcrumbs__link" href="#">Вода «Legend of Baikal» 0,75 л Стекло (упаковка 6 шт)</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="breadscrumb__item">
-                        <a class="breadscrumb__link" href="#">Вода «Legend of Baikal» 0,75 л Стекло (упаковка 6 шт)</a>
+                    <div class="breadcrumbs__item not-mobile">
+                        <a class="breadcrumbs__link" href="#">Вода «Legend of Baikal» 0,75 л Стекло (упаковка 6 шт)</a>
                     </div>
                 </div>
             </div>
@@ -268,9 +273,15 @@
                                 <rect y="15.3337" width="10" height="4" rx="2" fill="#0083C3"/>
                             </svg>
                         </div>
+                        <div class="catalog-filters__icon mobile">
+                            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="27.2857" height="27.2857" rx="4.5" stroke="#008DD2"/>
+                                <path d="M5.73238 5H21.2678C21.5418 4.9995 21.793 5.14883 21.9183 5.38665C22.0452 5.62768 22.0229 5.91792 21.8607 6.13804L16.1692 13.9601C16.1673 13.9628 16.1652 13.9653 16.1633 13.968C15.9565 14.2404 15.8447 14.5702 15.8441 14.9093V21.2865C15.8453 21.4755 15.7692 21.6568 15.6328 21.7908C15.4963 21.9248 15.3107 22 15.1172 22C15.0188 22 14.9215 21.9808 14.8306 21.944L11.6324 20.7543C11.3458 20.669 11.1556 20.4052 11.1556 20.0875V14.9093C11.1551 14.5704 11.0431 14.2404 10.8365 13.968C10.8346 13.9653 10.8325 13.9628 10.8306 13.9601L5.13928 6.13771C4.97705 5.91775 4.95477 5.62768 5.08175 5.38665C5.207 5.14883 5.4582 4.9995 5.73238 5ZM11.5497 13.4568C11.8676 13.8776 12.0395 14.3865 12.0405 14.9093V19.9826L14.9595 21.0684V14.9093C14.9605 14.3865 15.1324 13.8776 15.4505 13.4568L20.976 5.86297H6.024L11.5497 13.4568Z" fill="#008DD2"/>
+                            </svg>
+                        </div>
                         <p class="catalog-filters__title">Фильтры</p>
                     </div>
-                    <div class="catalog-filters__item active">
+                    <div class="catalog-filters__item">
                         <div class="catalog-filters__item-title">
                             <span>Розничная цена</span>
                             <div>
@@ -310,7 +321,20 @@
                         </div>
                         <div class="catalog-filters__item-info">
                             <div class="catalog-filters__checks">
-
+                                <input id="volume33" type="checkbox" name="volume33">
+                                <label class="catalog-filters__check catalog-filters__check-25" for="volume33">0.33 л</label>
+                                <input id="volume50" type="checkbox" name="volume50">
+                                <label class="catalog-filters__check catalog-filters__check-25" for="volume50">0.5 л</label>
+                                <input id="volume75" type="checkbox" name="volume75">
+                                <label class="catalog-filters__check catalog-filters__check-25" for="volume75">0.75 л</label>
+                                <input id="volume150" type="checkbox" name="volume150">
+                                <label class="catalog-filters__check catalog-filters__check-25" for="volume150">1.5 л</label>
+                                <input id="volume1130" type="checkbox" name="volume1130">
+                                <label class="catalog-filters__check catalog-filters__check-25" for="volume1130">11.3 л</label>
+                                <input id="volume1890" type="checkbox" name="volume1890">
+                                <label class="catalog-filters__check catalog-filters__check-25" for="volume1890">18.9 л</label>
+                                <input id="volume490" type="checkbox" name="volume490">
+                                <label class="catalog-filters__check catalog-filters__check-25" for="volume490">4.9 л</label>
                             </div>
                         </div>
                     </div>
@@ -323,7 +347,22 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="catalog-filters__item-info"></div>
+                        <div class="catalog-filters__item-info">
+                            <div class="catalog-filters__checks">
+                                <input id="packaging1" type="checkbox" name="packaging1">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="packaging1">1 бутылка</label>
+                                <input id="packaging12jars" type="checkbox" name="packaging12jars">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="packaging12jars">12 банок</label>
+                                <input id="packaging12" type="checkbox" name="packaging12">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="packaging12">12 бутылок</label>
+                                <input id="packaging2" type="checkbox" name="packaging2">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="packaging2">2 бутылки</label>
+                                <input id="packaging6" type="checkbox" name="packaging6">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="packaging6">6 бутылок</label>
+                                <input id="packaging9" type="checkbox" name="packaging9">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="packaging9">9 бутылок</label>
+                            </div>
+                        </div>
                     </div>
                     <div class="catalog-filters__item">
                         <div class="catalog-filters__item-title">
@@ -334,7 +373,16 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="catalog-filters__item-info"></div>
+                        <div class="catalog-filters__item-info">
+                            <div class="catalog-filters__checks">
+                                <input id="containerAluminumСan" type="checkbox" name="containerAluminumСan">
+                                <label class="catalog-filters__check catalog-filters__check-65" for="containerAluminumСan">Алюминиевая банка</label>
+                                <input id="containerPAT" type="checkbox" name="containerPAT">
+                                <label class="catalog-filters__check catalog-filters__check-30" for="containerPAT">ПЭТ</label>
+                                <input id="containerGlass" type="checkbox" name="containerGlass">
+                                <label class="catalog-filters__check catalog-filters__check-100" for="containerGlass">Стекло</label>
+                            </div>
+                        </div>
                     </div>
                     <div class="catalog-filters__item">
                         <div class="catalog-filters__item-title">
@@ -345,7 +393,14 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="catalog-filters__item-info"></div>
+                        <div class="catalog-filters__item-info">
+                            <div class="catalog-filters__checks">
+                                <input id="typeOfWaterWithoutGas" type="checkbox" name="typeOfWaterWithoutGas">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="typeOfWaterWithoutGas">Без газа</label>
+                                <input id="typeOfWaterWithGas" type="checkbox" name="typeOfWaterWithGas">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="typeOfWaterWithGas">С газом</label>
+                            </div>
+                        </div>
                     </div>
                     <div class="catalog-filters__item">
                         <div class="catalog-filters__item-title">
@@ -356,7 +411,14 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="catalog-filters__item-info"></div>
+                        <div class="catalog-filters__item-info">
+                            <div class="catalog-filters__checks">
+                                <input id="TypeOfPackagingPackage" type="checkbox" name="TypeOfPackagingPackage">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="TypeOfPackagingPackage">Упаковка</label>
+                                <input id="TypeOfPackagingThing" type="checkbox" name="TypeOfPackagingThing">
+                                <label class="catalog-filters__check catalog-filters__check-50" for="TypeOfPackagingThing">Штука</label>
+                            </div>
+                        </div>
                     </div>
                     <button class="catalog-filters__clear" type="reset">
                         <span>Очистить</span>
@@ -374,7 +436,7 @@
                         <div class="product-main__image-big">
                             <img src="img/product-page/item-id/1.png" alt="">
                         </div>
-                        <div class="product-main__images swiper-container">
+                        <div class="product-main__images">
                             <div class="product-main__image active">
                                 <img src="img/product-page/item-id/1.png" alt="">
                             </div>
@@ -393,47 +455,52 @@
                         <div class="product-main__top">
                             <h3 class="product-main__title">Вода «Legend of Baikal» 0,5 л Стекло (упаковка 9 шт)</h3>
                             <a href="#" class="product-main__add-to-favorites">
-                                <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.10226 13.7288L5.10227 13.7288C6.46531 15.4234 8.50364 17.2155 10.9199 19.3371C10.9205 19.3377 10.9212 19.3383 10.9219 19.3389L10.9222 19.3392L10.9263 19.3427L10.9263 19.3427C11.6724 19.9979 12.509 20.7325 13.3832 21.516C14.2619 20.731 15.1 19.9951 15.848 19.3385C18.265 17.2161 20.3038 15.4239 21.6672 13.7288C23.0616 11.9951 23.6461 10.5044 23.6461 8.86126C23.6461 7.27444 23.1285 5.8481 22.2177 4.83014C21.3239 3.83132 20.1003 3.28389 18.7638 3.28389C17.7978 3.28389 16.9119 3.59758 16.1185 4.22965L5.10226 13.7288ZM5.10226 13.7288C3.70769 11.9951 3.12319 10.5043 3.12319 8.86126C3.12319 7.27446 3.64081 5.84814 4.55162 4.83018L5.10226 13.7288ZM14.159 5.80331L14.5916 6.05395C14.3404 6.48761 13.8886 6.75654 13.3847 6.75654C12.8807 6.75654 12.429 6.48761 12.1777 6.05395L12.1777 6.05384C11.8748 5.53082 11.3667 4.80008 10.6509 4.22969C9.85743 3.59758 8.9715 3.28389 8.00569 3.28389C6.66908 3.28389 5.4456 3.83129 4.55166 4.83014L14.159 5.80331ZM14.159 5.80331L14.5916 6.05395C14.8946 5.53084 15.4028 4.80012 16.1184 4.22972L14.159 5.80331ZM9.33648 21.2105L9.33646 21.2106L9.34028 21.2139C10.1782 21.9496 11.1254 22.7814 12.1076 23.6662C12.4589 23.9832 12.9123 24.1596 13.3847 24.1596C13.8568 24.1596 14.3104 23.9832 14.6616 23.6666C15.646 22.7797 16.5947 21.9465 17.434 21.2097L17.4341 21.2097L17.4628 21.1844C19.8957 19.0482 22.043 17.1626 23.5459 15.2942C25.2494 13.1764 26.074 11.1247 26.074 8.86126C26.074 6.68808 25.3507 4.66127 24.0128 3.16606L24.0128 3.16604C22.6566 1.65043 20.7896 0.8125 18.7638 0.8125C17.2397 0.8125 15.8418 1.31166 14.6219 2.28379C14.1757 2.63931 13.7625 3.0508 13.3847 3.51319C13.0069 3.05077 12.5937 2.63931 12.1477 2.28384L12.1477 2.28381C10.9277 1.31167 9.52986 0.8125 8.00569 0.8125C5.97977 0.8125 4.11293 1.65043 2.75669 3.16604L2.75667 3.16606C1.41883 4.66125 0.695312 6.68804 0.695312 8.86126C0.695312 11.1247 1.52015 13.1765 3.22363 15.2944L3.22364 15.2944C4.72684 17.1631 6.87513 19.0494 9.3091 21.1865L9.3322 21.2067L9.33599 21.2101L9.33648 21.2105Z" fill="#D55555" stroke="#D45555"/>
+                                <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.14091 17.273C8.89155 17.273 8.65113 17.1778 8.46377 17.0049C7.75616 16.3529 7.07393 15.7402 6.47203 15.1997L6.46896 15.1969C4.70427 13.6122 3.18039 12.2437 2.12011 10.8956C0.934871 9.38857 0.382812 7.95965 0.382812 6.39865C0.382812 4.88201 0.876338 3.48281 1.77238 2.45861C2.67911 1.42231 3.92328 0.851562 5.2761 0.851562C6.28721 0.851562 7.21319 1.18841 8.02824 1.85266C8.43958 2.18796 8.81243 2.59831 9.14091 3.07696C9.46953 2.59831 9.84225 2.18796 10.2537 1.85266C11.0688 1.18841 11.9948 0.851562 13.0059 0.851562C14.3585 0.851562 15.6028 1.42231 16.5096 2.45861C17.4056 3.48281 17.899 4.88201 17.899 6.39865C17.899 7.95965 17.3471 9.38857 16.1619 10.8955C15.1016 12.2437 13.5778 13.6121 11.8134 15.1966C11.2104 15.7379 10.5271 16.3516 9.81792 17.0052C9.6307 17.1778 9.39015 17.273 9.14091 17.273ZM5.2761 1.93279C4.21328 1.93279 3.23692 2.37975 2.52663 3.19145C1.80579 4.01539 1.40875 5.15435 1.40875 6.39865C1.40875 7.71153 1.87181 8.88569 2.91004 10.2058C3.91353 11.4817 5.40613 12.8221 7.13434 14.3741L7.13755 14.3769C7.74172 14.9195 8.42662 15.5346 9.13944 16.1914C9.85655 15.5333 10.5425 14.9172 11.1479 14.3738C12.876 12.8218 14.3684 11.4817 15.3719 10.2058C16.41 8.88569 16.8731 7.71153 16.8731 6.39865C16.8731 5.15435 16.476 4.01539 15.7552 3.19145C15.045 2.37975 14.0685 1.93279 13.0059 1.93279C12.2273 1.93279 11.5125 2.19359 10.8813 2.70787C10.3188 3.16638 9.92697 3.746 9.69725 4.15157C9.57911 4.36012 9.37117 4.48461 9.14091 4.48461C8.91066 4.48461 8.70271 4.36012 8.58458 4.15157C8.35499 3.746 7.96316 3.16638 7.40055 2.70787C6.76937 2.19359 6.05454 1.93279 5.2761 1.93279Z" fill="#C4C4C4"/>
                                 </svg>
                             </a>
                         </div>
-                        <ul class="product-main__list">
-                            <li>Объем воды 0.5</li>
-                            <li>Стекло</li>
-                            <li>Цена за штуку 110 руб</li>
-                        </ul>
-                        <p class="product-main__price">379 Руб/Упак</p>
-                        <div class="product-main__rating">
-                            <div class="product-main__stars">
-                                <button class="product-main__star" data-rating="5">
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.91712 6.57874L10.6687 1.18803L12.4202 6.57874C12.656 7.30437 13.3322 7.79567 14.0952 7.79567H19.7633L15.1777 11.1273C14.5604 11.5758 14.3021 12.3707 14.5379 13.0964L16.2895 18.4871L11.7039 15.1554C11.0866 14.707 10.2507 14.707 9.63348 15.1554L5.04787 18.4871L6.79942 13.0964C7.03519 12.3707 6.77691 11.5758 6.15964 11.1273L1.57403 7.79567H7.24216C8.00514 7.79567 8.68134 7.30438 8.91712 6.57874Z" stroke="#FECC00" stroke-width="1.80132"/>
-                                    </svg>
-                                </button>
-                                <button class="product-main__star" data-rating="4">
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.91712 6.57874L10.6687 1.18803L12.4202 6.57874C12.656 7.30437 13.3322 7.79567 14.0952 7.79567H19.7633L15.1777 11.1273C14.5604 11.5758 14.3021 12.3707 14.5379 13.0964L16.2895 18.4871L11.7039 15.1554C11.0866 14.707 10.2507 14.707 9.63348 15.1554L5.04787 18.4871L6.79942 13.0964C7.03519 12.3707 6.77691 11.5758 6.15964 11.1273L1.57403 7.79567H7.24216C8.00514 7.79567 8.68134 7.30438 8.91712 6.57874Z" stroke="#FECC00" stroke-width="1.80132"/>
-                                    </svg>
-                                </button>
-                                <button class="product-main__star active" data-rating="3">
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.91712 6.57874L10.6687 1.18803L12.4202 6.57874C12.656 7.30437 13.3322 7.79567 14.0952 7.79567H19.7633L15.1777 11.1273C14.5604 11.5758 14.3021 12.3707 14.5379 13.0964L16.2895 18.4871L11.7039 15.1554C11.0866 14.707 10.2507 14.707 9.63348 15.1554L5.04787 18.4871L6.79942 13.0964C7.03519 12.3707 6.77691 11.5758 6.15964 11.1273L1.57403 7.79567H7.24216C8.00514 7.79567 8.68134 7.30438 8.91712 6.57874Z" stroke="#FECC00" stroke-width="1.80132"/>
-                                    </svg>
-                                </button>
-                                <button class="product-main__star" data-rating="2">
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.91712 6.57874L10.6687 1.18803L12.4202 6.57874C12.656 7.30437 13.3322 7.79567 14.0952 7.79567H19.7633L15.1777 11.1273C14.5604 11.5758 14.3021 12.3707 14.5379 13.0964L16.2895 18.4871L11.7039 15.1554C11.0866 14.707 10.2507 14.707 9.63348 15.1554L5.04787 18.4871L6.79942 13.0964C7.03519 12.3707 6.77691 11.5758 6.15964 11.1273L1.57403 7.79567H7.24216C8.00514 7.79567 8.68134 7.30438 8.91712 6.57874Z" stroke="#FECC00" stroke-width="1.80132"/>
-                                    </svg>
-                                </button>
-                                <button class="product-main__star" data-rating="1">
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.91712 6.57874L10.6687 1.18803L12.4202 6.57874C12.656 7.30437 13.3322 7.79567 14.0952 7.79567H19.7633L15.1777 11.1273C14.5604 11.5758 14.3021 12.3707 14.5379 13.0964L16.2895 18.4871L11.7039 15.1554C11.0866 14.707 10.2507 14.707 9.63348 15.1554L5.04787 18.4871L6.79942 13.0964C7.03519 12.3707 6.77691 11.5758 6.15964 11.1273L1.57403 7.79567H7.24216C8.00514 7.79567 8.68134 7.30438 8.91712 6.57874Z" stroke="#FECC00" stroke-width="1.80132"/>
-                                    </svg>
-                                </button>
+                        <div class="product-main__info">
+                            <ul class="product-main__list">
+                                <li>Объем воды 0.5</li>
+                                <li>Стекло</li>
+                                <li>Цена за штуку 110 руб</li>
+                            </ul>
+                            <div class="product-main__row">
+                                <p class="product-main__price">379 Руб/Упак</p>
+                                <div class="product-main__rating">
+                                    <div class="product-main__stars">
+                                        <button class="product-main__star" data-rating="5">
+                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.91712 6.57874L10.6687 1.18803L12.4202 6.57874C12.656 7.30437 13.3322 7.79567 14.0952 7.79567H19.7633L15.1777 11.1273C14.5604 11.5758 14.3021 12.3707 14.5379 13.0964L16.2895 18.4871L11.7039 15.1554C11.0866 14.707 10.2507 14.707 9.63348 15.1554L5.04787 18.4871L6.79942 13.0964C7.03519 12.3707 6.77691 11.5758 6.15964 11.1273L1.57403 7.79567H7.24216C8.00514 7.79567 8.68134 7.30438 8.91712 6.57874Z" stroke="#FECC00" stroke-width="1.80132"/>
+                                            </svg>
+                                        </button>
+                                        <button class="product-main__star" data-rating="4">
+                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.91712 6.57874L10.6687 1.18803L12.4202 6.57874C12.656 7.30437 13.3322 7.79567 14.0952 7.79567H19.7633L15.1777 11.1273C14.5604 11.5758 14.3021 12.3707 14.5379 13.0964L16.2895 18.4871L11.7039 15.1554C11.0866 14.707 10.2507 14.707 9.63348 15.1554L5.04787 18.4871L6.79942 13.0964C7.03519 12.3707 6.77691 11.5758 6.15964 11.1273L1.57403 7.79567H7.24216C8.00514 7.79567 8.68134 7.30438 8.91712 6.57874Z" stroke="#FECC00" stroke-width="1.80132"/>
+                                            </svg>
+                                        </button>
+                                        <button class="product-main__star active" data-rating="3">
+                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.91712 6.57874L10.6687 1.18803L12.4202 6.57874C12.656 7.30437 13.3322 7.79567 14.0952 7.79567H19.7633L15.1777 11.1273C14.5604 11.5758 14.3021 12.3707 14.5379 13.0964L16.2895 18.4871L11.7039 15.1554C11.0866 14.707 10.2507 14.707 9.63348 15.1554L5.04787 18.4871L6.79942 13.0964C7.03519 12.3707 6.77691 11.5758 6.15964 11.1273L1.57403 7.79567H7.24216C8.00514 7.79567 8.68134 7.30438 8.91712 6.57874Z" stroke="#FECC00" stroke-width="1.80132"/>
+                                            </svg>
+                                        </button>
+                                        <button class="product-main__star" data-rating="2">
+                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.91712 6.57874L10.6687 1.18803L12.4202 6.57874C12.656 7.30437 13.3322 7.79567 14.0952 7.79567H19.7633L15.1777 11.1273C14.5604 11.5758 14.3021 12.3707 14.5379 13.0964L16.2895 18.4871L11.7039 15.1554C11.0866 14.707 10.2507 14.707 9.63348 15.1554L5.04787 18.4871L6.79942 13.0964C7.03519 12.3707 6.77691 11.5758 6.15964 11.1273L1.57403 7.79567H7.24216C8.00514 7.79567 8.68134 7.30438 8.91712 6.57874Z" stroke="#FECC00" stroke-width="1.80132"/>
+                                            </svg>
+                                        </button>
+                                        <button class="product-main__star" data-rating="1">
+                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.91712 6.57874L10.6687 1.18803L12.4202 6.57874C12.656 7.30437 13.3322 7.79567 14.0952 7.79567H19.7633L15.1777 11.1273C14.5604 11.5758 14.3021 12.3707 14.5379 13.0964L16.2895 18.4871L11.7039 15.1554C11.0866 14.707 10.2507 14.707 9.63348 15.1554L5.04787 18.4871L6.79942 13.0964C7.03519 12.3707 6.77691 11.5758 6.15964 11.1273L1.57403 7.79567H7.24216C8.00514 7.79567 8.68134 7.30438 8.91712 6.57874Z" stroke="#FECC00" stroke-width="1.80132"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <a href="#" class="product-main__go-to-replies">432 Отзыва</a>
+                                </div>
                             </div>
-                            <a href="#" class="product-main__go-to-replies">432 Отзыва</a>
                         </div>
+                        
                         <div class="product-main__bottom">
                             <a href="#" class="product-main__buy">Купить</a>
                             <div class="product-main__count">
@@ -455,7 +522,7 @@
                     </div>
                 </div>
                 <div class="product-tabs">
-                    <div class="product-tabs__block">
+                    <div class="product-tabs__top">
                         <a class="product-tabs__tab active" href="#">Описание и характеристики</a>
                         <a class="product-tabs__tab" href="#">Способы оплаты</a>
                         <a class="product-tabs__tab" href="#">Доставка</a>
