@@ -1,0 +1,68 @@
+.about-banner
+    border-radius: 10px
+    margin-top: 10px
+    margin-bottom: 70px
+    @media screen and ( max-width: 1023px )
+        margin-bottom: 55px
+    @media screen and ( max-width: 767px )
+        margin-bottom: 35px
+    &__image
+        position: relative
+        border-radius: 10px
+        min-height: 196px
+        height: 27.6vw
+        max-height: 354px
+        max-width: 100%
+        overflow: hidden
+        & img
+            min-width: 100%
+            height: 100%
+        @media screen and ( max-width: 767px )
+            & img
+                position: absolute
+                left: 50%
+                top: 0
+                transform: translateX(-50%)
+        @media screen and ( max-width: 480px )
+            height: 61.25vw
+            max-height: none
+    &__title
+        position: absolute
+        left: 0
+        bottom: 0
+        border-radius: 10px 100px 10px 10px
+        padding: 40px 100px 30px 60px
+        font-size: 42px
+        line-height: 51px
+        font-weight: 700
+        text-transform: uppercase
+        color: $white
+        overflow: hidden
+        &::before
+            content: ''
+            position: absolute
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 100%
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)), url('../img/about-page/banner/banner-pc.jpg') no-repeat left bottom
+            filter: blur(30px)
+        & h2
+            position: relative
+        @media screen and ( max-width: 1023px )
+            font-size: 22px
+            line-height: 26px
+            padding: 22px 30px 15px 22px
+            border-radius: 5px 50px 5px 5px
+            &::before
+                filter: blur(15.6098px)
+        @media screen and ( max-width: 767px )
+            font-size: 17px
+            line-height: 20px
+            padding: 17px 25px 12px 20px
+            border-radius: 4px 40px 4px 4px
+            &::before
+                filter: blur(11.9205px)
+        @media screen and ( max-width: 480px )
+            &::before
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)), url('../img/about-page/banner/banner-mobile.jpg') no-repeat left bottom

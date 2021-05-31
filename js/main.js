@@ -422,7 +422,7 @@ if (document.querySelector('.main-news__slider')) {
 }
 
 if (document.querySelector('.main-partners__slider')) {
-    const mainRepliesSlider = new Swiper('.main-partners__slider', {
+    const mainPartnersSlider = new Swiper('.main-partners__slider', {
         navigation: {
             nextEl: '.main-partners__arrow-right',
             prevEl: '.main-partners__arrow-left'
@@ -501,7 +501,7 @@ if (document.querySelector('.main-replies__slider')) {
 }
 
 if (document.querySelector('.catalog-viewed__slider')) {
-    const mainNewsSlider = new Swiper('.catalog-viewed__slider', {
+    const catalogViewedSlider = new Swiper('.catalog-viewed__slider', {
         navigation: {
             nextEl: '.catalog-viewed__arrow-right',
             prevEl: '.catalog-viewed__arrow-left'
@@ -521,7 +521,7 @@ if (document.querySelector('.catalog-viewed__slider')) {
 }
 
 if (document.querySelector('.product-also__slider')) {
-    const mainNewsSlider = new Swiper('.product-also__slider', {
+    const productAlsoSlider = new Swiper('.product-also__slider', {
         navigation: {
             nextEl: '.product-also__arrow-right',
             prevEl: '.product-also__arrow-left'
@@ -543,4 +543,37 @@ if (document.querySelector('.product-also__slider')) {
             }
         }
     });
+}
+
+let aboutArticlesPCSlider, aboutArticlesMobileSlider;
+
+if (document.querySelector('.about-articles__slider-pc')) {
+    aboutArticlesPCSlider = new Swiper('.about-articles__slider-pc', {
+        navigation: {
+            nextEl: '.about-articles__arrow-right',
+            prevEl: '.about-articles__arrow-left'
+        },
+        pagination: {
+            el: '.about-articles__pagination',
+            clickable: true,
+            dynamicBullets: true
+        },
+        simulateTouch: false,
+        slidesPerView: 1,
+        watchOverflow: true,
+        spaceBetween: 15,
+    });
+}
+
+if (document.querySelector('.about-articles__slider-mobile')) {
+    aboutArticlesMobileSlider = new Swiper('.about-articles__slider-mobile', {
+        slidesPerView: 1,
+        watchOverflow: true,
+        spaceBetween: 15,
+    });
+}
+
+if (document.querySelector('.about-articles__slider-pc') && document.querySelector('.about-articles__slider-mobile')) {
+    aboutArticlesPCSlider.controller.control = aboutArticlesMobileSlider;
+    aboutArticlesMobileSlider.controller.control = aboutArticlesPCSlider;
 }
