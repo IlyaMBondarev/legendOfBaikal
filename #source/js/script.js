@@ -334,3 +334,22 @@ if (document.querySelector('.product-main__left')) {
         })
     })
 }
+
+// corporative-items mobile
+
+if (document.querySelector('.corporative-items__head .corporative-items__info')) {
+    let infoBlocks = document.querySelectorAll('.corporative-items__head .corporative-items__column');
+
+    infoBlocks.forEach(block => {
+        if (!(block.classList.contains('corporative-items__column-empty'))) {
+            let opener = block.querySelector('.corporative-items__info-opener');
+            let info = block.querySelector('.corporative-items__info');
+
+            opener.addEventListener('click', () => {
+                info.style.maxHeight = info.classList.contains('active') ? '' : `${info.scrollHeight}px`;
+                opener.classList.toggle('active');
+                info.classList.toggle('active');
+            })
+        }
+    })
+}

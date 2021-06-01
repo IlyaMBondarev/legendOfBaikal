@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legend of Baikal</title>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="page">
+<header class="header">
+    <div class="header__container container">
+        <div class="header__main-row not-mobile">
+            <div class="header__column">
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo-white.svg" alt="logo">
+                </a>
+                <div class="city dropdown">
+                    <a class="city__current" href="#">Москва</a>
+                    <div class="dropdown__menu">
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Москва</a></li>
+                            <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Санкт-Петербург</a></li>
+                            <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Казань</a></li>
+                            <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Новороссийск</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header__column header__large">
+                <div class="header__row">
+                    <form action="#" class="search">
+                        <button class="search__submit" type="submit">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.7558 18.5775L14.0683 12.89C15.17 11.5292 15.8333 9.8 15.8333 7.91668C15.8333 3.55168 12.2816 0 7.91664 0C3.55164 0 0 3.55164 0 7.91664C0 12.2816 3.55168 15.8333 7.91668 15.8333C9.8 15.8333 11.5292 15.17 12.89 14.0683L18.5775 19.7558C18.74 19.9183 18.9533 20 19.1667 20C19.38 20 19.5934 19.9183 19.7559 19.7558C20.0817 19.43 20.0817 18.9033 19.7558 18.5775ZM7.91668 14.1666C4.47 14.1666 1.66668 11.3633 1.66668 7.91664C1.66668 4.46996 4.47 1.66664 7.91668 1.66664C11.3634 1.66664 14.1667 4.46996 14.1667 7.91664C14.1667 11.3633 11.3633 14.1666 7.91668 14.1666Z" fill="#21487B"/>
+                            </svg>
+                        </button>
+                        <div class="search__block">
+                            <input class="search__text" type="text" name="search" placeholder="Текст" required>
+                        </div>
+                    </form>
+                    <div class="header__social">
+                        <a class="header__link" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="header__link" href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <a class="header__cart not-tablet" href="#">
+                        <span class="header__cart-text">Корзина</span>
+                        <div class="header__cart-item">
+                            <svg class="header__cart-icon" width="28" height="31" viewBox="0 0 28 31" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M27.3919 19.1429V8.01918L5.47837 4.06258V2.69505C5.47837 1.20902 4.26942 0 2.78338 0H0V1.82612H2.78332C3.26243 1.82612 3.65225 2.21594 3.65225 2.69505V19.5566C3.65225 21.5032 5.23586 23.0868 7.18245 23.0868H7.9132V25.1678C7.54012 25.0043 7.12852 24.9129 6.69579 24.9129C5.01758 24.9129 3.65225 26.2782 3.65225 27.9564C3.65225 29.6346 5.01758 31 6.69579 31C8.2713 31 9.5709 29.7966 9.72405 28.2608H9.73933V23.0868H25.5657V25.1678C25.1927 25.0043 24.781 24.9129 24.3483 24.9129C22.6701 24.9129 21.3048 26.2782 21.3048 27.9564C21.3048 29.6346 22.6701 31 24.3483 31C25.9238 31 27.2234 29.7966 27.3766 28.2608H27.3919V21.2606H7.18245C6.24279 21.2606 5.47837 20.4962 5.47837 19.5566V18.8385L27.3919 19.1429ZM6.69579 29.1738C6.0245 29.1738 5.47837 28.6277 5.47837 27.9564C5.47837 27.2851 6.0245 26.739 6.69579 26.739C7.36707 26.739 7.9132 27.2851 7.9132 27.9564C7.9132 28.6277 7.36707 29.1738 6.69579 29.1738ZM24.3483 29.1738C23.677 29.1738 23.1309 28.6277 23.1309 27.9564C23.1309 27.2851 23.677 26.739 24.3483 26.739C25.0196 26.739 25.5657 27.2851 25.5657 27.9564C25.5657 28.6277 25.0196 29.1738 24.3483 29.1738ZM14.609 17.1391L10.9567 17.0884V6.90737L14.609 7.56679V17.1391ZM16.4351 7.89652L19.783 8.50103V17.211L16.4351 17.1645V7.89652ZM9.13062 17.063L5.47837 17.0123V5.91822L9.13062 6.57764V17.063ZM25.5657 17.2913L21.6091 17.2363V8.83071L25.5657 9.54509V17.2913Z" fill="white"/>
+                            </svg>
+                            <div class="header__cart-count">1</div>
+                        </div>
+                    </a>
+                    <div class="account">
+                        <a class="account__link" href="#">Вход/регистрация</a>
+                    </div>
+                </div>
+                <div class="header__row">
+                    <div class="header__left header__large">
+                        <nav class="nav">
+                            <ul class="nav__list">
+                                <li class="nav__list-item"><a class="nav__link" href="#">О воде</a></li>
+                                <li class="nav__list-item dropdown">
+                                    <a class="nav__link" href="#">О нас</a>
+                                    <div class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <input class="dropdown__item-check" id="dropdown0" type="checkbox">
+                                                <label class="dropdown__item-label" for="dropdown0">
+                                                    Новости индустрии
+                                                    <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6 4.50001C6 4.66131 5.92797 4.82259 5.78422 4.94557L1.25832 8.81537C0.970413 9.06154 0.503627 9.06154 0.21584 8.81537C-0.0719468 8.5693 -0.0719468 8.17026 0.21584 7.92407L4.22061 4.50001L0.21598 1.07594C-0.0718072 0.829771 -0.0718073 0.430768 0.21598 0.184717C0.503767 -0.0615721 0.970553 -0.0615721 1.25846 0.184717L5.78436 4.05446C5.92814 4.1775 6 4.33878 6 4.50001Z" fill="#0083C3"/>
+                                                    </svg>
+                                                    </label>
+                                                <ul class="dropdown__list">
+                                                    <li class="dropdown__item"><a href="#" class="dropdown__link">Новость</a></li>
+                                                    <li class="dropdown__item"><a href="#" class="dropdown__link">Новость</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <input class="dropdown__item-check" id="dropdown1" type="checkbox">
+                                                <label class="dropdown__item-label" for="dropdown1">
+                                                    Статьи и обзоры
+                                                    <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6 4.50001C6 4.66131 5.92797 4.82259 5.78422 4.94557L1.25832 8.81537C0.970413 9.06154 0.503627 9.06154 0.21584 8.81537C-0.0719468 8.5693 -0.0719468 8.17026 0.21584 7.92407L4.22061 4.50001L0.21598 1.07594C-0.0718072 0.829771 -0.0718073 0.430768 0.21598 0.184717C0.503767 -0.0615721 0.970553 -0.0615721 1.25846 0.184717L5.78436 4.05446C5.92814 4.1775 6 4.33878 6 4.50001Z" fill="#0083C3"/>
+                                                    </svg>
+                                                </label>
+                                                <ul class="dropdown__list">
+                                                    <li class="dropdown__item"><a href="#" class="dropdown__link">Статья</a></li>
+                                                    <li class="dropdown__item"><a href="#" class="dropdown__link">Обзор</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav__list-item"><a class="nav__link" href="#">Каталог</a></li>
+                                <li class="nav__list-item"><a class="nav__link" href="#">Сотрудничество</a></li>
+                                <li class="nav__list-item not-tablet"><a class="nav__link" href="#">Новости</a></li>
+                                <li class="nav__list-item not-tablet"><a class="nav__link" href="#">Контакты</a></li>
+                                <li class="nav__list-item not-tablet"><a class="nav__link" href="#">Акции</a></li>
+                                <li class="nav__list-item tablet dropdown">
+                                    <a class="nav__link" href="#">Ещё...</a>
+                                    <div class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item"><a class="dropdown__item-label" href="#">Новости</a></li>
+                                            <li class="dropdown__item"><a class="dropdown__item-label" href="#">Контакты</a></li>
+                                            <li class="dropdown__item"><a class="dropdown__item-label" href="#">Акции</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__right header__short not-tablet">
+                        <a class="header__phone" href="tel:+74959800400"><i class="fas fa-phone-alt"></i><span>+7 (495) 980-04-00</span></a>
+                    </div>
+                    <a class="header__cart tablet not-mobile" href="#">
+                        <div class="header__cart-item">
+                            <svg class="header__cart-icon" width="28" height="31" viewBox="0 0 28 31" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M27.3919 19.1429V8.01918L5.47837 4.06258V2.69505C5.47837 1.20902 4.26942 0 2.78338 0H0V1.82612H2.78332C3.26243 1.82612 3.65225 2.21594 3.65225 2.69505V19.5566C3.65225 21.5032 5.23586 23.0868 7.18245 23.0868H7.9132V25.1678C7.54012 25.0043 7.12852 24.9129 6.69579 24.9129C5.01758 24.9129 3.65225 26.2782 3.65225 27.9564C3.65225 29.6346 5.01758 31 6.69579 31C8.2713 31 9.5709 29.7966 9.72405 28.2608H9.73933V23.0868H25.5657V25.1678C25.1927 25.0043 24.781 24.9129 24.3483 24.9129C22.6701 24.9129 21.3048 26.2782 21.3048 27.9564C21.3048 29.6346 22.6701 31 24.3483 31C25.9238 31 27.2234 29.7966 27.3766 28.2608H27.3919V21.2606H7.18245C6.24279 21.2606 5.47837 20.4962 5.47837 19.5566V18.8385L27.3919 19.1429ZM6.69579 29.1738C6.0245 29.1738 5.47837 28.6277 5.47837 27.9564C5.47837 27.2851 6.0245 26.739 6.69579 26.739C7.36707 26.739 7.9132 27.2851 7.9132 27.9564C7.9132 28.6277 7.36707 29.1738 6.69579 29.1738ZM24.3483 29.1738C23.677 29.1738 23.1309 28.6277 23.1309 27.9564C23.1309 27.2851 23.677 26.739 24.3483 26.739C25.0196 26.739 25.5657 27.2851 25.5657 27.9564C25.5657 28.6277 25.0196 29.1738 24.3483 29.1738ZM14.609 17.1391L10.9567 17.0884V6.90737L14.609 7.56679V17.1391ZM16.4351 7.89652L19.783 8.50103V17.211L16.4351 17.1645V7.89652ZM9.13062 17.063L5.47837 17.0123V5.91822L9.13062 6.57764V17.063ZM25.5657 17.2913L21.6091 17.2363V8.83071L25.5657 9.54509V17.2913Z" fill="white"/>
+                            </svg>                                    
+                            <div class="header__cart-count">1</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header__main-row mobile">
+            <div class="header__column">
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo-white.svg" alt="logo">
+                </a>
+            </div>
+            <div class="header__column">
+                <div class="header__row">
+                    <a class="header__cart mobile" href="#">
+                        <div class="header__cart-item">
+                            <svg class="header__cart-icon" width="28" height="31" viewBox="0 0 28 31" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M27.3919 19.1429V8.01918L5.47837 4.06258V2.69505C5.47837 1.20902 4.26942 0 2.78338 0H0V1.82612H2.78332C3.26243 1.82612 3.65225 2.21594 3.65225 2.69505V19.5566C3.65225 21.5032 5.23586 23.0868 7.18245 23.0868H7.9132V25.1678C7.54012 25.0043 7.12852 24.9129 6.69579 24.9129C5.01758 24.9129 3.65225 26.2782 3.65225 27.9564C3.65225 29.6346 5.01758 31 6.69579 31C8.2713 31 9.5709 29.7966 9.72405 28.2608H9.73933V23.0868H25.5657V25.1678C25.1927 25.0043 24.781 24.9129 24.3483 24.9129C22.6701 24.9129 21.3048 26.2782 21.3048 27.9564C21.3048 29.6346 22.6701 31 24.3483 31C25.9238 31 27.2234 29.7966 27.3766 28.2608H27.3919V21.2606H7.18245C6.24279 21.2606 5.47837 20.4962 5.47837 19.5566V18.8385L27.3919 19.1429ZM6.69579 29.1738C6.0245 29.1738 5.47837 28.6277 5.47837 27.9564C5.47837 27.2851 6.0245 26.739 6.69579 26.739C7.36707 26.739 7.9132 27.2851 7.9132 27.9564C7.9132 28.6277 7.36707 29.1738 6.69579 29.1738ZM24.3483 29.1738C23.677 29.1738 23.1309 28.6277 23.1309 27.9564C23.1309 27.2851 23.677 26.739 24.3483 26.739C25.0196 26.739 25.5657 27.2851 25.5657 27.9564C25.5657 28.6277 25.0196 29.1738 24.3483 29.1738ZM14.609 17.1391L10.9567 17.0884V6.90737L14.609 7.56679V17.1391ZM16.4351 7.89652L19.783 8.50103V17.211L16.4351 17.1645V7.89652ZM9.13062 17.063L5.47837 17.0123V5.91822L9.13062 6.57764V17.063ZM25.5657 17.2913L21.6091 17.2363V8.83071L25.5657 9.54509V17.2913Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <button class="header__burger _burger-opener">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="burger mobile">
+    <button class="burger__close _burger-closer">
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="27.2817" height="1.94869" rx="0.974345" transform="matrix(0.695598 0.718431 -0.695598 0.718431 1.35547 0)" fill="white"/>
+            <rect width="27.2817" height="1.94869" rx="0.974345" transform="matrix(-0.695598 0.718431 0.695598 0.718431 19.6445 0)" fill="white"/>
+        </svg>
+    </button>
+    <div class="burger__social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    <div class="burger__main">
+        <div class="burger__column">
+            <a class="burger__logo" href="index.html">
+                <img src="img/logo-white.svg" alt="logo">
+            </a>
+            <div class="city dropdown">
+                <a class="city__current" href="#">Москва</a>
+                <div class="dropdown__menu">
+                    <ul class="dropdown__list">
+                        <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Москва</a></li>
+                        <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Санкт-Петербург</a></li>
+                        <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Казань</a></li>
+                        <li class="dropdown__item"><a class="dropdown__item-label city__item" href="#">Новороссийск</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="burger__row">
+            <a class="burger__phone" href="tel:+74959800400"><i class="fas fa-phone-alt"></i><span>+7 (495) 980-04-00</span></a>
+            <div class="account">
+                <a class="account__link" href="#">Вход/регистрация</a>
+            </div>
+        </div>
+
+        <form action="#" class="search">
+            <div class="search__block">
+                <input class="search__text" type="text" name="search" placeholder="Текст" required>
+            </div>
+            <button class="search__submit" type="submit">
+                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.7558 18.5775L14.0683 12.89C15.17 11.5292 15.8333 9.8 15.8333 7.91668C15.8333 3.55168 12.2816 0 7.91664 0C3.55164 0 0 3.55164 0 7.91664C0 12.2816 3.55168 15.8333 7.91668 15.8333C9.8 15.8333 11.5292 15.17 12.89 14.0683L18.5775 19.7558C18.74 19.9183 18.9533 20 19.1667 20C19.38 20 19.5934 19.9183 19.7559 19.7558C20.0817 19.43 20.0817 18.9033 19.7558 18.5775ZM7.91668 14.1666C4.47 14.1666 1.66668 11.3633 1.66668 7.91664C1.66668 4.46996 4.47 1.66664 7.91668 1.66664C11.3634 1.66664 14.1667 4.46996 14.1667 7.91664C14.1667 11.3633 11.3633 14.1666 7.91668 14.1666Z" fill="#21487B"/>
+                </svg>
+            </button>
+        </form>
+
+        <ul class="burger__list">
+            <li class="burger__item"><a class="burger__link" href="#">О воде</a></li>
+            <li class="burger__item"><a class="burger__link" href="#">О нас</a></li>
+            <li class="burger__item"><a class="burger__link" href="#">Каталог</a></li>
+            <li class="burger__item"><a class="burger__link" href="#">Новости</a></li>
+            <li class="burger__item"><a class="burger__link" href="#">Сотрудничество</a></li>
+            <li class="burger__item"><a class="burger__link" href="#">Контакты</a></li>
+            <li class="burger__item"><a class="burger__link" href="#">Акции</a></li>
+        </ul>
+    </div>
+    </div>    <div class="content">
+
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="breadcrumbs__items">
+                    <div class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Главная</a>
+                    </div>
+                    <div class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Корпоративным клиентам</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="corporative-banner container">
+            <div class="corporative-banner__image">
+                <div class="corporative-banner__left">
+                    <h2 class="corporative-banner__title">Корпоративным клиентам</h2>
+                    <p class="corporative-banner__content">ООО «ТК «Байкал Аква» предлагает своим корпоративным клиентам специальные условия сотрудничества.</p>
+                    <p class="corporative-banner__content">Мы поможем вам решить вопрос с обеспечением питьевой водой офиса, производства или мероприятия.</p>
+                </div>
+                <picture>
+                    <img src="img/corporative-page/banner/banner-pc.jpg" alt="">
+                </picture>
+            </div>
+        </section>
+        <section class="corporative-advantages container">
+            <h4 class="corporative-advantages__title title">Преимущества сотрудничества:</h4>
+            <div class="corporative-advantages__items">
+                <div class="corporative-advantages__item">
+                    <div class="corporative-advantages__item-icon">
+                        <img src="img/corporative-page/advantages/icon1.svg" alt="">
+                    </div>
+                    <p class="corporative-advantages__item-content">Собственное<br>производство</p>
+                </div>
+                <div class="corporative-advantages__item">
+                    <div class="corporative-advantages__item-icon">
+                        <img src="img/corporative-page/advantages/icon2.svg" alt="">
+                    </div>
+                    <p class="corporative-advantages__item-content">Персональный<br>менеджер</p>
+                </div>
+                <div class="corporative-advantages__item">
+                    <div class="corporative-advantages__item-icon">
+                        <img src="img/corporative-page/advantages/icon3.svg" alt="">
+                    </div>
+                    <p class="corporative-advantages__item-content">Поддержка<br>продуктом</p>
+                </div>
+            </div>
+        </section>
+        <section class="corporative-callback">
+            <div class="container">
+                <form action="" class="corporative-callback__main">
+                    <h5 class="corporative-callback__title">оставить заявку</h5>
+                    <p class="corporative-callback__subtitle">Введите свои контактные данные</p>
+                    <div class="corporative-callback__row">
+                        <div class="corporative-callback__block">
+                            <input class="_req" type="text" name="name" placeholder="Имя">
+                        </div>
+                        <div class="corporative-callback__block">
+                            <input class="_req" type="tel" name="tel" placeholder="Номер телефона">
+                        </div>
+                        <div class="corporative-callback__block">
+                            <input class="_req" type="email" name="email" placeholder="Почта">
+                        </div>
+                        <button class="corporative-callback__submit">Отправить</button>
+                    </div>
+                    <div class="corporative-callback__bottom">
+                        <p class="corporative-callback__bottom-left">
+                            По вопросам сотрудничества: <a href="tel:+74959800400">+7(495)9-800-400</a> (доб.100)
+                        </p>
+                        <a class="corporative-callback__bottom-right" href="mailto:klishin.dv@tkbaikalaqua.com">klishin.dv@tkbaikalaqua.com</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="corporative-items container">
+            <div class="corporative-items__main">
+                <div class="corporative-items__head">
+                    <div class="corporative-items__column corporative-items__column-7 corporative-items__column-empty"></div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <div class="corporative-items__image">
+                            <img src="img/corporative-page/items/1.png" alt="">
+                            <button class="corporative-items__info-opener mobile">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="corporative-items__info mobile">
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">ПЭТ</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ОБЪЕМ, Л</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">0,33</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГАЗАЦИЯ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">нет</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГРУППОВАЯ УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">термоусадочная пленка</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШТУК В УПАКОВКЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">12</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВОК НА ПАЛЕТЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">96</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШК</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content corporative-items__content-small">4610044160019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <div class="corporative-items__image">
+                            <img src="img/corporative-page/items/2.png" alt="">
+                            <button class="corporative-items__info-opener mobile">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="corporative-items__info mobile">
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">ПЭТ</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ОБЪЕМ, Л</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">0,5</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГАЗАЦИЯ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">нет</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГРУППОВАЯ УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">термоусадочная пленка</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШТУК В УПАКОВКЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">12</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВОК НА ПАЛЕТЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">75</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШК</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content corporative-items__content-small">4610044160033</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <div class="corporative-items__image">
+                            <img src="img/corporative-page/items/3.png" alt="">
+                            <button class="corporative-items__info-opener mobile">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="corporative-items__info mobile">
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">ПЭТ</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ОБЪЕМ, Л</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">1,5</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГАЗАЦИЯ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">нет</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГРУППОВАЯ УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">термоусадочная пленка</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШТУК В УПАКОВКЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">6</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВОК НА ПАЛЕТЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">67</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШК</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content corporative-items__content-small">4610044160057</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <div class="corporative-items__image">
+                            <img src="img/corporative-page/items/4.png" alt="">
+                            <button class="corporative-items__info-opener mobile">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="corporative-items__info mobile">
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">ПЭТ</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ОБЪЕМ, Л</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">4,9</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГАЗАЦИЯ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">нет</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГРУППОВАЯ УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">термоусадочная пленка</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШТУК В УПАКОВКЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">2</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВОК НА ПАЛЕТЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">60</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШК</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content corporative-items__content-small">4610044160071</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <div class="corporative-items__image">
+                            <img src="img/corporative-page/items/5.png" alt="">
+                            <button class="corporative-items__info-opener mobile">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="corporative-items__info mobile">
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">ПЭТ</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ОБЪЕМ, Л</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">11,3</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГАЗАЦИЯ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">нет</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГРУППОВАЯ УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">термоусадочная пленка</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШТУК В УПАКОВКЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">1</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВОК НА ПАЛЕТЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">40</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШК</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content corporative-items__content-small">4610044160095</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <div class="corporative-items__image">
+                            <img src="img/corporative-page/items/6.png" alt="">
+                            <button class="corporative-items__info-opener mobile">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="corporative-items__info mobile">
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">ПЭТ</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ОБЪЕМ, Л</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">18,9</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГАЗАЦИЯ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">нет</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГРУППОВАЯ УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">термоусадочная пленка</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШТУК В УПАКОВКЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">1</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВОК НА ПАЛЕТЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">26</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШК</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content corporative-items__content-small">4610044160361</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <div class="corporative-items__image">
+                            <img src="img/corporative-page/items/7.png" alt="">
+                            <button class="corporative-items__info-opener mobile">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="corporative-items__info mobile">
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">Алюминий</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ОБЪЕМ, Л</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">0,33</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГАЗАЦИЯ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">нет</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГРУППОВАЯ УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">термоусадочная пленка</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШТУК В УПАКОВКЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">12</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВОК НА ПАЛЕТЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">120</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШК</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content corporative-items__content-small">4610044160163</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="corporative-items__row">
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__title">УПАКОВКА</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">ПЭТ</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">ПЭТ</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">ПЭТ</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">ПЭТ</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">ПЭТ</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">ПЭТ</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">Алюминий</span>
+                    </div>
+                </div>
+                <div class="corporative-items__row">
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__title">ОБЪЕМ, Л</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">0,33</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">0,5</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">1,5</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">4,9</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">11,3</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">18,9</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">0,33</span>
+                    </div>
+                </div>
+                <div class="corporative-items__row">
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__title">ГАЗАЦИЯ</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">нет</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">нет</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">нет</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">нет</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">нет</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">нет</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">нет</span>
+                    </div>
+                </div>
+                <div class="corporative-items__row">
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__title">ГРУППОВАЯ УПАКОВКА</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content corporative-items__content-small">термоусадочная пленка</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content corporative-items__content-small">термоусадочная пленка</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content corporative-items__content-small">термоусадочная пленка</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content corporative-items__content-small">термоусадочная пленка</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content corporative-items__content-small">термоусадочная пленка</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content corporative-items__content-small">термоусадочная пленка</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content corporative-items__content-small">термоусадочная пленка</span>
+                    </div>
+                </div>
+                <div class="corporative-items__row">
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__title">ШТУК В УПАКОВКЕ</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">12</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">12</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">6</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">2</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">1</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">1</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">12</span>
+                    </div>
+                </div>
+                <div class="corporative-items__row">
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__title">УПАКОВОК НА ПАЛЕТЕ</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">96</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">85</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">67</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">60</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">40</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">26</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content">120</span>
+                    </div>
+                </div>
+                <div class="corporative-items__row">
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__title">ШК</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content corporative-items__content-small">4610044160019</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content corporative-items__content-small">4610044160033</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content corporative-items__content-small">4610044160057</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content corporative-items__content-small">4610044160071</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content corporative-items__content-small">4610044160095</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content corporative-items__content-small">4610044160361</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-7">
+                        <span class="corporative-items__content corporative-items__content-small">4610044160163</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="corporative-items container">
+            <div class="corporative-items__main">
+                <div class="corporative-items__head">
+                    <div class="corporative-items__column corporative-items__column-6 corporative-items__column-empty"></div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <div class="corporative-items__image">
+                            <img src="img/corporative-page/items/8.png" alt="">
+                            <button class="corporative-items__info-opener mobile">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="corporative-items__info mobile">
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">Стекло</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ОБЪЕМ, Л</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">0,3</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГАЗАЦИЯ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">нет</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГРУППОВАЯ УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">гофрокороб</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШТУК В УПАКОВКЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">12</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВОК НА ПАЛЕТЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">64</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШК</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content corporative-items__content-small">4610044160170</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <div class="corporative-items__image">
+                            <img src="img/corporative-page/items/9.png" alt="">
+                            <button class="corporative-items__info-opener mobile">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="corporative-items__info mobile">
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">Стекло</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ОБЪЕМ, Л</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">0,5</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГАЗАЦИЯ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">нет</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГРУППОВАЯ УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">гофрокороб</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШТУК В УПАКОВКЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">9</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВОК НА ПАЛЕТЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">60</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШК</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content corporative-items__content-small">4610044160125</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <div class="corporative-items__image">
+                            <img src="img/corporative-page/items/10.png" alt="">
+                            <button class="corporative-items__info-opener mobile">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="corporative-items__info mobile">
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">Стекло</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ОБЪЕМ, Л</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">0,7</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГАЗАЦИЯ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">нет</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГРУППОВАЯ УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">термоусадочная пленка</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШТУК В УПАКОВКЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">12</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВОК НА ПАЛЕТЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">63</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШК</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content corporative-items__content-small">4610044160149</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <div class="corporative-items__image">
+                            <img src="img/corporative-page/items/11.png" alt="">
+                            <button class="corporative-items__info-opener mobile">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="corporative-items__info mobile">
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">ПЭТ</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ОБЪЕМ, Л</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">0,33</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГАЗАЦИЯ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">да</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГРУППОВАЯ УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">термоусадочная пленка</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШТУК В УПАКОВКЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">12</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВОК НА ПАЛЕТЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">96</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШК</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content corporative-items__content-small">4610044160200</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <div class="corporative-items__image">
+                            <img src="img/corporative-page/items/12.png" alt="">
+                            <button class="corporative-items__info-opener mobile">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="corporative-items__info mobile">
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">ПЭТ</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ОБЪЕМ, Л</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">0,5</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГАЗАЦИЯ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">да</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГРУППОВАЯ УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">термоусадочная пленка</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШТУК В УПАКОВКЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">12</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВОК НА ПАЛЕТЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">76</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШК</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content corporative-items__content-small">4610044160224</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <div class="corporative-items__image">
+                            <img src="img/corporative-page/items/13.png" alt="">
+                            <button class="corporative-items__info-opener mobile">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="corporative-items__info mobile">
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">ПЭТ</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ОБЪЕМ, Л</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">1,5</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГАЗАЦИЯ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">да</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ГРУППОВАЯ УПАКОВКА</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">термоусадочная пленка</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШТУК В УПАКОВКЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">6</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">УПАКОВОК НА ПАЛЕТЕ</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content">67</span>
+                                </div>
+                            </div>
+                            <div class="corporative-items__info-row">
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__title">ШК</span>
+                                </div>
+                                <div class="corporative-items__info-column">
+                                    <span class="corporative-items__content corporative-items__content-small">4610044160248</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="corporative-items__row">
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__title">УПАКОВКА</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">Стекло</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">Стекло</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">Стекло</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">ПЭТ</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">ПЭТ</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">ПЭТ</span>
+                    </div>
+                </div>
+                <div class="corporative-items__row">
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__title">ОБЪЕМ, Л</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">0,33</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">0,5</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">0,7</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">0,33</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">0,5</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">1,5</span>
+                    </div>
+                </div>
+                <div class="corporative-items__row">
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__title">ГАЗАЦИЯ</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">нет</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">нет</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">нет</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">да</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">да</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">да</span>
+                    </div>
+                </div>
+                <div class="corporative-items__row">
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__title">ГРУППОВАЯ УПАКОВКА</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content corporative-items__content-small">гофрокороб</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content corporative-items__content-small">гофрокороб</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content corporative-items__content-small">термоусадочная пленка</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content corporative-items__content-small">термоусадочная пленка</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content corporative-items__content-small">термоусадочная пленка</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content corporative-items__content-small">термоусадочная пленка</span>
+                    </div>
+                </div>
+                <div class="corporative-items__row">
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__title">ШТУК В УПАКОВКЕ</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">12</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">9</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">12</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">12</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">12</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">6</span>
+                    </div>
+                </div>
+                <div class="corporative-items__row">
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__title">УПАКОВОК НА ПАЛЕТЕ</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">64</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">60</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">63</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">96</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">76</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content">67</span>
+                    </div>
+                </div>
+                <div class="corporative-items__row">
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__title">ШК</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content corporative-items__content-small">4610044160170</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content corporative-items__content-small">4610044160125</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content corporative-items__content-small">4610044160149</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content corporative-items__content-small">4610044160200</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content corporative-items__content-small">4610044160224</span>
+                    </div>
+                    <div class="corporative-items__column corporative-items__column-6">
+                        <span class="corporative-items__content corporative-items__content-small">4610044160248</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="corporative-slider">
+            <div class="container">
+                <h4 class="corporative-slider__title title">Преимущества:</h4>
+                <div class="corporative-slider__slider swiper-container">
+                    <div class="corporative-slider__items swiper-wrapper">
+                        <div class="corporative-slider__item swiper-slide">
+                            <div class="corporative-slider__item-image">
+                                <img src="img/corporative-page/slider/1.jpg" alt="">
+                            </div>
+                            <div class="corporative-slider__item-content">
+                                <p>Байкал - одно из немногих озёр на планете, в котором по нормативам разрешено брать воду для питья из открытых водоёмов</p>
+                            </div>
+                        </div>
+                        <div class="corporative-slider__item swiper-slide">
+                            <div class="corporative-slider__item-image">
+                                <img src="img/corporative-page/slider/2.jpg" alt="">
+                            </div>
+                            <div class="corporative-slider__item-content">
+                                <p>Вода добывается из особых слоев озера Байкал, с глубины 400 метров</p>
+                            </div>
+                        </div>
+                        <div class="corporative-slider__item swiper-slide">
+                            <div class="corporative-slider__item-image">
+                                <img src="img/corporative-page/slider/3.jpg" alt="">
+                            </div>
+                            <div class="corporative-slider__item-content">
+                                <p>Наш завод расположен непосредственно на берегу озера Байкал и разливает воду сразу после её добычи</p>
+                            </div>
+                        </div>
+                        <div class="corporative-slider__item swiper-slide">
+                            <div class="corporative-slider__item-image">
+                                <img src="img/corporative-page/slider/2.jpg" alt="">
+                            </div>
+                            <div class="corporative-slider__item-content">
+                                <p>Вода добывается из особых слоев озера Байкал, с глубины 400 метров</p>
+                            </div>
+                        </div>
+                        <div class="corporative-slider__item swiper-slide">
+                            <div class="corporative-slider__item-image">
+                                <img src="img/corporative-page/slider/3.jpg" alt="">
+                            </div>
+                            <div class="corporative-slider__item-content">
+                                <p>Наш завод расположен непосредственно на берегу озера Байкал и разливает воду сразу после её добычи</p>
+                            </div>
+                        </div>
+                        <div class="corporative-slider__item swiper-slide">
+                            <div class="corporative-slider__item-image">
+                                <img src="img/corporative-page/slider/2.jpg" alt="">
+                            </div>
+                            <div class="corporative-slider__item-content">
+                                <p>Вода добывается из особых слоев озера Байкал, с глубины 400 метров</p>
+                            </div>
+                        </div>
+                        <div class="corporative-slider__item swiper-slide">
+                            <div class="corporative-slider__item-image">
+                                <img src="img/corporative-page/slider/3.jpg" alt="">
+                            </div>
+                            <div class="corporative-slider__item-content">
+                                <p>Наш завод расположен непосредственно на берегу озера Байкал и разливает воду сразу после её добычи</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="corporative-slider__bottom">
+                    <div class="corporative-slider__pagination swiper-pagination"></div>
+                    <div class="corporative-slider__arrows">
+                        <button class="corporative-slider__arrow corporative-slider__arrow-left">
+                            <svg width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M-2.43188e-06 12C-2.41308e-06 11.5698 0.168064 11.1398 0.503489 10.8118L11.0639 0.49234C11.7357 -0.164114 12.8249 -0.164113 13.4964 0.49234C14.1679 1.14853 14.1679 2.21264 13.4964 2.86915L4.15191 12L13.496 21.1308C14.1675 21.7873 14.1675 22.8513 13.496 23.5074C12.8245 24.1642 11.7354 24.1642 11.0636 23.5074L0.503163 13.1881C0.167682 12.86 -2.45068e-06 12.4299 -2.43188e-06 12Z" fill="#0083C3"/>
+                            </svg>                                
+                        </button>
+                        <button class="corporative-slider__arrow corporative-slider__arrow-right">
+                            <svg width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 12C14 12.4302 13.8319 12.8602 13.4965 13.1882L2.93607 23.5077C2.2643 24.1641 1.17513 24.1641 0.503627 23.5077C-0.167876 22.8515 -0.167875 21.7874 0.503628 21.1309L9.84809 12L0.503956 2.86918C-0.167547 2.21273 -0.167546 1.14872 0.503957 0.492582C1.17546 -0.164188 2.26463 -0.164188 2.9364 0.492583L13.4968 10.8119C13.8323 11.14 14 11.5701 14 12Z" fill="#0083C3"/>
+                            </svg>                                
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <form action="#" class="fast-order-form container">
+            <h4 class="fast-order-form__title">Быстрый заказ</h4>
+            <p class="fast-order-form__subtitle">Заполните форму и мы свяжемся с вами</p>
+            <div class="fast-order-form__main">
+                <div class="fast-order-form__block">
+                    <input class="_req" type="text" name="name" placeholder="Ваше имя">
+                </div>
+                <div class="fast-order-form__block">
+                    <input class="_req" type="tel" name="phone" placeholder="Ваш телефон">
+                </div>
+                <div class="fast-order-form__block">
+                    <input class="_req" type="email" name="mail" placeholder="Электронная почта">
+                </div>
+                <button class="fast-order-form__submit">Отправить</button>
+            </div>
+            <p class="fast-order-form__agree">Нажимая на кнопку “Отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с <a href="#">политикой конфидециальности</a></p>
+        </form>
+
+    </div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__left">
+                <p class="footer__content">Задать&nbsp;вопрос по&nbsp;почте:</p>
+                <a class="footer__link-mail" href="mailto:shop@tkbaikalaqua.com">shop@tkbaikalaqua.com</a>
+            </div>
+            <div class="footer__center">
+                <a class="footer__logo" href="index.html">
+                    <img src="img/logo-blue.svg" alt="">
+                </a>
+                <div class="footer__social">
+                    <a class="footer__social-link" href="#">
+                        <svg width="20" height="40" viewBox="0 0 20 40" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.0891 6.64215H19.6825V0.282155C19.0626 0.195488 16.9305 0.000488281 14.4474 0.000488281C9.26642 0.000488281 5.7173 3.31215 5.7173 9.39882V15.0005H0V22.1105H5.7173V40.0005H12.727V22.1122H18.213L19.0839 15.0022H12.7253V10.1038C12.727 8.04882 13.2715 6.64215 16.0891 6.64215Z" fill="#008DD2"/>
+                        </svg>                            
+                    </a>
+                    <a class="footer__social-link" href="#">
+                        <svg width="37" height="38" viewBox="0 0 37 38" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.86548 0.904785H32.2385C34.8391 0.904785 36.9651 3.0315 36.9651 5.63207V33.0051C36.9651 35.6049 34.8391 37.7302 32.2385 37.7302H4.86548C2.26491 37.7302 0.136719 35.6048 0.136719 33.0051V5.63207C0.136719 3.0315 2.26491 0.904785 4.86548 0.904785ZM26.9657 4.99482C26.0526 4.99482 25.3078 5.74256 25.3078 6.65516V10.6221C25.3078 11.535 26.0526 12.2811 26.9657 12.2811H31.1276C32.0393 12.2811 32.7857 11.535 32.7857 10.6221V6.65516C32.7857 5.74256 32.0393 4.99482 31.1276 4.99482H26.9657ZM32.8015 16.4778H29.5611C29.8684 17.4813 30.0349 18.5397 30.0349 19.64C30.0349 25.7635 24.9077 30.7302 18.5855 30.7302C12.2649 30.7302 7.13754 25.7635 7.13754 19.64C7.13754 18.5397 7.30572 17.4813 7.61152 16.4778H4.2308V32.0355C4.2308 32.8412 4.88868 33.4966 5.69362 33.4966H31.3393C32.145 33.4966 32.8015 32.8412 32.8015 32.0355V16.4778ZM18.5856 12.0719C14.5026 12.0719 11.1905 15.2794 11.1905 19.2397C11.1905 23.1959 14.5026 26.4058 18.5856 26.4058C22.6709 26.4058 25.9831 23.1959 25.9831 19.2397C25.9831 15.2793 22.6709 12.0719 18.5856 12.0719Z" fill="#008DD2"/>
+                        </svg>                            
+                    </a>
+                    <a class="footer__social-link" href="#">
+                        <svg width="45" height="37" viewBox="0 0 45 37" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M44.5166 5.11823C42.8874 5.83287 41.1514 6.30656 39.3416 6.53656C41.2035 5.42489 42.6245 3.67799 43.2926 1.57239C41.5567 2.60739 39.64 3.33846 37.5974 3.74644C35.9491 1.99132 33.5998 0.904297 31.0369 0.904297C26.0645 0.904297 22.0614 4.94025 22.0614 9.88799C22.0614 10.5999 22.1217 11.2844 22.2695 11.9361C14.8027 11.5719 8.19572 7.99323 3.75727 2.54168C2.98239 3.88608 2.52786 5.42489 2.52786 7.08144C2.52786 10.1919 4.12965 12.9492 6.51727 14.5455C5.07429 14.5181 3.6587 14.0992 2.45941 13.4393C2.45941 13.4667 2.45941 13.5023 2.45941 13.5379C2.45941 17.9024 5.57263 21.5276 9.65513 22.3627C8.92406 22.5626 8.12727 22.6585 7.30036 22.6585C6.72536 22.6585 6.14489 22.6256 5.60001 22.5051C6.7637 26.0619 10.0658 28.6768 13.9923 28.7617C10.9366 31.152 7.05667 32.5923 2.85644 32.5923C2.11989 32.5923 1.41346 32.5594 0.707031 32.4691C4.68548 35.0347 9.40048 36.4995 14.4851 36.4995C31.0123 36.4995 40.048 22.8091 40.048 10.9422C40.048 10.5451 40.0343 10.1618 40.0151 9.7812C41.7976 8.5162 43.2954 6.93632 44.5166 5.11823Z" fill="#008DD2"/>
+                        </svg>                            
+                    </a>
+                </div>
+            </div>
+            <div class="footer__right">
+                <p class="footer__content">Позвонить&nbsp;на горячую&nbsp;линию</p>
+                <a class="footer__link-phone" href="tel:+74959800400">+7 (495) 980-04-00</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__column">
+                <a class="footer__title-link" href="#">О воде</a>
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a class="footer__link" href="#">Миссия</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">История</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Статьи</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Новости</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Вопросы и ответы</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <a class="footer__title-link" href="#">О нас</a>
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a class="footer__link" href="#">Оплата</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Доставка</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Документы</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Безопасность</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <a class="footer__title-link" href="#">Каталог</a>
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a class="footer__link" href="#">Байкальская вода</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Аренда кулеров</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Орехи/Крекеры</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Напитки</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Масла</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Мёд/Варенье</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <a class="footer__title-link" href="#">Сотрудничество</a>
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a class="footer__link" href="#">Скидки</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Условия</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Оптовые цены</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <a class="footer__title-link" href="#">Новости</a>
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a class="footer__link" href="#">Ноябрь</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Кандидаты</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Торговые условия</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Розничная торговля</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Доставка</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <a class="footer__title-link" href="#">Контакты</a>
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a class="footer__link" href="#">Адрес склада</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Номера телефонов</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Отдел продаж</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Документы</a></li>
+                    <li class="footer__list-item"><a class="footer__link" href="#">Рекомендации</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer></main>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script></body>
+</html>
