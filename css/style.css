@@ -7279,6 +7279,271 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.foreign-banner {
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 90px;
+  filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.2));
+}
+@media screen and (max-width: 1023px) {
+  .foreign-banner {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .foreign-banner {
+    margin-bottom: 35px;
+  }
+}
+.foreign-banner__image {
+  position: relative;
+  border-radius: 10px;
+  min-height: 196px;
+  height: 27.6vw;
+  max-height: 354px;
+  max-width: 100%;
+  overflow: hidden;
+}
+.foreign-banner__image > picture > img {
+  min-width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 480px) {
+  .foreign-banner__image {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    max-height: none;
+  }
+  .foreign-banner__image > picture > img {
+    height: 66.25vw;
+    min-width: 100%;
+    border-radius: 0 0 10px 10px;
+    transform: translateX(-50%);
+  }
+}
+.foreign-banner__left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  min-width: 550px;
+  border-radius: 10px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.foreign-banner__left::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)), url("../img/foreign-page/banner/banner.jpg") no-repeat left top;
+  filter: blur(30px);
+}
+@media screen and (max-width: 1023px) {
+  .foreign-banner__left {
+    padding: 10px 24px;
+    min-width: 340px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .foreign-banner__left {
+    position: relative;
+    height: 66.25vw;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px 10px 0 0;
+    min-width: auto;
+  }
+}
+.foreign-banner__title {
+  position: relative;
+  font-size: 33px;
+  line-height: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+@media screen and (max-width: 1023px) {
+  .foreign-banner__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .foreign-banner__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.foreign-banner__content {
+  margin-top: 20px;
+  position: relative;
+  font-size: 21px;
+  line-height: 25px;
+  color: #ffffff;
+}
+@media screen and (max-width: 1023px) {
+  .foreign-banner__content {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .foreign-banner__content {
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 15px;
+  }
+}
+.foreign-banner__links {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px 0;
+}
+@media screen and (max-width: 1023px) {
+  .foreign-banner__links {
+    top: 35px;
+    gap: 8px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .foreign-banner__links {
+    top: auto;
+    bottom: 35px;
+  }
+}
+.foreign-banner__link {
+  display: block;
+  background: #ffffff;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 5px 0px 0px 5px;
+  padding: 11px 7px 11px 9px;
+}
+.foreign-banner__link img {
+  width: 45px;
+  height: 30px;
+  filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.2));
+}
+@media screen and (max-width: 1023px) {
+  .foreign-banner__link {
+    border-radius: 3px 0px 0px 3px;
+    padding: 7px 4px 7px 5px;
+  }
+  .foreign-banner__link img {
+    width: 27px;
+    height: 18px;
+    filter: drop-shadow(0px 0px 18.1967px rgba(0, 0, 0, 0.2));
+  }
+}
+
+.foreign-advantages {
+  margin-bottom: 25px;
+}
+.foreign-advantages__title {
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 1023px) {
+  .foreign-advantages__title {
+    margin-bottom: 30px;
+  }
+}
+.foreign-advantages__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 16px 0;
+}
+@media screen and (max-width: 767px) {
+  .foreign-advantages__items {
+    flex-wrap: wrap;
+    gap: 30px 0;
+  }
+}
+.foreign-advantages__item {
+  width: calc((100% - 30px) / 4);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .foreign-advantages__item {
+    width: calc(50% - 5px);
+  }
+}
+.foreign-advantages__item-icon {
+  width: 133px;
+  min-width: 133px;
+  max-width: 133px;
+  height: 133px;
+  min-height: 133px;
+  max-height: 133px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0px 0px 21.885px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 33px;
+}
+.foreign-advantages__item-icon img {
+  max-width: 55%;
+  max-height: 55%;
+}
+@media screen and (max-width: 1023px) {
+  .foreign-advantages__item-icon {
+    width: 97px;
+    min-width: 97px;
+    max-width: 97px;
+    height: 97px;
+    min-height: 97px;
+    max-height: 97px;
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .foreign-advantages__item-icon {
+    width: 83px;
+    min-width: 83px;
+    max-width: 83px;
+    height: 83px;
+    min-height: 83px;
+    max-height: 83px;
+    margin-bottom: 20px;
+  }
+}
+.foreign-advantages__item-content {
+  font-size: 23px;
+  line-height: 27px;
+  font-weight: 600;
+  text-align: center;
+}
+@media screen and (max-width: 1023px) {
+  .foreign-advantages__item-content {
+    font-size: 17px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .foreign-advantages__item-content {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
 .corporative-callback {
   background: url("../img/corporative-page/callback/main-bg.png") no-repeat center/cover;
   padding: 100px 0;
@@ -7474,6 +7739,7 @@ h1, h2, h3, h4, h5, h6 {
 .corporative-callback__bottom-right {
   font-size: 13px;
   line-height: 16px;
+  font-weight: 600;
   color: #0083C3;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
