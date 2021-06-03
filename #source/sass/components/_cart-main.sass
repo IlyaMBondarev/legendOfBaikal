@@ -1,0 +1,89 @@
+.cart-main
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-top: 30px
+    margin-bottom: 65px
+    @media screen and ( max-width: 1023px )
+        margin-top: 27px
+        margin-bottom: 50px
+    @media screen and ( max-width: 767px )
+        margin-top: 15px
+        margin-bottom: 24px
+    &__left
+        width: 276px
+        @media screen and ( max-width: 1023px )
+            width: 217px
+        @media screen and ( max-width: 767px )
+            display: none
+    &__right
+        position: relative
+        width: calc(100% - 296px)
+        @media screen and ( max-width: 1023px )
+            width: calc(100% - 237px)
+        @media screen and ( max-width: 767px )
+            width: 100%
+    &__search
+        position: absolute
+        top: 0
+        left: 0
+        & input
+            height: 37px
+            width: 200px
+            background: $white
+            border: 1px solid #C9C9C9
+            border-radius: 4px
+            padding: 12px 34px 12px 12px
+            font-size: 12px
+            line-height: 14px
+            &:placeholder
+                color: #959595
+        & button
+            position: absolute
+            top: 50%
+            right: 8px
+            transform: translateY(-50%)
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 20px
+            height: 20px
+            border-radius: 50%
+            background: #ffffff
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15)
+            transition: all 0.2s ease-in-out
+            & svg
+                max-width: 40%
+                max-height: 45%
+                & *
+                    fill: #C5C5C5
+                    transition: all 0.2s ease-in-out
+            &:hover
+                background: $blue
+                color: $white
+                & svg *
+                    fill: $white
+        @media screen and ( max-width: 1023px )
+            & input
+                width: 146px
+                height: 28px
+                padding: 8px 24px 8px 8px
+                font-size: 9px
+                line-height: 10px
+                border-radius: 3px
+            & button
+                width: 15px
+                height: 15px
+                box-shadow: 0px 0px 7.41246px rgba(0, 0, 0, 0.15)
+        @media screen and ( max-width: 767px )
+            & input
+                width: 123px
+                height: 23px
+                padding: 7px 23px 7px 7px
+                font-size: 7px
+                line-height: 9px
+                border-radius: 2px
+            & button
+                width: 12.5px
+                height: 12.5px
+                box-shadow: 0px 0px 6.24365px rgba(0, 0, 0, 0.15)

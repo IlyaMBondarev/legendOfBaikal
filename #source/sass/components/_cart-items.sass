@@ -1,0 +1,121 @@
+.cart-items
+    &__top
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        margin-bottom: 45px
+        @media screen and ( max-width: 1023px )
+            margin-bottom: 30px
+        @media screen and ( max-width: 767px )
+            margin-bottom: 16px
+    &__count
+        position: relative
+        font-size: 16px
+        line-height: 19px
+        color: #868686
+        padding: 0 0 5px 0
+        & span
+            font-weight: 600
+            color: $blue
+        &::after
+            content: ''
+            position: absolute
+            left: 50%
+            bottom: -4px
+            transform: translateX(-50%)
+            height: 2px
+            width: 90%
+            background: $blue
+            border-radius: 1px
+        @media screen and ( max-width: 1023px )
+            font-size: 12px
+            line-height: 14px
+        @media screen and ( max-width: 767px )
+            position: absolute
+            right: 4px
+            top: -18px
+            transform: translateY(-100%)
+            font-size: 8px
+            line-height: 10px
+            &::after
+                height: 1px
+                bottom: -2px
+    &__print
+        background: $white
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+        border-radius: 3px
+        margin-left: 33px
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 37px
+        width: 37px
+        cursor: pointer
+        transition: all 0.2s ease-in-out
+        & svg
+            max-width: 50%
+            max-height: 50%
+            & *
+                fill: $blue
+                transition: all 0.2s ease-in-out
+        &:hover
+            background: $blue
+            color: $white
+            & svg *
+                fill: $white
+        @media screen and ( max-width: 1023px )
+            height: 28px
+            width: 28px
+            margin-left: 24px
+            box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.15)
+            border-radius: 4px
+        @media screen and ( max-width: 767px )
+            width: 23px
+            height: 23px
+            margin-left: 0
+            box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15)
+            border-radius: 3px
+    &__clear
+        background: $white
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+        border-radius: 3px
+        margin-left: 12px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 11px
+        line-height: 13px
+        font-weight: 600
+        color: $blue
+        height: 37px
+        padding: 0 23px
+        cursor: pointer
+        transition: all 0.2s ease-in-out
+        & svg
+            margin-right: 10px
+            max-height: 50%
+            & *
+                fill: $blue
+                transition: all 0.2s ease-in-out
+        &:hover
+            background: $blue
+            color: $white
+            & svg *
+                fill: $white
+        @media screen and ( max-width: 1023px )
+            height: 28px
+            font-size: 8px
+            line-height: 10px
+            padding: 0 17px
+            box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.15)
+            margin-left: 9px
+            border-radius: 2px
+            & svg
+                margin-right: 8px
+        @media screen and ( max-width: 767px )
+            height: 23px
+            font-size: 7px
+            line-height: 8px
+            padding: 0 10px 0 14px
+            box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15)
+            margin-left: 7px
