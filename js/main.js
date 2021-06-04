@@ -366,6 +366,55 @@ if (document.querySelector('.corporative-items__head .corporative-items__info'))
         }
     })
 }
+
+// select
+
+if(document.querySelector('.__select')) {
+    let selectSingle = document.querySelectorAll('.__select');
+
+    selectSingle.forEach(selectSingle => {
+        let selectSingle_title = selectSingle.querySelector('.__select__title');
+        let selectSingle_arrow = selectSingle.querySelector('.__select__arrow');
+        let selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
+    
+        // Открытие/закрытие select
+
+        selectSingle_title.addEventListener('click', function () {
+            if ('active' === selectSingle.getAttribute('data-state')) {
+            selectSingle.setAttribute('data-state', '');
+            } else {
+            selectSingle.setAttribute('data-state', 'active');
+            }
+        });
+
+        selectSingle_arrow.addEventListener('click', function () {
+            if ('active' === selectSingle.getAttribute('data-state')) {
+            selectSingle.setAttribute('data-state', '');
+            } else {
+            selectSingle.setAttribute('data-state', 'active');
+            }
+        });
+    
+        // Закрытие при нажатии на option
+
+        for (let j = 0; j < selectSingle_labels.length; j++) {
+            selectSingle_labels[j].addEventListener('click', function (evt) {
+            selectSingle_title.textContent = evt.target.textContent;
+            selectSingle.setAttribute('data-state', '');
+            });
+        }
+
+        // Закрытие при нажатии за пределами select
+
+        window.addEventListener('click', function(event) {
+            if (event.target !== selectSingle && !(selectSingle.contains(event.target))) {
+            selectSingle.setAttribute('data-state', '');
+            }
+        })
+    })
+}
+
+
 if (document.querySelector('.main-banners__slider')) {
     const mainBannersSlider = new Swiper('.main-banners__slider', {
         navigation: {
