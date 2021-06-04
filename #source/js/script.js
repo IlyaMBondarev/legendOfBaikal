@@ -290,6 +290,32 @@ if (document.querySelector('.catalog-filters')) {
     }
 }
 
+function popupImage(image) {
+    let popup = document.createElement('div');
+
+    popup.classList.add('popup-image');
+
+    let popupImage = document.createElement('img');
+
+    popupImage.setAttribute('src', image.src);
+    popupImage.setAttribute('alt', image.alt);
+
+    popup.appendChild(popupImage);
+    document.querySelector('body').appendChild(popup);
+
+    popup = document.querySelector('body .popup-image');
+    setTimeout(() => {
+        popup.classList.add('active');
+    }, 0)
+
+    popup.addEventListener('click', () => {
+        popup.classList.remove('active');
+        setTimeout(() => {
+            popup.parentNode.removeChild(popup);
+        }, 300)
+    })
+}
+
 // product images
 
 if (document.querySelector('.product-main__left')) {
@@ -308,30 +334,16 @@ if (document.querySelector('.product-main__left')) {
         })
     })
 
-    bigImage.addEventListener('click', () => {
-        let popup = document.createElement('div');
+    bigImage.addEventListener('click', () => popupImage(bigImage));
+}
 
-        popup.classList.add('popup-image');
+// cart images
 
-        let popupImage = document.createElement('img');
+if(document.querySelector('.cart-item__image > img')) {
+    let images = document.querySelectorAll('.cart-item__image > img');
 
-        popupImage.setAttribute('src', bigImage.src);
-        popupImage.setAttribute('alt', bigImage.alt);
-
-        popup.appendChild(popupImage);
-        document.querySelector('body').appendChild(popup);
-
-        popup = document.querySelector('body .popup-image');
-        setTimeout(() => {
-            popup.classList.add('active');
-        }, 0)
-
-        popup.addEventListener('click', () => {
-            popup.classList.remove('active');
-            setTimeout(() => {
-                popup.parentNode.removeChild(popup);
-            }, 300)
-        })
+    images.forEach(image => {
+        image.addEventListener('click', () => popupImage(image));
     })
 }
 

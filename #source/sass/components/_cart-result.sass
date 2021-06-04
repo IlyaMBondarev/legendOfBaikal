@@ -1,1 +1,163 @@
 .cart-result
+    &__main
+        background: $white
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1)
+        border-radius: 5px
+        padding: 26px 38px 20px 23px
+        margin-bottom: 45px
+        @media screen and ( max-width: 1023px )
+            box-shadow: 0px 0px 15.9516px rgba(0, 0, 0, 0.1)
+            border-radius: 2.65859px
+            padding: 14px 20px 10px 12px
+            margin-bottom: 18px
+        @media screen and ( max-width: 767px )
+            padding: 14px 14px 11px 15px
+            margin-bottom: 15px
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 20px
+        @media screen and ( max-width: 1023px )
+            margin-bottom: 10px
+    &__left
+        font-size: 15px
+        line-height: 18px
+        font-weight: 600
+        color: #969696
+        @media screen and ( max-width: 1023px )
+            font-size: 8px
+            line-height: 10px
+    &__right
+        font-size: 18px
+        line-height: 21px
+        font-weight: 600
+        color: #969696
+        @media screen and ( max-width: 1023px )
+            font-size: 10px
+            line-height: 11px
+        &.green
+            color: #019E24
+    &__result
+        padding-top: 20px
+        border-top: 1px solid #C4C4C4
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @media screen and ( max-width: 1023px )
+            padding-top: 11px
+    &__result-left
+        font-size: 18px
+        line-height: 21px
+        font-weight: 600
+        color: #696969
+        @media screen and ( max-width: 1023px )
+            font-size: 10px
+            line-height: 11px
+    &__result-right
+        font-size: 21px
+        line-height: 25px
+        font-weight: 700
+        color: $blue
+        @media screen and ( max-width: 1023px )
+            font-size: 11px
+            line-height: 13px
+    &__bottom
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__bottom-checks
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: 10px
+        max-width: 50%
+        min-width: 200px
+    &__bottom-check
+        & input
+            position: absolute
+            left: -3000px
+            width: 0
+            height: 0
+            opacity: 0
+            visibility: hidden
+            &:checked + label::after
+                content: url('../img/icons/check-white.svg')
+                background: $hover
+                opacity: 1 !important
+        & label
+            position: relative
+            display: block
+            padding-left: 36px
+            font-size: 12px
+            line-height: 14px
+            color: #696969
+            cursor: pointer
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                left: 6px
+                display: block
+                width: 16px
+                height: 16px
+                border-radius: 3px
+                background: #F9F9F9
+                border: 1px solid #D2D2D2
+                transition: all 0.2s ease-in-out
+            &::after
+                content: url('../img/icons/check-blue.svg')
+                position: absolute
+                top: 0px
+                left: 6px
+                width: 16px
+                height: 16px
+                border-radius: 3px
+                transition: all 0.2s ease-in-out
+                z-index: 1
+                opacity: 0
+                display: flex
+                justify-content: center
+                align-items: center
+            &:hover::after
+                opacity: 1
+            @media screen and ( max-width: 1023px )
+                padding-left: 20px
+                font-size: 8px
+                line-height: 9px
+                &::before,
+                &::after
+                    transform-origin: top left
+                    transform: scale(0.6875)
+                &::before
+                    left: 0
+                &::after
+                    left: 0
+                    top: 0
+    &__submit
+        background: $blue
+        border: 1px solid $blue
+        box-shadow: 0px 0px 22.4562px rgba(0, 0, 0, 0.15)
+        border-radius: 3.7427px
+        padding: 10px 17px
+        font-size: 11px
+        line-height: 13px
+        font-weight: 600
+        color: $white
+        text-transform: uppercase
+        transition: all 0.2s ease-in-out
+        &:hover
+            color: $hover
+            background-color: transparent
+        @media screen and ( max-width: 1023px )
+            box-shadow: 0px 0px 16.574px rgba(0, 0, 0, 0.15)
+            border-radius: 2.76234px
+            padding: 7px 13px
+            font-size: 8px
+            line-height: 10px
+        @media screen and ( max-width: 767px )
+            box-shadow: 0px 0px 13.0715px rgba(0, 0, 0, 0.15)
+            border-radius: 2.17859px
+            padding: 6px 10px
+            font-size: 7px
+            line-height: 8px

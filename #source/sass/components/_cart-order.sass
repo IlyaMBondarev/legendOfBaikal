@@ -1,1 +1,90 @@
 .cart-order
+    background: $white
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    padding: 20px 22px 26px
+    margin-bottom: 30px
+    @media screen and ( max-width: 1023px )
+        box-shadow: 0px 0px 15.9516px rgba(0, 0, 0, 0.1)
+        border-radius: 2.65859px
+        padding: 10px 12px 14px
+        margin-bottom: 13px
+    @media screen and ( max-width: 767px )
+        box-shadow: 0px 0px 15.9516px rgba(0, 0, 0, 0.1)
+        border-radius: 2.65859px
+        padding: 15px 17px
+    &__top
+        display: flex
+        align-items: center
+        margin-bottom: 25px
+        @media screen and ( max-width: 1023px )
+            margin-bottom: 15px
+    &__icon
+        margin-right: 16px
+        & img
+            max-height: 33px
+        @media screen and ( max-width: 1023px )
+            margin-right: 9px
+            & img
+                max-height: 18px
+    &__title
+        font-size: 21px
+        line-height: 25px
+        font-weight: 700
+        color: #696969
+        @media screen and ( max-width: 1023px )
+            font-size: 11px
+            line-height: 13px
+    &__items
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        gap: 25px
+        @media screen and ( max-width: 1023px )
+            gap: 13px
+        @media screen and ( max-width: 767px )
+            flex-direction: column
+            align-items: stretch
+            gap: 11px 0
+    &__item
+        flex-grow: 1
+        max-width: 42%
+        @media screen and ( max-width: 767px )
+            max-width: 100%
+    &__item-title
+        font-size: 14px
+        line-height: 17px
+        font-weight: 600
+        color: #969696
+        margin-bottom: 12px
+        @media screen and ( max-width: 1023px )
+            font-size: 7px
+            line-height: 9px
+            margin-bottom: 6px
+    &__block
+        height: 44px
+        width: 100%
+        & input
+            width: 100%
+            height: 100%
+            background: #F7F7F7
+            border: 0.79262px solid #F1F1F1
+            border-radius: 7.14675px
+            padding: 14px 30px
+            &:placeholder
+                color: #969696
+        @media screen and ( max-width: 1023px )
+            height: 23px
+            & input
+                padding: 7px 16px
+        @media screen and ( max-width: 767px )
+            height: 24px
+    &__item-subtext
+        font-size: 10px
+        line-height: 12px
+        color: #969696
+        margin-top: 10px
+        @media screen and ( max-width: 1023px )
+            font-size: 5px
+            line-height: 6px
+            margin-top: 5px
