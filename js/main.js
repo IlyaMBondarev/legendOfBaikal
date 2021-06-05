@@ -240,22 +240,6 @@ if (document.querySelector('.catalog-filters')) {
             let minPressed = false;
             let maxPressed = false;
 
-            minButton.addEventListener('mousedown', () => {
-                minPressed = true;
-            })
-
-            minButton.addEventListener('touchstart', () => {
-                minPressed = true;
-            })
-
-            maxButton.addEventListener('mousedown', () => {
-                maxPressed = true;
-            })
-
-            maxButton.addEventListener('touchstart', (event) => {
-                maxPressed = true;
-            })
-
             function handleMove (event) {
                 if (minPressed) {
                     if (event.pageX - rangeBlock.offsetLeft >= 0 && event.pageX - rangeBlock.offsetLeft <= maxButton.offsetLeft) {
@@ -291,21 +275,115 @@ if (document.querySelector('.catalog-filters')) {
                 }
             }
 
-            document.addEventListener('mousemove', (event) => handleMove(event))
+            minButton.addEventListener('mousedown', () => {
+                minPressed = true;
+            })
 
-            document.addEventListener('touchmove', (event) => handleMove(event))
+            maxButton.addEventListener('mousedown', () => {
+                maxPressed = true;
+            })
+
+            document.addEventListener('mousemove', (event) => handleMove(event))
 
             document.addEventListener('mouseup', function rangemoveStop() {
                 minPressed = false;
                 maxPressed = false;
             })
 
-            document.addEventListener('touchend', function rangemoveStop(event) {
+            minButton.addEventListener('touchstart', (event) => {
+                event.preventDefault();
+                minPressed = true;
+                let touch = event.changedTouches[0];
+
+                if (minPressed) {
+                    if (touch.pageX - rangeBlock.offsetLeft >= 0 && touch.pageX - rangeBlock.offsetLeft <= maxButton.offsetLeft) {
+                        minButton.style.left = `${touch.pageX - rangeBlock.offsetLeft}px`;
+                        rangeLine.style.left = `${touch.pageX - rangeBlock.offsetLeft}px`;
+                        rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
+                        minInput.value = Math.round(minButton.offsetLeft * rangeLength / rangeBlock.offsetWidth);
+                    } else if (touch.pageX - rangeBlock.offsetLeft < 0) {
+                        minButton.style.left = `0px`;
+                        rangeLine.style.left = `0px`;
+                        rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
+                        minInput.value = min;
+                    } else if (touch.pageX - rangeBlock.offsetLeft > maxButton.offsetLeft) {
+                        minButton.style.left = `${maxButton.offsetLeft}px`;
+                        rangeLine.style.left = `${maxButton.offsetLeft}px`;
+                        rangeLine.style.width = `0px`;
+                        minInput.value = maxInput.value;
+                    }
+                }
+            })
+
+            maxButton.addEventListener('touchstart', (event) => {
+                event.preventDefault();
+                maxPressed = true;
+                let touch = event.changedTouches[0];
+
+                if (maxPressed) {
+                    if (touch.pageX - rangeBlock.offsetLeft >= minButton.offsetLeft && touch.pageX - rangeBlock.offsetLeft <= rangeBlock.offsetWidth) {
+                        maxButton.style.left = `${touch.pageX - rangeBlock.offsetLeft}px`;
+                        rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
+                        maxInput.value = Math.round(maxButton.offsetLeft * rangeLength / rangeBlock.offsetWidth);
+                    } else if (touch.pageX - rangeBlock.offsetLeft > rangeBlock.offsetWidth) {
+                        maxButton.style.left = `${rangeBlock.offsetWidth}px`;
+                        rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
+                        maxInput.value = max;
+                    } else if (touch.pageX - rangeBlock.offsetLeft < minButton.offsetLeft) {
+                        maxButton.style.left = `${minButton.offsetLeft}px`;
+                        rangeLine.style.width = `0px`;
+                        maxInput.value = minInput.value;
+                    }
+                }
+            })
+
+            document.addEventListener('touchmove', (event) => {
+                if (minPressed) {
+                    event.preventDefault();
+                    let touch = event.changedTouches[0];
+    
+                    if (touch.pageX - rangeBlock.offsetLeft >= 0 && touch.pageX - rangeBlock.offsetLeft <= maxButton.offsetLeft) {
+                        minButton.style.left = `${touch.pageX - rangeBlock.offsetLeft}px`;
+                        rangeLine.style.left = `${touch.pageX - rangeBlock.offsetLeft}px`;
+                        rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
+                        minInput.value = Math.round(minButton.offsetLeft * rangeLength / rangeBlock.offsetWidth);
+                    } else if (touch.pageX - rangeBlock.offsetLeft < 0) {
+                        minButton.style.left = `0px`;
+                        rangeLine.style.left = `0px`;
+                        rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
+                        minInput.value = min;
+                    } else if (touch.pageX - rangeBlock.offsetLeft > maxButton.offsetLeft) {
+                        minButton.style.left = `${maxButton.offsetLeft}px`;
+                        rangeLine.style.left = `${maxButton.offsetLeft}px`;
+                        rangeLine.style.width = `0px`;
+                        minInput.value = maxInput.value;
+                    }
+                } else if (maxPressed) {
+                    event.preventDefault();
+                    let touch = event.changedTouches[0];
+    
+                    if (touch.pageX - rangeBlock.offsetLeft >= minButton.offsetLeft && touch.pageX - rangeBlock.offsetLeft <= rangeBlock.offsetWidth) {
+                        maxButton.style.left = `${touch.pageX - rangeBlock.offsetLeft}px`;
+                        rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
+                        maxInput.value = Math.round(maxButton.offsetLeft * rangeLength / rangeBlock.offsetWidth);
+                    } else if (touch.pageX - rangeBlock.offsetLeft > rangeBlock.offsetWidth) {
+                        maxButton.style.left = `${rangeBlock.offsetWidth}px`;
+                        rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
+                        maxInput.value = max;
+                    } else if (touch.pageX - rangeBlock.offsetLeft < minButton.offsetLeft) {
+                        maxButton.style.left = `${minButton.offsetLeft}px`;
+                        rangeLine.style.width = `0px`;
+                        maxInput.value = minInput.value;
+                    }
+                }
+            })
+
+            document.addEventListener('touchend', function rangemoveStop() {
                 minPressed = false;
                 maxPressed = false;
             })
 
-            document.addEventListener('touchcancel', function rangemoveStop(event) {
+            document.addEventListener('touchcancel', function rangemoveStop(eent) {
                 minPressed = false;
                 maxPressed = false;
             })
