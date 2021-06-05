@@ -303,13 +303,13 @@ if (document.querySelector('.catalog-filters')) {
                 maxPressed = false;
             })
 
-            document.addEventListener('touchend', function rangemoveStop() {
+            document.addEventListener('touchend', function rangemoveStop(event) {
                 event.preventDefault();
                 minPressed = false;
                 maxPressed = false;
             })
 
-            document.addEventListener('touchcancel', function rangemoveStop() {
+            document.addEventListener('touchcancel', function rangemoveStop(event) {
                 event.preventDefault();
                 minPressed = false;
                 maxPressed = false;
