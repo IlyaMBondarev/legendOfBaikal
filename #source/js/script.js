@@ -229,8 +229,10 @@ if (document.querySelector('.catalog-filters')) {
             let maxButton = range.querySelector('.range__max');
             let rangeLine = range.querySelector('.range__center');
 
-            let minInput = range.querySelector('.range__curr-min');
-            let maxInput = range.querySelector('.range__curr-max');
+            let minInput = range.querySelector('input.range__curr-min');
+            let maxInput = range.querySelector('input.range__curr-max');
+            let minSpan = range.querySelector('span.range__curr-min');
+            let maxSpan = range.querySelector('span.range__curr-max');
 
             let min = minInput.dataset.min;
             let max = maxInput.dataset.max;
@@ -246,30 +248,36 @@ if (document.querySelector('.catalog-filters')) {
                         rangeLine.style.left = `${event.pageX - rangeBlock.offsetLeft}px`;
                         rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
                         minInput.value = Math.round(minButton.offsetLeft * rangeLength / rangeBlock.offsetWidth);
+                        minSpan.textContent = minInput.value;
                     } else if (event.pageX - rangeBlock.offsetLeft < 0) {
                         minButton.style.left = `0px`;
                         rangeLine.style.left = `0px`;
                         rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
                         minInput.value = min;
+                        minSpan.textContent = minInput.value;
                     } else if (event.pageX - rangeBlock.offsetLeft > maxButton.offsetLeft) {
                         minButton.style.left = `${maxButton.offsetLeft}px`;
                         rangeLine.style.left = `${maxButton.offsetLeft}px`;
                         rangeLine.style.width = `0px`;
                         minInput.value = maxInput.value;
+                        minSpan.textContent = minInput.value;
                     }
                 } else if (maxPressed) {
                     if (event.pageX - rangeBlock.offsetLeft >= minButton.offsetLeft && event.pageX - rangeBlock.offsetLeft <= rangeBlock.offsetWidth) {
                         maxButton.style.left = `${event.pageX - rangeBlock.offsetLeft}px`;
                         rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
                         maxInput.value = Math.round(maxButton.offsetLeft * rangeLength / rangeBlock.offsetWidth);
+                        maxSpan.textContent = maxInput.value;
                     } else if (event.pageX - rangeBlock.offsetLeft > rangeBlock.offsetWidth) {
                         maxButton.style.left = `${rangeBlock.offsetWidth}px`;
                         rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
                         maxInput.value = max;
+                        maxSpan.textContent = maxInput.value;
                     } else if (event.pageX - rangeBlock.offsetLeft < minButton.offsetLeft) {
                         maxButton.style.left = `${minButton.offsetLeft}px`;
                         rangeLine.style.width = `0px`;
                         maxInput.value = minInput.value;
+                        maxSpan.textContent = maxInput.value;
                     }
                 }
             }
@@ -300,16 +308,19 @@ if (document.querySelector('.catalog-filters')) {
                         rangeLine.style.left = `${touch.pageX - rangeBlock.offsetLeft}px`;
                         rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
                         minInput.value = Math.round(minButton.offsetLeft * rangeLength / rangeBlock.offsetWidth);
+                        minSpan.textContent = minInput.value;
                     } else if (touch.pageX - rangeBlock.offsetLeft < 0) {
                         minButton.style.left = `0px`;
                         rangeLine.style.left = `0px`;
                         rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
                         minInput.value = min;
+                        minSpan.textContent = minInput.value;
                     } else if (touch.pageX - rangeBlock.offsetLeft > maxButton.offsetLeft) {
                         minButton.style.left = `${maxButton.offsetLeft}px`;
                         rangeLine.style.left = `${maxButton.offsetLeft}px`;
                         rangeLine.style.width = `0px`;
                         minInput.value = maxInput.value;
+                        minSpan.textContent = minInput.value;
                     }
                 }
             })
@@ -324,21 +335,23 @@ if (document.querySelector('.catalog-filters')) {
                         maxButton.style.left = `${touch.pageX - rangeBlock.offsetLeft}px`;
                         rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
                         maxInput.value = Math.round(maxButton.offsetLeft * rangeLength / rangeBlock.offsetWidth);
+                        maxSpan.textContent = maxInput.value;
                     } else if (touch.pageX - rangeBlock.offsetLeft > rangeBlock.offsetWidth) {
                         maxButton.style.left = `${rangeBlock.offsetWidth}px`;
                         rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
                         maxInput.value = max;
+                        maxSpan.textContent = maxInput.value;
                     } else if (touch.pageX - rangeBlock.offsetLeft < minButton.offsetLeft) {
                         maxButton.style.left = `${minButton.offsetLeft}px`;
                         rangeLine.style.width = `0px`;
                         maxInput.value = minInput.value;
+                        maxSpan.textContent = maxInput.value;
                     }
                 }
             })
 
             document.addEventListener('touchmove', (event) => {
                 if (minPressed) {
-                    event.preventDefault();
                     let touch = event.changedTouches[0];
     
                     if (touch.pageX - rangeBlock.offsetLeft >= 0 && touch.pageX - rangeBlock.offsetLeft <= maxButton.offsetLeft) {
@@ -346,33 +359,38 @@ if (document.querySelector('.catalog-filters')) {
                         rangeLine.style.left = `${touch.pageX - rangeBlock.offsetLeft}px`;
                         rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
                         minInput.value = Math.round(minButton.offsetLeft * rangeLength / rangeBlock.offsetWidth);
+                        minSpan.textContent = minInput.value;
                     } else if (touch.pageX - rangeBlock.offsetLeft < 0) {
                         minButton.style.left = `0px`;
                         rangeLine.style.left = `0px`;
                         rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
                         minInput.value = min;
+                        minSpan.textContent = minInput.value;
                     } else if (touch.pageX - rangeBlock.offsetLeft > maxButton.offsetLeft) {
                         minButton.style.left = `${maxButton.offsetLeft}px`;
                         rangeLine.style.left = `${maxButton.offsetLeft}px`;
                         rangeLine.style.width = `0px`;
                         minInput.value = maxInput.value;
+                        minSpan.textContent = minInput.value;
                     }
                 } else if (maxPressed) {
-                    event.preventDefault();
                     let touch = event.changedTouches[0];
     
                     if (touch.pageX - rangeBlock.offsetLeft >= minButton.offsetLeft && touch.pageX - rangeBlock.offsetLeft <= rangeBlock.offsetWidth) {
                         maxButton.style.left = `${touch.pageX - rangeBlock.offsetLeft}px`;
                         rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
                         maxInput.value = Math.round(maxButton.offsetLeft * rangeLength / rangeBlock.offsetWidth);
+                        maxSpan.textContent = maxInput.value;
                     } else if (touch.pageX - rangeBlock.offsetLeft > rangeBlock.offsetWidth) {
                         maxButton.style.left = `${rangeBlock.offsetWidth}px`;
                         rangeLine.style.width = `${maxButton.offsetLeft - minButton.offsetLeft}px`;
                         maxInput.value = max;
+                        maxSpan.textContent = maxInput.value;
                     } else if (touch.pageX - rangeBlock.offsetLeft < minButton.offsetLeft) {
                         maxButton.style.left = `${minButton.offsetLeft}px`;
                         rangeLine.style.width = `0px`;
                         maxInput.value = minInput.value;
+                        maxSpan.textContent = maxInput.value;
                     }
                 }
             })

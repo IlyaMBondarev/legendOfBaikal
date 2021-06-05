@@ -190,21 +190,26 @@
         display: flex
         justify-content: space-between
         align-items: center
-    &__left
+    &__left,
     &__right
+        & input
+            position: absolute
+            left: -120vw
+            width: 0
+            height: 0
+            opacity: 0
+            visibility: hidden
     &__content
         font-size: 13px
         line-height: 16px
         color: $black
     &__curr
+        display: inline-block
         font-size: 13px
         line-height: 16px
         color: #A6A6A6
+        min-width: 34px
         margin-left: 10px
-        max-width: 34px
         background-color: transparent
-        &::-webkit-inner-spin-button,
-        &::-webkit-outer-spin-button
-            display: none
     &__curr-min
     &__curr-max
