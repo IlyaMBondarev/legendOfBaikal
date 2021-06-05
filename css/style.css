@@ -9647,8 +9647,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 3px;
   }
   .cart-payment__coupon-block button {
-    top: 4px;
-    right: 6px;
+    padding-right: 6px;
   }
   .cart-payment__coupon-block button svg {
     max-height: 8px;
