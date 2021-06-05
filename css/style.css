@@ -4725,21 +4725,27 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
 }
+.range__left input, .range__right input {
+  position: absolute;
+  left: -120vw;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
 .range__content {
   font-size: 13px;
   line-height: 16px;
   color: #000000;
 }
 .range__curr {
+  display: inline-block;
   font-size: 13px;
   line-height: 16px;
   color: #A6A6A6;
+  min-width: 34px;
   margin-left: 10px;
-  max-width: 34px;
   background-color: transparent;
-}
-.range__curr::-webkit-inner-spin-button, .range__curr::-webkit-outer-spin-button {
-  display: none;
 }
 .catalog-items__top {
   display: flex;
