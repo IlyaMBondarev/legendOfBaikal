@@ -4905,13 +4905,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 1230px) {
   .catalog-items__items {
-    gap: 10px 10px;
+    gap: 10px;
   }
 }
 @media screen and (max-width: 767px) {
   .catalog-items__items {
     justify-content: space-around;
     margin-bottom: 25px;
+    gap: 0 10px;
+  }
+  .catalog-items__items > * {
+    margin-bottom: 10px;
   }
 }
 .catalog-items__pagination {
