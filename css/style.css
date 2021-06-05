@@ -4905,7 +4905,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 1230px) {
   .catalog-items__items {
-    gap: 10px;
+    gap: 10px 10px;
   }
 }
 @media screen and (max-width: 767px) {
