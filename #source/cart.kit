@@ -226,13 +226,42 @@
                                 <div class="cart-order__item">
                                     <p class="cart-order__item-title">Выберите профиль</p>
                                     <div class="cart-order__block">
-                                        <input type="text">
+                                        <div class="cart-order__select __select" data-state="">
+                                            <div class="__select__title" data-default="Олег Шиняев">Олег Шиняев</div>
+                                            <div class="__select__arrow">
+                                                <svg width="27" height="14" viewBox="0 0 27 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M26 1L13.5 13L1 1" stroke="#969696"/>
+                                                </svg>
+                                            </div>
+                                            <div class="__select__content">
+                                                <input id="profile0" class="__select__input" type="radio" name="profile" value="Олег Шиняев" checked />
+                                                <label for="profile0" class="__select__label">Олег Шиняев</label>
+                                                <input id="profile1" class="__select__input" type="radio" name="profile" value="Виктор Токарев" />
+                                                <label for="profile1" class="__select__label">Виктор Токарев </label>
+                                                <input id="profile2" class="__select__input" type="radio" name="profile" value="Павел Кучков" />
+                                                <label for="profile2" class="__select__label">Павел Кучков</label>
+                                                <input id="profile3" class="__select__input" type="radio" name="profile" value="Андрей Синицын" />
+                                                <label for="profile3" class="__select__label">Андрей Синицын</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="cart-order__item">
                                     <p class="cart-order__item-title required-mark">Город</p>
                                     <div class="cart-order__block">
+                                        <div class="cart-order__icon">
+                                            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.44447 9.88894C7.89908 9.88894 9.88894 7.89908 9.88894 5.44447C9.88894 2.98986 7.89908 1 5.44447 1C2.98986 1 1 2.98986 1 5.44447C1 7.89908 2.98986 9.88894 5.44447 9.88894Z" stroke="#969696" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12 12L9 9" stroke="#969696" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
                                         <input type="text" required>
+                                        <button class="cart-order__clear" type="button">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.60039 1.3999L1.40039 8.5999" stroke="#F6F6F6" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1.40039 1.3999L8.60039 8.5999" stroke="#F6F6F6" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
                                     </div>
                                     <p class="cart-order__item-subtext">Доставка осуществляется только по Санкт-Петербургу</p>
                                 </div>
@@ -280,6 +309,11 @@
                                         <p class="cart-payment__coupon-title">Применить купон или сертификат:</p>
                                         <div class="cart-payment__coupon-block">
                                             <input type="text" name="coupon" placeholder="Введите текст">
+                                            <button type="button">
+                                                <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.999999 1L11 11.5L1 22" stroke="#969696"/>
+                                                </svg>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
