@@ -245,7 +245,6 @@ if (document.querySelector('.catalog-filters')) {
             })
 
             minButton.addEventListener('touchstart', () => {
-                event.preventDefault();
                 minPressed = true;
             })
 
@@ -254,7 +253,6 @@ if (document.querySelector('.catalog-filters')) {
             })
 
             maxButton.addEventListener('touchstart', (event) => {
-                event.preventDefault();
                 maxPressed = true;
             })
 
@@ -303,13 +301,11 @@ if (document.querySelector('.catalog-filters')) {
             })
 
             document.addEventListener('touchend', function rangemoveStop(event) {
-                event.preventDefault();
                 minPressed = false;
                 maxPressed = false;
             })
 
             document.addEventListener('touchcancel', function rangemoveStop(event) {
-                event.preventDefault();
                 minPressed = false;
                 maxPressed = false;
             })
