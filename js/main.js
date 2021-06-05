@@ -259,7 +259,6 @@ if (document.querySelector('.catalog-filters')) {
             })
 
             function handleMove (event) {
-                event.preventDefault();
                 if (minPressed) {
                     if (event.pageX - rangeBlock.offsetLeft >= 0 && event.pageX - rangeBlock.offsetLeft <= maxButton.offsetLeft) {
                         minButton.style.left = `${event.pageX - rangeBlock.offsetLeft}px`;
