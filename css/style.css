@@ -1560,19 +1560,56 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .uniq {
-  padding: 95px 0;
-  background: url("../img/uniq/uniq-bg.svg") no-repeat right center;
+  position: relative;
+}
+.uniq__back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.uniq__back picture {
+  position: absolute;
+  right: 0;
+}
+.uniq__back picture:first-of-type {
+  top: 120px;
+}
+.uniq__back picture:last-of-type {
+  bottom: 100px;
 }
 @media screen and (max-width: 1230px) {
-  .uniq {
-    background: url("../img/uniq/uniq-bg-tablet.svg") no-repeat right center;
+  .uniq__back picture:first-of-type {
+    top: auto;
+    bottom: 262px;
+  }
+  .uniq__back picture:last-of-type {
+    bottom: 133px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .uniq__back picture:first-of-type {
+    top: auto;
+    bottom: 80px;
+  }
+  .uniq__back picture:last-of-type {
+    bottom: 28px;
+  }
+}
+.uniq__back picture._animate-uniq-back {
+  transform: translateX(105%);
+}
+.uniq__container {
+  position: relative;
+  padding: 95px 0;
+}
+@media screen and (max-width: 1230px) {
+  .uniq__container {
     padding-top: 50px;
     padding-bottom: 120px;
   }
 }
 @media screen and (max-width: 767px) {
-  .uniq {
-    background: url("../img/uniq/uniq-bg-mobile.svg") no-repeat right bottom;
+  .uniq__container {
     padding-top: 35px;
     padding-bottom: 90px;
     margin-bottom: 30px;
@@ -1616,19 +1653,19 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 600px;
   margin-top: 35px;
 }
-.uniq__items > *:not(:last-child) {
+.uniq__items > *:not(:nth-child(n+5)) {
   margin-bottom: 45px;
 }
 @media screen and (max-width: 1230px) {
   .uniq__items {
     margin-top: 20px;
   }
-  .uniq__items > *:not(:last-child) {
+  .uniq__items > *:not(:nth-child(n+5)) {
     margin-bottom: 35px;
   }
 }
 @media screen and (max-width: 767px) {
-  .uniq__items > *:not(:last-child) {
+  .uniq__items > *:not(:nth-child(n+5)) {
     margin-bottom: 30px;
   }
 }
@@ -1754,6 +1791,9 @@ h1, h2, h3, h4, h5, h6 {
 .health__left img {
   width: 100%;
 }
+.health__left._animate-health-bottles {
+  transform: translateX(-100vw);
+}
 @media screen and (max-width: 1000px) {
   .health__left {
     width: 25vw;
@@ -1768,6 +1808,9 @@ h1, h2, h3, h4, h5, h6 {
     width: 185px;
     left: auto;
     bottom: auto;
+  }
+  .health__left._animate-health-bottles {
+    transform: translateX(100vw);
   }
 }
 @media screen and (max-width: 480px) {
@@ -3224,9 +3267,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-videos {
+  position: relative;
   padding-top: 65px;
   padding-bottom: 65px;
-  background: url("../img/videos/main-bg.png") no-repeat top center/100%;
 }
 @media screen and (max-width: 1230px) {
   .main-videos {
@@ -3239,8 +3282,19 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 40px;
   }
 }
-.main-videos.about-videos {
-  background: none;
+.main-videos__back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.main-videos__back img {
+  min-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .main-videos__container {
   position: relative;
