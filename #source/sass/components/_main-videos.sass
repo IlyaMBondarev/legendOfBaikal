@@ -1,14 +1,24 @@
 .main-videos
+    position: relative
     padding-top: 65px
     padding-bottom: 65px
-    background: url('../img/videos/main-bg.png') no-repeat top center / 100%
     @media screen and ( max-width: 1230px )
         padding-bottom: 45px
     @media screen and ( max-width: 767px )
         padding-top: 50px
         padding-bottom: 40px
-    &.about-videos
-        background: none
+    &__back
+        position: absolute
+        height: 100%
+        width: 100%
+        top: 0
+        left: 0
+        & img
+            min-width: 100%
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
     &__container
         position: relative
         @media screen and ( max-width: 1370px )

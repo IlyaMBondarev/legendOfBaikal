@@ -39,6 +39,8 @@
         left: 0
         & img
             width: 100%
+        &._animate-health-bottles
+            transform: translateX(-100vw)
         @media screen and ( max-width: 1000px )
             width: 25vw
             bottom: -131px
@@ -49,6 +51,8 @@
             width: 185px
             left: auto
             bottom: auto
+            &._animate-health-bottles
+                transform: translateX(100vw)
         @media screen and ( max-width: 480px )
             width: 125px
     &__image-text
@@ -153,7 +157,8 @@
         justify-content: space-between
         align-items: stretch
         @media screen and ( max-width: 767px )
-            gap: 0 30px
+            & > *:nth-child(2n)
+                margin-right: 30px
     &__item-title
         width: 66.6666666%
         font-size: 45px

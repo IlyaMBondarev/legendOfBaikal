@@ -41,92 +41,102 @@ cityBlocks.forEach(cityBlock => {
 
 // main page pagination
 
-let screens = document.querySelectorAll('.screen');
-let mainPagination = document.querySelector('.main-pagination');
+if (document.querySelector('.screen') && document.querySelector('.main-pagination')) {
+    
+    let screens = document.querySelectorAll('.screen');
+    let mainPagination = document.querySelector('.main-pagination');
 
-if (mainPagination && screens.length) {
-    mainPagination.style.display = 'none';
-    mainPagination.classList.remove('hidden');
+    if (mainPagination && screens.length) {
+        mainPagination.style.display = 'none';
+        mainPagination.classList.remove('hidden');
 
-    let indexOfActiveSlide = 0;
-    let mainPaginationBlock = mainPagination.querySelector('.main-pagination__pagination');
-    screens.forEach((screen, index) => {
-        let bullet = document.createElement('span');
-        bullet.classList.add('main-pagination__pagination-bullet');
-        mainPaginationBlock.appendChild(bullet);
+        let indexOfActiveSlide = 0;
+        let mainPaginationBlock = mainPagination.querySelector('.main-pagination__pagination');
+        screens.forEach((screen, index) => {
+            let bullet = document.createElement('span');
+            bullet.classList.add('main-pagination__pagination-bullet');
+            mainPaginationBlock.appendChild(bullet);
 
-        if (screen.offsetTop <= window.scrollY) {
-            indexOfActiveSlide = index;
-        }
-    })
-
-    let bullets = mainPaginationBlock.querySelectorAll('.main-pagination__pagination-bullet');
-    bullets[indexOfActiveSlide].classList.add('active');
-
-    bullets.forEach((bullet, index) => {
-        bullet.addEventListener('click', () => {
-            bullets[indexOfActiveSlide].classList.remove('active');
-            bullet.classList.add('active');
-            indexOfActiveSlide = index;
-            if (indexOfActiveSlide === 0) {
-                window.scrollTo({top: 0, behavior: 'smooth'});
-            } else {
-                screens[indexOfActiveSlide].scrollIntoView({behavior: 'smooth'});
+            if (screen.offsetTop <= window.scrollY) {
+                indexOfActiveSlide = index;
             }
         })
-    })
 
-    let arrowUp = mainPagination.querySelector('.main-pagination__arrow-up');
+        let bullets = mainPaginationBlock.querySelectorAll('.main-pagination__pagination-bullet');
+        bullets[indexOfActiveSlide].classList.add('active');
 
-    arrowUp.addEventListener('click', () => {
-        if (indexOfActiveSlide !== 0) {
-            bullets[indexOfActiveSlide].classList.remove('active');
-            indexOfActiveSlide--;
-            bullets[indexOfActiveSlide].classList.add('active');
-            if (indexOfActiveSlide === 0) {
-                window.scrollTo({top: 0, behavior: 'smooth'});
-            } else {
-                screens[indexOfActiveSlide].scrollIntoView({behavior: 'smooth'});
-            }
-        }
-    })
-
-    let arrowDown = mainPagination.querySelector('.main-pagination__arrow-down');
-
-    arrowDown.addEventListener('click', () => {
-        if (indexOfActiveSlide !== bullets.length - 1) {
-            bullets[indexOfActiveSlide].classList.remove('active');
-            indexOfActiveSlide++;
-            bullets[indexOfActiveSlide].classList.add('active');
-            screens[indexOfActiveSlide].scrollIntoView({behavior: 'smooth'});
-        }
-    });
-
-    let lastScrollTop = window.scrollY;
-
-    window.addEventListener('scroll', () => {
-        let st = window.scrollY;
-
-        if (st > lastScrollTop){
-            if (screens[indexOfActiveSlide + 1] && screens[indexOfActiveSlide + 1].offsetTop + 20 <= st) {
+        bullets.forEach((bullet, index) => {
+            bullet.addEventListener('click', () => {
                 bullets[indexOfActiveSlide].classList.remove('active');
-                indexOfActiveSlide++;
-                bullets[indexOfActiveSlide].classList.add('active');
-                screens[indexOfActiveSlide].scrollIntoView({behavior: 'smooth'});
-            }
-         } else {
-            if (screens[indexOfActiveSlide - 1] && screens[indexOfActiveSlide - 1].offsetTop + screens[indexOfActiveSlide - 1].scrollHeight - 20 > st) {
+                bullet.classList.add('active');
+                indexOfActiveSlide = index;
+                if (indexOfActiveSlide === 0) {
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                } else {
+                    window.scrollTo({
+                        top: screens[indexOfActiveSlide].offsetTop,
+                        behavior: "smooth"
+                    })
+                }
+            })
+        })
+
+        let arrowUp = mainPagination.querySelector('.main-pagination__arrow-up');
+
+        arrowUp.addEventListener('click', () => {
+            if (indexOfActiveSlide !== 0) {
                 bullets[indexOfActiveSlide].classList.remove('active');
                 indexOfActiveSlide--;
                 bullets[indexOfActiveSlide].classList.add('active');
-                screens[indexOfActiveSlide].scrollIntoView({behavior: 'smooth'});
+                if (indexOfActiveSlide === 0) {
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                } else {
+                    window.scrollTo({
+                        top: screens[indexOfActiveSlide].offsetTop,
+                        behavior: "smooth"
+                    })
+                }
             }
-         }
+        })
 
-        lastScrollTop = st;
-    })
+        let arrowDown = mainPagination.querySelector('.main-pagination__arrow-down');
 
-    mainPagination.style.display = '';
+        arrowDown.addEventListener('click', () => {
+            if (indexOfActiveSlide !== bullets.length - 1) {
+                bullets[indexOfActiveSlide].classList.remove('active');
+                indexOfActiveSlide++;
+                bullets[indexOfActiveSlide].classList.add('active');
+                window.scrollTo({
+                    top: screens[indexOfActiveSlide].offsetTop,
+                    behavior: "smooth"
+                })
+            }
+        });
+
+        let lastScrollTop = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            let st = window.scrollY;
+
+            if (st > lastScrollTop){
+                if (screens[indexOfActiveSlide + 1] && screens[indexOfActiveSlide + 1].offsetTop + 20 <= st) {
+                    bullets[indexOfActiveSlide].classList.remove('active');
+                    indexOfActiveSlide++;
+                    bullets[indexOfActiveSlide].classList.add('active');
+                }
+            } else {
+                if (screens[indexOfActiveSlide - 1] && screens[indexOfActiveSlide - 1].offsetTop + screens[indexOfActiveSlide - 1].scrollHeight - 20 > st) {
+                    bullets[indexOfActiveSlide].classList.remove('active');
+                    indexOfActiveSlide--;
+                    bullets[indexOfActiveSlide].classList.add('active');
+                }
+            }
+
+            lastScrollTop = st;
+        })
+
+        mainPagination.style.display = '';
+    }
 }
 
 // catalog category description
@@ -531,3 +541,58 @@ if(document.querySelector('.__select')) {
     })
 }
 
+// animation pictures
+
+if (document.querySelector('._animate-health-bottles') && document.querySelector('.health__top')) {
+    let animateElementParent = document.querySelector('.health__top');
+    let animateElement = document.querySelector('._animate-health-bottles');
+
+    if (window.scrollY > animateElementParent.offsetTop - (document.documentElement.clientHeight/2) && window.scrollY < animateElementParent.offsetTop + (animateElementParent.scrollHeight/2)) {
+        animateElement.style.transition = 'transform 1.3s ease-out';
+        animateElement.style.transform = 'translateX(0)';
+    }
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > animateElementParent.offsetTop - (document.documentElement.clientHeight/2) && window.scrollY < animateElementParent.offsetTop + (animateElementParent.scrollHeight/2)) {
+            animateElement.style.transition = 'transform 1.3s ease-out';
+            animateElement.style.transform = 'translateX(0)';
+        }
+    })
+}
+
+if (document.querySelector('._animate-uniq-back') && document.querySelector('.uniq')) {
+    let animateElementParent = document.querySelector('.uniq');
+    let animateElement = document.querySelector('._animate-uniq-back');
+
+    if (window.scrollY > animateElementParent.offsetTop - (document.documentElement.clientHeight/2) && window.scrollY < animateElementParent.offsetTop + (animateElementParent.scrollHeight/2)) {
+        animateElement.style.transition = 'transform 0.8s ease-out';
+        animateElement.style.transform = 'translateX(0)';
+    }
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > animateElementParent.offsetTop - (document.documentElement.clientHeight/2) && window.scrollY < animateElementParent.offsetTop + (animateElementParent.scrollHeight/2)) {
+            animateElement.style.transition = 'transform 0.8s ease-out';
+            animateElement.style.transform = 'translateX(0)';
+        }
+    })
+}
+
+// parallax
+
+if (document.querySelector('._parallax')) {
+    let image = document.querySelector('._parallax');
+    let imageParent = document.querySelector('._parallax-parent');
+    let yMin = -200;
+    let yMax = 300;
+    if (window.scrollY > imageParent.offsetTop - (document.documentElement.clientHeight)/2 && window.scrollY < imageParent.offsetTop + imageParent.scrollHeight) {
+        let y = (window.scrollY - (imageParent.offsetTop - document.documentElement.clientHeight)) / (imageParent.offsetHeight + document.documentElement.clientHeight);
+        image.style.top = `${yMin + y * (yMax - yMin)}px`;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > imageParent.offsetTop - (document.documentElement.clientHeight)/2 && window.scrollY < imageParent.offsetTop + imageParent.scrollHeight) {
+            let y = (window.scrollY - (imageParent.offsetTop - document.documentElement.clientHeight)) / (imageParent.offsetHeight + document.documentElement.clientHeight);
+            image.style.top = `${yMin + y * (yMax - yMin)}px`;
+        }
+    })
+}

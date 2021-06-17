@@ -46,7 +46,19 @@
             </div>
         </section>
         <section class="uniq screen">
-            <div class="container">
+            <div class="uniq__back">
+                <picture>
+                    <source srcset="img/uniq/ornament-mobile.svg" media="(max-width: 767px)">
+                    <source srcset="img/uniq/ornament-tablet.svg" media="(max-width: 1230px)">
+                    <img src="img/uniq/ornament-pc.svg" alt="">
+                </picture>
+                <picture class="_animate-uniq-back">
+                    <source srcset="img/uniq/back-mobile.svg" media="(max-width: 767px)">
+                    <source srcset="img/uniq/back-tablet.svg" media="(max-width: 1230px)">
+                    <img src="img/uniq/back-pc.svg" alt="">
+                </picture>
+            </div>
+            <div class="uniq__container container">
                 <div class="uniq__block">
                     <h3 class="uniq__title title">Уникальность</h3>
                     <p class="uniq__content">Legend Of Baikal - вода натуральной минерализации без добавления искусственных солей. Проходит бережную очистку, сохраняя при этом натуральную сверхлегкую минерализацию.</p>
@@ -119,7 +131,7 @@
                         <img src="img/health/top-bg.jpg" alt="">
                     </div>
                     <div class="health__container container">
-                        <div class="health__left">
+                        <div class="health__left _animate-health-bottles">
                             <img src="img/health/bottles.png" alt="">
                         </div>
                         <div class="health__image-text">
@@ -858,7 +870,10 @@
                 </div>
             </div>
         </section>
-        <section class="main-videos screen">
+        <section class="main-videos screen _parallax-parent">
+            <div class="main-videos__back">
+                <img class="_parallax" src="img/videos/main-bg.png" alt="">
+            </div>
             <div class="main-videos__container container">
                 <button class="main-videos__arrow main-videos__arrow-left">
                     <svg width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
@@ -1011,6 +1026,9 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="main-bottom">
+            <img class="main-bottom__image" src="img/main-bottom.png" alt="">
         </section>
 
     </div>

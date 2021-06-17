@@ -90,8 +90,11 @@ a
   overflow: hidden
   background-color: $white
   position: relative
+  margin-top: 150px
   & > *
     width: 100%
+  @media screen and ( max-width: 767px )
+    margin-top: 74px
 
 .container
   max-width: 1230px
@@ -101,9 +104,6 @@ a
     padding: 0 15px
   @media screen and ( max-width: 480px )
     padding: 0 5px
-
-.hidden
-  display: none
 
 .title
   font-size: 50px

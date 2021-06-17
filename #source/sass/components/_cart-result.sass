@@ -65,14 +65,15 @@
     &__bottom
         display: flex
         justify-content: space-between
-        align-items: center
+        align-items: flex-start
     &__bottom-checks
         display: flex
         flex-direction: column
         align-items: flex-start
-        gap: 10px
         max-width: 50%
         min-width: 200px
+        & > *:not(:last-child)
+            margin-bottom: 10px
     &__bottom-check
         & input
             position: absolute
@@ -90,7 +91,7 @@
             display: block
             padding-left: 36px
             font-size: 12px
-            line-height: 14px
+            line-height: 17px
             color: #696969
             cursor: pointer
             &::before
@@ -102,13 +103,13 @@
                 width: 16px
                 height: 16px
                 border-radius: 3px
+                transition: all 0.2s ease-in-out
                 background: #F9F9F9
                 border: 1px solid #D2D2D2
-                transition: all 0.2s ease-in-out
             &::after
                 content: url('../img/icons/check-blue.svg')
                 position: absolute
-                top: 0px
+                top: 0
                 left: 6px
                 width: 16px
                 height: 16px

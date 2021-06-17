@@ -23,14 +23,16 @@
         justify-content: space-between
         align-items: flex-start
         padding: 36px 0 30px
-        gap: 15px
+        & > *:not(:last-child)
+            margin-right: 15px
         @media screen and ( max-width: 1230px )
             padding: 22px 0 15px
         @media screen and ( max-width: 767px )
             padding: 20px 0 11px
             flex-wrap: wrap
         @media screen and ( max-width: 480px )
-            gap: 5px
+            & > *:not(:last-child)
+                margin-right: 5px
     &__left
         width: 33%
         text-align: left
@@ -108,13 +110,16 @@
         justify-content: space-between
         align-items: center
         margin-top: 58px
-        gap: 45px
+        & > *:not(:last-child)
+            margin-right: 45px
         @media screen and ( max-width: 1230px )
             margin-top: 36px
-            gap: 30px
+            & > *:not(:last-child)
+                margin-right: 30px
         @media screen and ( max-width: 767px )
             margin-top: 16px
-            gap: 18px
+            & > *:not(:last-child)
+                margin-right: 18px
     &__social-link
         width: 67px
         height: 67px

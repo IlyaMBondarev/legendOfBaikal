@@ -1,3 +1,6 @@
+
+//sliders
+
 if (document.querySelector('.main-banners__slider')) {
     const mainBannersSlider = new Swiper('.main-banners__slider', {
         navigation: {

@@ -82,7 +82,6 @@
         align-items: center
         white-space: nowrap
         flex-wrap: wrap
-        gap: 6px 5px
         & input
             display: none
         & input:checked + label
@@ -103,14 +102,24 @@
         transition: all 0.2s ease-in-out
         &-25
             width: calc(25% - 4px)
+            margin-bottom: 6px
+            &:not(:nth-of-type(4n))
+                margin-right: 5px
         &-30
             width: calc(35% - 3px)
+            margin-bottom: 6px
         &-50
             width: calc(50% - 3px)
+            margin-bottom: 6px
+            &:not(:nth-of-type(2n))
+                margin-right: 5px
         &-65
             width: calc(65% - 3px)
+            margin-right: 5px
+            margin-bottom: 6px
         &-100
             width: 100%
+            margin-bottom: 6px
         &:hover
             border-color: $blue
     &__item-info

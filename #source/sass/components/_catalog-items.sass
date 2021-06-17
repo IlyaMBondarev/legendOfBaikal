@@ -115,10 +115,16 @@
     &__items
         display: flex
         flex-wrap: wrap
-        gap: 22px 25px
         margin-bottom: 65px
+        & > *
+            margin-left: 9px
+            margin-right: 9px
+            margin-bottom: 22px
         @media screen and ( max-width: 1230px )
-            gap: 10px
+            & > *
+                margin-left: 5px
+                margin-right: 5px
+                margin-bottom: 10px
         @media screen and ( max-width: 767px )
             justify-content: space-around
             margin-bottom: 25px
@@ -127,7 +133,8 @@
         display: flex
         justify-content: center
         align-items: center
-        gap: 2px
+        & > *:not(:last-child)
+            margin-right: 2px
         & span
             display: inline-block
             width: 28px

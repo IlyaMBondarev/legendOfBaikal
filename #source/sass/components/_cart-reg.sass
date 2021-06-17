@@ -41,6 +41,8 @@
         justify-content: space-between
         align-items: stretch
         flex-wrap: wrap
+        & > *:not(:last-child)
+            margin-bottom: 10px
     &__left
         width: calc(66.6666% - 18px)
         display: flex
@@ -50,7 +52,6 @@
             width: calc(66.6666% - 9px)
         @media screen and ( max-width: 767px )
             width: 100%
-            margin-bottom: 10px
     &__right
         width: calc(33.3333% - 18px)
         @media screen and ( max-width: 1023px )

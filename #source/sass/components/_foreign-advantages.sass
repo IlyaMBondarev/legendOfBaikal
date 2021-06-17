@@ -1,5 +1,7 @@
 .foreign-advantages
     margin-bottom: 25px
+    @media screen and ( max-width: 767px )
+        margin-bottom: 0
     &__title
         margin-bottom: 50px
         @media screen and ( max-width: 1023px )
@@ -8,10 +10,12 @@
         display: flex
         justify-content: space-between
         align-items: stretch
-        gap: 16px 0
+        & > *
+            margin-bottom: 16px
         @media screen and ( max-width: 767px )
             flex-wrap: wrap
-            gap: 30px 0
+            & > *
+                margin-bottom: 30px
     &__item
         width: calc((100% - 30px) / 4)
         display: flex

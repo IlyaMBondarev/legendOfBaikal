@@ -44,16 +44,19 @@
         display: flex
         justify-content: space-between
         align-items: stretch
-        gap: 4%
+        & > *:not(:last-child)
+            margin-right: 4%
         @media screen and ( max-width: 1023px )
             margin-top: 17px
             margin-bottom: 22px
         @media screen and ( max-width: 767px )
             flex-direction: column
             align-items: center
-            gap: 10px 0
             margin-top: 25px
             margin-bottom: 25px
+            & > *:not(:last-child)
+                margin-right: 0
+                margin-bottom: 10px
     &__block
         width: 22%
         @media screen and ( max-width: 767px )
@@ -105,12 +108,16 @@
         display: flex
         justify-content: center
         align-items: center
-        gap: 20px
+        & > *:not(:last-child)
+            margin-right: 20px
         @media screen and ( max-width: 1023px )
-            gap: 15px
+            & > *:not(:last-child)
+                margin-right: 15px
         @media screen and ( max-width: 767px )
             flex-direction: column
-            gap: 8px
+            & > *:not(:last-child)
+                margin-right: 0
+                margin-bottom: 8px
     &__bottom-left
         font-size: 13px
         line-height: 15px

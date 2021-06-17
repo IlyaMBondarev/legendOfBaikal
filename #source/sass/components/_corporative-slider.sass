@@ -108,7 +108,8 @@
         display: flex
         @media screen and ( max-width: 767px )
             justify-content: center
-            gap: 90px
+            & > *:not(:last-child)
+                margin-right: 90px
     &__arrow
         width: 45px
         height: 45px

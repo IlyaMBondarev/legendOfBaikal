@@ -39,13 +39,17 @@
         display: flex
         justify-content: flex-start
         align-items: flex-start
-        gap: 25px
+        & > *:not(:last-child)
+            margin-right: 25px
         @media screen and ( max-width: 1023px )
-            gap: 13px
+            & > *:not(:last-child)
+                margin-right: 13px
         @media screen and ( max-width: 767px )
             flex-direction: column
             align-items: stretch
-            gap: 11px 0
+            & > *:not(:last-child)
+                margin-right: 0
+                margin-bottom: 11px
     &__item
         flex-grow: 1
         max-width: 42%
@@ -80,7 +84,7 @@
                 padding: 7px 16px
         @media screen and ( max-width: 767px )
             height: 24px
-    &__icon
+    &__block-icon
         position: absolute
         left: 0
         top: 0

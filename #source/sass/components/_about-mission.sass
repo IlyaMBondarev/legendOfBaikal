@@ -6,7 +6,8 @@
         display: flex
         justify-content: space-between
         align-items: stretch
-        gap: 70px
+        & > *:not(:last-child)
+            margin-right: 70px
         @media screen and ( max-width: 1023px )
             justify-content: flex-start
     &__main
