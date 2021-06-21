@@ -1377,7 +1377,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 1000px) {
   .main-banner__block {
-    max-width: 500px;
+    max-width: 440px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1555,7 +1555,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .main-banner__image-animate {
   position: absolute;
-  right: 30px;
+  right: -13%;
   top: 15%;
   height: 70%;
   max-height: 70%;
@@ -1563,6 +1563,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 .main-banner__image-animate img {
   max-height: 100%;
+}
+@media screen and (max-width: 1600px) {
+  .main-banner__image-animate {
+    right: -5%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .main-banner__image-animate {
+    right: 30px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .main-banner__image-animate {
+    height: 54%;
+    top: 23%;
+  }
 }
 @media screen and (max-width: 767px) {
   .main-banner__image-animate {
