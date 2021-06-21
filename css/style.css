@@ -1368,6 +1368,7 @@ h1, h2, h3, h4, h5, h6 {
 .main-banner__block {
   padding: 93px 0;
   position: relative;
+  z-index: 1;
 }
 @media screen and (max-width: 1430px) {
   .main-banner__block {
@@ -1627,7 +1628,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 767px) {
   .uniq__container {
     padding-top: 35px;
-    padding-bottom: 35px;
+    padding-bottom: 25px;
   }
 }
 .uniq__title {
@@ -1755,17 +1756,17 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 767px) {
   .uniq__slider {
     display: block;
-    padding: 0 15px 50px;
+    padding: 0 15px 60px;
   }
 }
 @media screen and (max-width: 480px) {
   .uniq__slider {
-    padding: 0 5px 40px;
+    padding: 0 5px 50px;
   }
 }
 .uniq__slider .swiper-pagination {
   position: absolute;
-  bottom: 10px !important;
+  bottom: 21px !important;
   left: 50% !important;
   transform: translateX(-50%);
 }
@@ -1814,7 +1815,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   padding-right: 6px;
   padding-right: 3px;
-  bottom: 14px;
+  bottom: 25px;
   left: 50%;
   transform: translate(calc(-50% - 55px), 50%);
   z-index: 3;
@@ -1823,7 +1824,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   padding-left: 6px;
   padding-left: 3px;
-  bottom: 14px;
+  bottom: 25px;
   left: 50%;
   transform: translate(calc(-50% + 55px), 50%);
   z-index: 3;
