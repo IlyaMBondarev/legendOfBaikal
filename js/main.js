@@ -679,6 +679,36 @@ if (document.querySelector('.main-banners__slider')) {
     }
 }
 
+if (document.querySelector('.uniq__slider')) {
+    const uniqSlider = new Swiper('.uniq__slider', {
+        navigation: {
+            nextEl: '.uniq__arrow-right',
+            prevEl: '.uniq__arrow-left'
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 2
+            },
+            480: {
+                slidesPerView: 3
+            },
+            600: {
+                slidesPerView: 4,
+            }
+        },
+        watchOverflow: true,
+        spaceBetween: 30,
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+    });
+}
+
 if (document.querySelector('.main-news__slider')) {
     const mainNewsSlider = new Swiper('.main-news__slider', {
         navigation: {
