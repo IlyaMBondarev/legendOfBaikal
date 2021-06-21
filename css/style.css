@@ -9579,7 +9579,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
   }
 }
-.cart-payment__type input {
+.cart-payment__type input[type=radio] {
   position: absolute;
   left: -3000px;
   width: 0;
@@ -9587,17 +9587,17 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   visibility: hidden;
 }
-.cart-payment__type input:checked + label::after {
+.cart-payment__type input[type=radio]:checked + label::after {
   opacity: 1 !important;
   background: #ffffff !important;
   border: 4px solid #008DD2 !important;
 }
 @media screen and (max-width: 1023px) {
-  .cart-payment__type input:checked + label::after {
+  .cart-payment__type input[type=radio]:checked + label::after {
     border-width: 2px !important;
   }
 }
-.cart-payment__type label {
+.cart-payment__type input[type=radio] + label {
   position: relative;
   display: block;
   padding-left: 32px;
@@ -9606,14 +9606,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #696969;
   cursor: pointer;
 }
-.cart-payment__type label::before, .cart-payment__type label::after {
+.cart-payment__type input[type=radio] + label::before, .cart-payment__type input[type=radio] + label::after {
   content: "";
   position: absolute;
   display: block;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
 }
-.cart-payment__type label::before {
+.cart-payment__type input[type=radio] + label::before {
   top: 0;
   left: 0;
   width: 17px;
@@ -9621,7 +9621,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #F9F9F9;
   border: 1px solid #D2D2D2;
 }
-.cart-payment__type label::after {
+.cart-payment__type input[type=radio] + label::after {
   top: 1px;
   left: 1px;
   width: 15px;
@@ -9631,27 +9631,27 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   border: 4px solid #ffffff;
 }
-.cart-payment__type label:hover::after {
+.cart-payment__type input[type=radio] + label:hover::after {
   opacity: 1;
 }
 @media screen and (max-width: 1023px) {
-  .cart-payment__type label {
+  .cart-payment__type input[type=radio] + label {
     padding-left: 17px;
     font-size: 7px;
     line-height: 9px;
   }
-  .cart-payment__type label::before {
+  .cart-payment__type input[type=radio] + label::before {
     width: 9px;
     height: 9px;
   }
-  .cart-payment__type label::after {
+  .cart-payment__type input[type=radio] + label::after {
     width: 7px;
     height: 7px;
     border-width: 2px;
   }
 }
 @media screen and (max-width: 767px) {
-  .cart-payment__type label::after {
+  .cart-payment__type input[type=radio] + label::after {
     border-width: 2px;
   }
 }
@@ -10023,7 +10023,7 @@ h1, h2, h3, h4, h5, h6 {
     border-width: 2px !important;
   }
 }
-.cart-delivery__type label {
+.cart-delivery__type input[type=radio] + label {
   position: relative;
   display: block;
   padding-left: 32px;
@@ -10032,14 +10032,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #696969;
   cursor: pointer;
 }
-.cart-delivery__type label::before, .cart-delivery__type label::after {
+.cart-delivery__type input[type=radio] + label::before, .cart-delivery__type input[type=radio] + label::after {
   content: "";
   position: absolute;
   display: block;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
 }
-.cart-delivery__type label::before {
+.cart-delivery__type input[type=radio] + label::before {
   top: 0;
   left: 0;
   width: 17px;
@@ -10047,7 +10047,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #F9F9F9;
   border: 1px solid #D2D2D2;
 }
-.cart-delivery__type label::after {
+.cart-delivery__type input[type=radio] + label::after {
   top: 1px;
   left: 1px;
   width: 15px;
@@ -10057,27 +10057,27 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   border: 4px solid #ffffff;
 }
-.cart-delivery__type label:hover::after {
+.cart-delivery__type input[type=radio] + label:hover::after {
   opacity: 1;
 }
 @media screen and (max-width: 1023px) {
-  .cart-delivery__type label {
+  .cart-delivery__type input[type=radio] + label {
     padding-left: 17px;
     font-size: 7px;
     line-height: 9px;
   }
-  .cart-delivery__type label::before {
+  .cart-delivery__type input[type=radio] + label::before {
     width: 9px;
     height: 9px;
   }
-  .cart-delivery__type label::after {
+  .cart-delivery__type input[type=radio] + label::after {
     width: 7px;
     height: 7px;
     border-width: 2px;
   }
 }
 @media screen and (max-width: 767px) {
-  .cart-delivery__type label::after {
+  .cart-delivery__type input[type=radio] + label::after {
     border-width: 2px;
   }
 }
