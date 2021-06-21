@@ -2314,7 +2314,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .main-banners__left-image {
-  min-width: 185px;
+  max-width: 185px;
+  min-width: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2331,10 +2332,13 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 767px) {
   .main-banners__left-image {
     display: block;
-    min-width: 73px;
+    max-width: 73px;
+    min-width: 60px;
+    max-height: 225px;
   }
   .main-banners__left-image > img {
-    max-height: 225px;
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 .main-banners__left-slider {
