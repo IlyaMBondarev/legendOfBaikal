@@ -578,6 +578,23 @@ if (document.querySelector('._animate-uniq-back') && document.querySelector('.un
     })
 }
 
+if (document.querySelector('._animate-main-banner') && document.querySelector('.main-banner')) {
+    let animateElementParent = document.querySelector('.main-banner');
+    let animateElement = document.querySelector('._animate-main-banner');
+
+    if (window.scrollY > animateElementParent.offsetTop - (document.documentElement.clientHeight/2) && window.scrollY < animateElementParent.offsetTop + (animateElementParent.scrollHeight/2)) {
+        animateElement.style.transition = 'transform 0.8s ease-out';
+        animateElement.style.transform = 'translateX(0)';
+    }
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > animateElementParent.offsetTop - (document.documentElement.clientHeight/2) && window.scrollY < animateElementParent.offsetTop + (animateElementParent.scrollHeight/2)) {
+            animateElement.style.transition = 'transform 0.8s ease-out';
+            animateElement.style.transform = 'translateX(0)';
+        }
+    })
+}
+
 // parallax
 
 if (document.querySelector('._parallax')) {
