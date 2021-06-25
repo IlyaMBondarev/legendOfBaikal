@@ -40,6 +40,29 @@ cityBlocks.forEach(cityBlock => {
     })
 })
 
+// dropdown-catalog
+
+if (document.querySelector('.dropdown-catalog')) {
+    let dropdownCatalog = document.querySelector('.dropdown-catalog');
+    let dropdownCatalogMenu = dropdownCatalog.querySelector('.dropdown__menu');
+    
+    if (document.documentElement.scrollWidth > 1230) {
+        dropdownCatalogMenu.style.left = `-${dropdownCatalog.offsetLeft}px`;
+    } else {
+        dropdownCatalogMenu.style.right = `-${document.documentElement.scrollWidth - dropdownCatalog.offsetWidth - dropdownCatalog.offsetLeft}px`;
+        dropdownCatalogMenu.style.left = 'auto';
+    }
+
+    window.addEventListener('resize', () => {
+        if (document.documentElement.scrollWidth > 1230) {
+            dropdownCatalogMenu.style.left = `-${dropdownCatalog.offsetLeft}px`;
+        } else {
+            dropdownCatalogMenu.style.right = `-${document.documentElement.scrollWidth - dropdownCatalog.offsetWidth - dropdownCatalog.offsetLeft}px`;
+            dropdownCatalogMenu.style.left = 'auto';
+        }
+    })
+}
+
 // main page pagination
 
 if (document.querySelector('.screen') && document.querySelector('.main-pagination')) {
