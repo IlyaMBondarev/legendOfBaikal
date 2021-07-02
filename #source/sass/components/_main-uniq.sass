@@ -25,16 +25,18 @@
                     bottom: 28px
             &._animate-uniq-back
                 transform: translateX(105%)
+        @media screen and ( max-width: 767px )
+            display: none
     &__container
         position: relative
-        padding: 95px 0
+        padding-top: 95px
+        padding-bottom: 95px
         @media screen and ( max-width: 1230px )
             padding-top: 50px
             padding-bottom: 120px
         @media screen and ( max-width: 767px )
             padding-top: 35px
-            padding-bottom: 90px
-            margin-bottom: 30px
+            padding-bottom: 25px
     &__title
         margin-bottom: 20px
         @media screen and ( max-width: 1230px )
@@ -67,15 +69,14 @@
             & > *:not(:nth-child(n+5))
                 margin-bottom: 35px
         @media screen and ( max-width: 767px )
-            & > *:not(:nth-child(n+5))
-                margin-bottom: 30px
+            display: none
     &__item
         display: flex
         align-items: center
         flex-direction: column
         width: 25%
         @media screen and ( max-width: 767px )
-            width: 50%
+            width: auto
     &__item-icon
         position: relative
         margin-bottom: 10px
@@ -113,3 +114,66 @@
         @media screen and ( max-width: 767px )
             font-size: 15px
             line-height: 18px
+    &__slider
+        display: none
+        position: relative
+        @media screen and ( max-width: 767px )
+            display: block
+            padding: 0 15px 60px
+        @media screen and ( max-width: 480px )
+            padding: 0 5px 50px
+        & .swiper-pagination
+            position: absolute
+            bottom: 21px !important
+            left: 50% !important
+            transform: translateX(-50%)
+        & .swiper-pagination-bullet
+            display: inline-block
+            margin: 0 !important
+            width: 7px
+            height: 7px
+            background: transparent
+            opacity: 1
+            border: 1px solid $hover
+            border-radius: 50%
+            cursor: pointer
+            transform: none !important
+            transition: all 0.2s ease-in-out
+            &:not(:last-of-type)
+                margin-right: 3px !important
+            &:hover
+                background: $hover
+        & .swiper-pagination-bullet-active
+            background: $hover
+    &__arrow
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        background: $white
+        border: 2px solid $white
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15)
+        transition: all 0.2s ease-in-out
+        width: 28px
+        height: 28px
+        & svg
+            width: 8px
+        &:hover
+            background: transparent
+            border-color: $blue
+    &__arrow-left
+        position: absolute
+        padding-right: 6px
+        padding-right: 3px
+        bottom: 25px
+        left: 50%
+        transform: translate(calc(-50% - 55px), 50%)
+        z-index: 3
+    &__arrow-right
+        position: absolute
+        padding-left: 6px
+        padding-left: 3px
+        bottom: 25px
+        left: 50%
+        transform: translate(calc(-50% + 55px), 50%)
+        z-index: 3
