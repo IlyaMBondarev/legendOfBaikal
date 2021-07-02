@@ -2954,7 +2954,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .main-promotions__item-large {
-  flex-grow: 2;
+  flex-grow: 1.5;
 }
 .main-promotions__item-large .main-promotions__item-image {
   width: 100%;
