@@ -273,6 +273,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: stretch;
   flex-grow: 1;
+  flex-basis: 0;
   padding-top: 30px;
   padding-bottom: 10px;
   min-height: 150px;
@@ -2196,6 +2197,7 @@ h1, h2, h3, h4, h5, h6 {
     width: calc(50% - 15px);
     margin-bottom: 15px;
     flex-grow: 1;
+    flex-basis: 0;
     max-width: 60%;
   }
 }
@@ -2852,6 +2854,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 767px) {
   .main-promotions__row {
     flex-grow: 1;
+    flex-basis: 0;
   }
   .main-promotions__row > *:not(:last-child) {
     margin-right: 13px;
@@ -2876,6 +2879,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: stretch;
   flex-grow: 1;
+  flex-basis: 0;
 }
 .main-promotions__right > *:not(:last-child) {
   margin-bottom: 22px;
@@ -2909,6 +2913,7 @@ h1, h2, h3, h4, h5, h6 {
 .main-promotions__item {
   display: block;
   flex-grow: 1;
+  flex-basis: 0;
 }
 @media screen and (max-width: 767px) {
   .main-promotions__item {
@@ -3946,6 +3951,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  flex-basis: 0;
   transition: all 0.2s ease-in-out;
 }
 @media screen and (max-width: 480px) {
@@ -7604,13 +7610,13 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: stretch;
 }
-.corporative-advantages__items > *:not(:last-child) {
-  margin-bottom: 16px;
-}
 @media screen and (max-width: 767px) {
   .corporative-advantages__items {
     flex-direction: column;
     align-items: center;
+  }
+  .corporative-advantages__items > *:not(:last-child) {
+    margin-bottom: 16px;
   }
 }
 .corporative-advantages__item {
