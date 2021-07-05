@@ -440,16 +440,20 @@
     height: 100%
     left: 0
     top: 0
-    display: flex
-    justify-content: center
-    align-items: center
+    right: 0
+    bottom: 0
     background: rgba(0, 0, 0, 0.8)
     opacity: 0
     transition: opacity 0.2s ease-in-out
     &.active
         opacity: 1
     & > img
-        max-width: 90%
-        max-height: 90%
-        flex-grow: 1
+        width: 70%
+        height: 70%
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        margin: auto
         object-fit: contain
