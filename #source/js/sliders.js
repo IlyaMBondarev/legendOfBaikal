@@ -173,7 +173,6 @@ if (document.querySelector('.main-replies__slider')) {
             dynamicBullets: true
         },
         simulateTouch: false,
-        slidesPerView: 4,
         watchOverflow: true,
         breakpoints: {
             320: {
@@ -201,6 +200,29 @@ if (document.querySelector('.product-tabs__slider')) {
         navigation: {
             nextEl: '.product-tabs__arrow-right',
             prevEl: '.product-tabs__arrow-left'
+        },
+        simulateTouch: false,
+        watchOverflow: true,
+        spaceBetween: 20,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            600: {
+                slidesPerView: 2,
+            },
+            1230: {
+                slidesPerView: 3,
+            }
+        }
+    });
+}
+
+if (document.querySelector('.sertificates__slider')) {
+    const sertificatesSlider = new Swiper('.sertificates__slider', {
+        navigation: {
+            nextEl: '.sertificates__arrow-right',
+            prevEl: '.sertificates__arrow-left'
         },
         simulateTouch: false,
         watchOverflow: true,

@@ -552,6 +552,14 @@ if(document.querySelector('.product-tabs__slider .swiper-slide > img')) {
     })
 }
 
+if(document.querySelector('.sertificates__slider .swiper-slide > img')) {
+    let images = document.querySelectorAll('.sertificates__slider .swiper-slide > img');
+
+    images.forEach(image => {
+        image.addEventListener('click', () => popupImage(image, true));
+    })
+}
+
 // corporative-items mobile
 
 if (document.querySelector('.corporative-items__head .corporative-items__info')) {
@@ -688,6 +696,43 @@ if (document.querySelector('._parallax')) {
             let y = (window.scrollY - (imageParent.offsetTop - document.documentElement.clientHeight)) / (imageParent.offsetHeight + document.documentElement.clientHeight);
             image.style.top = `${yMin + y * (yMax - yMin)}px`;
         }
+    })
+}
+
+// faq
+
+if (document.querySelector('.faq')) {
+    let items = document.querySelectorAll('.faq .faq__item');
+
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            let sign = item.querySelector('.faq__question > .faq__sign');
+            let answer = item.querySelector('.faq__answer');
+
+            if (sign.classList.contains('active')) {
+                sign.classList.remove('active');
+                answer.style.maxHeight = '';
+                answer.style.marginTop = '';
+            } else {
+                sign.classList.add('active');
+                answer.style.maxHeight = `${answer.scrollHeight}px`;
+                answer.style.marginTop = '25px';
+            }
+            })
+    })
+}
+
+// video
+
+if (document.querySelector('.video')) {
+    let videos = document.querySelectorAll('.video');
+
+    videos.forEach(video => {
+        video.addEventListener('click', function loadVideo() {
+            video.innerHTML = `<iframe src="${video.dataset.videolink}" style="width: 100%; height: 100%" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            video.classList.remove('video');
+            video.removeEventListener('click', loadVideo);
+        })
     })
 }
 
@@ -865,7 +910,6 @@ if (document.querySelector('.main-replies__slider')) {
             dynamicBullets: true
         },
         simulateTouch: false,
-        slidesPerView: 4,
         watchOverflow: true,
         breakpoints: {
             320: {
@@ -893,6 +937,29 @@ if (document.querySelector('.product-tabs__slider')) {
         navigation: {
             nextEl: '.product-tabs__arrow-right',
             prevEl: '.product-tabs__arrow-left'
+        },
+        simulateTouch: false,
+        watchOverflow: true,
+        spaceBetween: 20,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            600: {
+                slidesPerView: 2,
+            },
+            1230: {
+                slidesPerView: 3,
+            }
+        }
+    });
+}
+
+if (document.querySelector('.sertificates__slider')) {
+    const sertificatesSlider = new Swiper('.sertificates__slider', {
+        navigation: {
+            nextEl: '.sertificates__arrow-right',
+            prevEl: '.sertificates__arrow-left'
         },
         simulateTouch: false,
         watchOverflow: true,
