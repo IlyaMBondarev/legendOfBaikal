@@ -56,6 +56,8 @@
                 margin-right: 20px
         @media screen and ( max-width: 767px )
             min-height: 74px
+            & > *:not(:last-child)
+                margin-right: 10px
     &__row
         display: flex
         justify-content: space-between
@@ -68,6 +70,8 @@
         flex-direction: column
         justify-content: space-between
         align-items: center
+        @media screen and ( max-width: 767px )
+            justify-content: flex-end
     &__left
         display: flex
         justify-content: center
@@ -87,6 +91,9 @@
         @media screen and ( max-width: 767px )
             width: 113px
             //height: 44px
+        @media screen and ( max-width: 480px )
+            width: 93px
+            //height: 37px
     &__social
         display: flex
         & > *:not(:last-child)
@@ -113,9 +120,9 @@
         &:hover &-icon *
             fill: $white
         @media screen and ( max-width: 767px )
-            height: 43px
-            width: 43px
-            margin-right: 23px
+            height: 40px
+            width: 40px
+            margin-right: 10px
             justify-content: center
             background: $white
             box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25)
@@ -181,6 +188,10 @@
             margin-right: 10px
         &:hover
             color: $hover
+        @media screen and ( max-width: 480px )
+            font-size: 11px
+            line-height: 13px
+            font-weight: 400
     &__burger
         position: relative
         height: 43px
@@ -233,6 +244,7 @@
         text-decoration-line: underline
         text-align: center
         color: $white
+        background: transparent
         transition: all 0.2s ease-in-out
         cursor: pointer
         &:hover

@@ -297,6 +297,9 @@ h1, h2, h3, h4, h5, h6 {
   .header__main-row {
     min-height: 74px;
   }
+  .header__main-row > *:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 .header__row {
   display: flex;
@@ -314,6 +317,11 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .header__column {
+    justify-content: flex-end;
+  }
 }
 .header__left {
   display: flex;
@@ -338,6 +346,11 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 767px) {
   .header__logo {
     width: 113px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header__logo {
+    width: 93px;
   }
 }
 .header__social {
@@ -381,9 +394,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 767px) {
   .header__cart {
-    height: 43px;
-    width: 43px;
-    margin-right: 23px;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
     justify-content: center;
     background: #ffffff;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
@@ -464,6 +477,13 @@ h1, h2, h3, h4, h5, h6 {
 .header__phone:hover {
   color: #008DD2;
 }
+@media screen and (max-width: 480px) {
+  .header__phone {
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 400;
+  }
+}
 .header__burger {
   position: relative;
   height: 43px;
@@ -528,6 +548,7 @@ h1, h2, h3, h4, h5, h6 {
           text-decoration-line: underline;
   text-align: center;
   color: #ffffff;
+  background: transparent;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
