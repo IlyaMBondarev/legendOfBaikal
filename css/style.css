@@ -11458,3 +11458,154 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 3px;
   }
 }
+
+.rent {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 1230px) {
+  .rent {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .rent {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+.rent__title {
+  font-size: 45px;
+  line-height: 54px;
+  font-weight: 600;
+  color: #565656;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1160px) {
+  .rent__title {
+    font-size: 35px;
+    line-height: 42px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rent__title {
+    font-size: 23px;
+    line-height: 29px;
+  }
+}
+.rent__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media screen and (max-width: 767px) {
+  .rent__main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.rent__image {
+  width: 15%;
+}
+.rent__image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media screen and (max-width: 1023px) {
+  .rent__image {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .rent__block {
+    margin-bottom: 20px;
+  }
+}
+.rent__content {
+  font-size: 16px;
+  line-height: 19px;
+}
+@media screen and (max-width: 1230px) {
+  .rent__content {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .rent__content {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rent__content {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
+.rent__table {
+  margin-top: 20px;
+  margin-left: 5px;
+  border-collapse: collapse;
+}
+@media screen and (max-width: 767px) {
+  .rent__table {
+    margin-left: 0;
+  }
+}
+.rent__table tr:nth-of-type(2n) {
+  background: #f4f4f4;
+}
+.rent__table td {
+  padding: 7px;
+  border: 1px solid #eee;
+}
+@media screen and (max-width: 1230px) {
+  .rent__table td {
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rent__table td {
+    padding: 3px;
+  }
+}
+.rent__link {
+  width: 150px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0083C3;
+  background: #0083C3;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.rent__link:hover {
+  background: #ffffff;
+  color: #0083C3;
+}
+@media screen and (max-width: 1230px) {
+  .rent__link {
+    width: 100px;
+    height: 28px;
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .rent__link {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rent__link {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
