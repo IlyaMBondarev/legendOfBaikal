@@ -1,0 +1,138 @@
+.done
+    margin-bottom: 145px
+    @media screen and ( max-width: 1023px )
+        margin-bottom: 70px
+    @media screen and ( max-width: 767px )
+        margin-bottom: 60px
+    &__title
+        margin-bottom: 48px
+        @media screen and ( max-width: 767px )
+            margin-bottom: 30px
+    &__main
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 60px
+        @media screen and ( max-width: 1023px )
+            align-items: flex-start
+        @media screen and ( max-width: 767px )
+            flex-direction: column
+            margin-bottom: 27px
+    &__image
+        width: 220px
+        min-width: 220px
+        margin-right: 125px
+        & img
+            max-width: 100%
+        @media screen and ( max-width: 1023px )
+            width: 135px
+            min-width: 135px
+            margin-right: 40px
+        @media screen and ( max-width: 767px )
+            width: 55px
+            min-width: 55px
+            margin-right: 0
+            margin-bottom: 30px
+    &__right
+        @media screen and ( max-width: 767px )
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+    &__content
+        font-size: 22px
+        line-height: 27px
+        margin-bottom: 29px
+        & span
+            font-weight: 700
+        @media screen and ( max-width: 1023px )
+            font-size: 15px
+            line-height: 17px
+            margin-bottom: 20px
+        @media screen and ( max-width: 480px )
+            font-size: 11px
+            line-height: 13px
+            margin-bottom: 6px
+    &__submit
+        display: inline-block
+        padding: 16px 25px
+        background: $blue
+        box-shadow: 0px 0px 34.6898px rgba(0, 0, 0, 0.15)
+        border: 2px solid $blue
+        border-radius: 6px
+        font-size: 17px
+        line-height: 21px
+        font-weight: 600
+        text-transform: uppercase
+        color: $white
+        transition: all 0.2s ease-in-out
+        &:hover
+            background: $white
+            color: $blue
+        @media screen and ( max-width: 1023px )
+            padding: 11px 19px
+            box-shadow: 0px 0px 24.8024px rgba(0, 0, 0, 0.15)
+            border-radius: 4px
+            font-size: 12px
+            line-height: 14px
+        @media screen and ( max-width: 767px )
+            align-self: center
+            margin: 19px 0
+            border-width: 1px
+        @media screen and ( max-width: 480px )
+            padding: 10px 16px
+            box-shadow: 0px 0px 21.1155px rgba(0, 0, 0, 0.15)
+            font-size: 10px
+            line-height: 12px
+    &__block
+        padding: 18px 22px 30px
+        background: $white
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1)
+        border-radius: 5px
+        @media screen and ( max-width: 1023px )
+            padding: 16px 20px 26px
+            box-shadow: 0px 0px 27.0732px rgba(0, 0, 0, 0.1)
+        @media screen and ( max-width: 767px )
+            padding: 15px 18px
+            box-shadow: 0px 0px 20.7317px rgba(0, 0, 0, 0.1)
+            border-radius: 3px
+    &__block-title
+        margin-bottom: 25px
+        font-size: 21px
+        line-height: 26px
+        font-weight: 700
+        color: #696969
+        @media screen and ( max-width: 1023px )
+            font-size: 17px
+            line-height: 21px
+        @media screen and ( max-width: 767px )
+            display: inline-block
+        @media screen and ( max-width: 480px )
+            font-size: 13px
+            line-height: 16px
+            margin-bottom: 10px
+    &__block-cards
+        display: inline-flex
+        justify-content: flex-start
+        align-items: center
+        margin-right: 25px
+        & img:not(:last-child)
+            margin-right: 10px
+        @media screen and ( max-width: 1023px )
+            margin-right: 20px
+        @media screen and ( max-width: 767px )
+            margin-right: 0
+            margin-left: 20px
+            & img:not(:last-child)
+                margin-right: 8px
+    &__block-content
+        display: inline-block
+        font-size: 18px
+        line-height: 22px
+        @media screen and ( max-width: 1023px )
+            font-size: 16px
+            line-height: 18px
+        @media screen and ( max-width: 767px )
+            display: block
+        @media screen and ( max-width: 480px )
+            font-size: 12px
+            line-height: 14px

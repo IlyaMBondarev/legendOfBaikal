@@ -1,0 +1,236 @@
+.cart-order
+    background: $white
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    padding: 20px 22px 26px
+    margin-bottom: 30px
+    @media screen and ( max-width: 1023px )
+        box-shadow: 0px 0px 15.9516px rgba(0, 0, 0, 0.1)
+        border-radius: 2.65859px
+        padding: 10px 12px 14px
+        margin-bottom: 13px
+    @media screen and ( max-width: 767px )
+        box-shadow: 0px 0px 15.9516px rgba(0, 0, 0, 0.1)
+        border-radius: 2.65859px
+        padding: 15px 17px
+    &__top
+        display: flex
+        align-items: center
+        margin-bottom: 25px
+        @media screen and ( max-width: 1023px )
+            margin-bottom: 15px
+    &__icon
+        margin-right: 16px
+        & img
+            max-height: 33px
+        @media screen and ( max-width: 1023px )
+            margin-right: 9px
+            & img
+                max-height: 18px
+    &__title
+        font-size: 21px
+        line-height: 25px
+        font-weight: 700
+        color: #696969
+        @media screen and ( max-width: 1023px )
+            font-size: 11px
+            line-height: 13px
+    &__items
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        & > *:not(:last-child)
+            margin-right: 25px
+        @media screen and ( max-width: 1023px )
+            & > *:not(:last-child)
+                margin-right: 13px
+        @media screen and ( max-width: 767px )
+            flex-direction: column
+            align-items: stretch
+            & > *:not(:last-child)
+                margin-right: 0
+                margin-bottom: 11px
+    &__item
+        flex-grow: 1
+        max-width: 42%
+        @media screen and ( max-width: 767px )
+            max-width: 100%
+    &__item-title
+        font-size: 14px
+        line-height: 17px
+        font-weight: 600
+        color: #969696
+        margin-bottom: 12px
+        @media screen and ( max-width: 1023px )
+            font-size: 7px
+            line-height: 9px
+            margin-bottom: 6px
+    &__block
+        position: relative
+        height: 44px
+        width: 100%
+        & > input
+            width: 100%
+            height: 100%
+            background: #F7F7F7
+            border: 0.79262px solid #F1F1F1
+            border-radius: 7.14675px
+            padding: 14px 30px
+            &:placeholder
+                color: #969696
+        @media screen and ( max-width: 1023px )
+            height: 23px
+            & > input
+                padding: 7px 16px
+        @media screen and ( max-width: 767px )
+            height: 24px
+    &__block-icon
+        position: absolute
+        left: 0
+        top: 0
+        height: 100%
+        padding: 0 5px 0 10px
+        display: flex
+        align-items: center
+        @media screen and ( max-width: 1023px )
+            padding: 0 3px 0 5px
+            & svg
+                max-height: 6px
+    &__clear
+        position: absolute
+        top: 13px
+        right: 13px
+        width: 18px
+        height: 18px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        background: #969696
+        transition: all 0.2s ease-in-out
+        & svg
+            max-width: 45%
+            max-height: 45%
+            & *
+                stroke: $white
+        &:hover
+            background: $blue
+        @media screen and ( max-width: 1023px )
+            top: 7px
+            right: 7px
+            width: 10px
+            height: 10px
+    &__item-subtext
+        font-size: 10px
+        line-height: 12px
+        color: #969696
+        margin-top: 10px
+        @media screen and ( max-width: 1023px )
+            font-size: 5px
+            line-height: 6px
+            margin-top: 5px
+
+.__select
+    position: relative
+    width: 100%
+    height: 100%
+    font-size: 12px
+    line-height: 14px
+    background: #F7F7F7
+    border-radius: 7.14675px
+    @media screen and ( max-width: 1023px )
+        font-size: 7px
+        line-height: 8px
+    &[data-state="active"] &__content
+        opacity: 1
+    &[data-state="active"] &__arrow
+        transform: rotate(180deg) translateY(4px)
+        @media screen and ( max-width: 1023px )
+            transform: rotate(180deg) translateY(2px)
+    &[data-state="active"] &__label
+        max-height: 28px
+        border-bottom-width: 1px
+        padding: 5px 14px
+        @media screen and ( max-width: 1023px )
+            max-height: 20px
+            padding: 3px 10px
+    &__title 
+        display: flex
+        align-items: center
+        width: 100%
+        height: 100%
+        padding: 14px 20px
+        border-radius: 7.14675px
+        border: solid 1px #F1F1F1
+        cursor: pointer
+        &:hover + .__select__arrow svg *
+            stroke: $blue
+        @media screen and ( max-width: 1023px )
+            padding: 7px 10px
+    &__arrow
+        position: absolute
+        top: 16px
+        right: 21px
+        transform-origin: center
+        transition: all 0.3s ease-in-out
+        cursor: pointer
+        & svg
+            max-height: 12px
+            & *
+                stroke: #969696
+                transition: all 0.3s ease-in-out
+        &:hover svg *
+            stroke: $blue
+        @media screen and ( max-width: 1023px )
+            top: 8px
+            right: 11px
+            & svg
+                max-height: 6px
+    &__content 
+        position: absolute
+        top: calc(100% + 10px)
+        left: 6px
+        max-height: 250px
+        overflow: auto
+        width: calc(100% - 12px)
+        background-color: $white
+        border-radius: 10px
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15)
+        transition: all 0.3s ease-in-out
+        opacity: 0
+        z-index: 8
+        scrollbar-width: 4px
+        scrollbar-color: #D0D0D0
+        &::-webkit-scrollbar 
+            width: 4px
+            background-color: transparent
+        &::-webkit-scrollbar-thumb 
+            width: 4px
+            border-radius: 4px
+            background-color: #D0D0D0
+        @media screen and ( max-width: 1023px )
+            top: calc(100% + 4px)
+    &__input 
+        display: none
+    &__input:checked + label 
+        color: $blue
+    &__input:disabled + label 
+        opacity: 0.6
+        pointer-events: none
+    &__label 
+        display: flex
+        align-items: center
+        width: 100%
+        height: 28px
+        max-height: 0
+        padding: 0 14px
+        transition: all 0.3s ease-in-out
+        cursor: pointer
+        overflow: hidden
+        &:not(:last-of-type)
+            border-bottom: 0px solid #E6E6E6
+        @media screen and ( max-width: 1023px )
+            height: 20px
+            padding: 0 10px
+    &__label:hover 
+        color: $blue

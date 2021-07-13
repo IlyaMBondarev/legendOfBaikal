@@ -1,0 +1,76 @@
+.main-catalog
+    padding-top: 68px
+    padding-bottom: 30px
+    @media screen and ( max-width: 1230px )
+        padding-top: 55px
+        padding-bottom: 50px
+    @media screen and ( max-width: 767px )
+        padding-top: 45px
+        padding-bottom: 30px
+    &__title
+        margin-bottom: 23px
+        @media screen and ( max-width: 767px )
+            margin-bottom: 10px
+    &__subtitle
+        font-size: 22px
+        line-height: 27px
+        margin-bottom: 30px
+        @media screen and ( max-width: 1230px )
+            font-size: 20px
+            line-height: 24px
+            margin-bottom: 15px
+        @media screen and ( max-width: 767px )
+            display: none
+    &__items
+        margin-top: 60px
+        margin-bottom: 60px
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        flex-wrap: wrap
+        & > *:nth-child(n+5)
+            margin-top: 40px
+        @media screen and ( max-width: 1230px )
+            margin-top: 30px
+            margin-bottom: 40px
+            justify-content: space-around
+            & > *:nth-child(n+5)
+                margin-top: 16px
+        @media screen and ( max-width: 767px )
+            margin-top: 0
+            margin-bottom: 25px
+            & > *
+                margin: 0 5px 18px
+    &__link
+        width: fit-content
+        margin-left: auto
+        font-size: 22px
+        line-height: 26px
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        margin-top: 35px
+        margin-bottom: 30px
+        transition: all 0.2s ease-in-out
+        & span
+            text-decoration-line: underline
+        & svg
+            margin-left: 24px
+            width: 42px
+            height: 20px
+            & *
+                transition: all 0.2s ease-in-out
+                fill: #464646
+        &:hover
+            color: $blue
+            & svg *
+                fill: $blue
+        @media screen and ( max-width: 1230px )
+            margin-top: 0
+            margin-bottom: 0
+            font-size: 14px
+            line-height: 17px
+            & svg
+                margin-left: 15px
+                width: 27px
+                height: 13px

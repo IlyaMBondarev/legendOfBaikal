@@ -1,0 +1,49 @@
+.cart-nav
+    background: $white
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    padding: 23px 0
+    @media screen and ( max-width: 1023px )
+        padding: 20px 0
+    &__title
+        font-size: 22px
+        line-height: 27px
+        font-weight: 700
+        color: $blue
+        margin-bottom: 10px
+        padding-left: 22px
+        padding-right: 22px
+        @media screen and ( max-width: 1023px )
+            font-size: 17px
+            line-height: 21px
+            padding-left: 17px
+            padding-right: 17px
+    &__list
+        &:not(:last-of-type)
+            margin-bottom: 30px
+            @media screen and ( max-width: 1023px )
+                margin-bottom: 23px
+    &__item
+    &__link
+        display: inline-block
+        padding: 5px 30px 5px 22px
+        font-size: 16px
+        line-height: 19px
+        color: #696969
+        transition: all 0.2s ease-in-out
+        @media screen and ( max-width: 1023px )
+            padding: 5px 23px 5px 17px
+            font-size: 13px
+            line-height: 15px
+        &.active
+            font-size: 18px
+            line-height: 21px
+            font-weight: 600
+            color: $white
+            background-color: $hover
+            border-radius: 0px 100px 100px 0px
+            @media screen and ( max-width: 1023px )
+                font-size: 14px
+                line-height: 17px
+        &:not(.active):hover
+            color: $blue

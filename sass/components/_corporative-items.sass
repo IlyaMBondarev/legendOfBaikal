@@ -1,0 +1,179 @@
+.corporative-items
+    margin-bottom: 60px
+    @media screen and ( max-width: 767px )
+        margin-bottom: 0
+    &__main
+        background: $white
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2)
+        border-radius: 10px
+        padding: 35px
+        @media screen and ( max-width: 1230px )
+            box-shadow: 0px 0px 17.9432px rgba(0, 0, 0, 0.2)
+            border-radius: 5.98107px
+            padding: 20px
+        @media screen and ( max-width: 767px )
+            box-shadow: none
+            padding: 0
+            border-radius: 0
+            background: transparent
+    &__head
+        display: flex
+        justify-content: flex-start
+        align-items: stretch
+        margin-bottom: 10px
+        @media screen and ( max-width: 767px )
+            flex-direction: column
+            align-items: center
+            margin-bottom: 0
+    &__row
+        display: flex
+        justify-content: flex-start
+        align-items: stretch
+        &:not(:last-of-type)
+            margin-bottom: 10px
+        @media screen and ( max-width: 767px )
+            display: none
+    &__column
+        display: flex
+        justify-content: center
+        align-items: center
+        &-1
+            width: calc(100% / 2)
+            min-width: calc(100% / 2)
+            max-width: calc(100% / 2)
+        &-2
+            width: calc(100% / 3)
+            min-width: calc(100% / 3)
+            max-width: calc(100% / 3)
+        &-3
+            width: calc(100% / 4)
+            min-width: calc(100% / 4)
+            max-width: calc(100% / 4)
+        &-4
+            width: calc(100% / 5)
+            min-width: calc(100% / 5)
+            max-width: calc(100% / 5)
+        &-5
+            width: calc(100% / 6)
+            min-width: calc(100% / 6)
+            max-width: calc(100% / 6)
+        &-6
+            width: calc(100% / 7)
+            min-width: calc(100% / 7)
+            max-width: calc(100% / 7)
+        &-7
+            width: calc(100% / 8)
+            min-width: calc(100% / 8)
+            max-width: calc(100% / 8)
+        @media screen and ( max-width: 767px )
+            flex-direction: column
+            width: 90vw
+            min-width: 290px
+            max-width: none
+            margin-bottom: 20px
+        &-empty
+            @media screen and ( max-width: 767px )
+                display: none
+    &__image
+        margin-top: auto
+        & img
+            width: 100%
+        @media screen and ( max-width: 767px )
+            position: relative
+            width: 100%
+            height: 55vw
+            min-height: 178px
+            background: $white
+            box-shadow: 0px 0px 17.9432px rgba(0, 0, 0, 0.2)
+            border-radius: 5.98107px
+            display: flex
+            justify-content: center
+            align-items: center
+            & img
+                width: auto
+                height: 100%
+                margin: 0 auto
+    &__title
+        display: block
+        width: 100%
+        text-align: left
+        font-size: 20px
+        line-height: 24px
+        font-weight: 600
+        color: $blue
+        @media screen and ( max-width: 1230px )
+            font-size: 12px
+            line-height: 14px
+        @media screen and ( max-width: 767px )
+            font-size: 14px
+            line-height: 16px
+    &__content
+        display: block
+        width: 100%
+        font-size: 20px
+        line-height: 24px
+        text-align: center
+        &-small
+            font-size: 14px
+            line-height: 17px
+        @media screen and ( max-width: 1230px )
+            font-size: 12px
+            line-height: 14px
+            &-small
+                font-size: 8px
+                line-height: 10px
+        @media screen and ( max-width: 767px )
+            font-size: 13px
+            line-height: 16px
+            text-align: center
+            &-small
+                font-size: 10px
+                line-height: 11px
+    &__info-opener
+        position: absolute
+        right: 23px
+        bottom: 17px
+        width: 40px
+        height: 40px
+        background-color: $blue
+        border: 2px solid $blue
+        border-radius: 50%
+        transition: all 0.2s ease-in-out
+        & span
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            display: block
+            background: $white
+            transition: all 0.2s ease-in-out
+            &:first-of-type
+                width: 3px
+                height: 21px
+            &:last-of-type
+                width: 21px
+                height: 3px
+        &.active
+            background: $white
+            & span
+                background: $blue
+                &:first-of-type
+                    opacity: 0
+    &__info
+        max-height: 0
+        overflow: hidden
+        width: 100%
+        transition: all 0.3s ease-in-out
+        &.active
+            margin-top: 35px
+            margin-bottom: 10px
+    &__info-row
+        width: 100%
+        display: flex
+        justify-content: space-evenly
+        margin-bottom: 10px
+    &__info-column
+        &:nth-of-type(1)
+            width: 30%
+        &:nth-of-type(2)
+            width: 35%

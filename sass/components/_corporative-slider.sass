@@ -1,0 +1,151 @@
+.corporative-slider
+    background: url('../img/corporative-page/slider/main-bg.png') no-repeat center / cover
+    margin-top: 70px
+    margin-bottom: 90px
+    padding-bottom: 30px
+    @media screen and ( max-width: 1023px )
+        margin-top: 30px
+        margin-bottom: 40px
+    @media screen and ( max-width: 767px )
+        margin-top: 35px
+        margin-bottom: 60px
+    &__title
+        margin-bottom: 40px
+        @media screen and ( max-width: 1023px )
+            margin-bottom: 20px
+        @media screen and ( max-width: 767px )
+            margin-bottom: 13px
+    &__slider
+    &__items
+        padding: 20px 0
+    &__item
+        position: relative
+        border-radius: 10px
+        filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.2))
+        @media screen and ( max-width: 1023px )
+            filter: drop-shadow(0px 0px 17.9432px rgba(0, 0, 0, 0.2))
+            border-radius: 6px
+        @media screen and ( max-width: 767px )
+            filter: drop-shadow(0px 0px 23.1818px rgba(0, 0, 0, 0.2))
+            border-radius: 8px
+    &__item-image
+        overflow: hidden
+        display: flex
+        justify-content: center
+        align-items: center
+        & img
+            flex-grow: 1
+            min-width: 100%
+            min-height: 100%
+    &__item-content
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(40.45deg, $black -52.95%, rgba(0, 0, 0, 0.00520833) 107.67%, rgba(0, 0, 0, 0) 107.69%)
+        padding: 20px 15px 20px 20px
+        display: flex
+        align-items: flex-end
+        font-size: 20px
+        line-height: 24px
+        font-weight: 600
+        color: $white
+        @media screen and ( max-width: 1023px )
+            font-size: 12px
+            line-height: 14px
+        @media screen and ( max-width: 767px )
+            font-size: 16px
+            line-height: 18px
+    &__bottom
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        margin-top: 20px
+        @media screen and ( max-width: 1023px )
+            margin-top: 4px
+        @media screen and ( max-width: 767px )
+            margin-top: 20px
+            justify-content: center
+    &__pagination
+        position: relative
+        margin-right: 22px
+        white-space: nowrap
+        @media screen and ( max-width: 1023px )
+            margin-right: 16px
+        @media screen and ( max-width: 767px )
+            position: absolute
+            z-index: 1
+            margin: 0 auto
+        & .swiper-pagination-bullet
+            display: inline-block
+            margin: 0 !important
+            width: 14px
+            height: 14px
+            background: transparent
+            opacity: 1
+            border: 2px solid $hover
+            border-radius: 50%
+            cursor: pointer
+            transform: none !important
+            transition: all 0.2s ease-in-out
+            &:not(:last-of-type)
+                margin-right: 5px !important
+            &:hover
+                background: $hover
+            @media screen and ( max-width: 1230px )
+                width: 10px
+                height: 10px
+                border-width: 1px
+                &:not(:last-of-type)
+                    margin-right: 3px  !important
+            @media screen and ( max-width: 767px )
+                width: 7px
+                height: 7px
+        & .swiper-pagination-bullet-active
+            background: $hover
+    &__arrows
+        display: flex
+        @media screen and ( max-width: 767px )
+            justify-content: center
+            & > *:not(:last-child)
+                margin-right: 90px
+    &__arrow
+        width: 45px
+        height: 45px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-left: 23px
+        border-radius: 50%
+        background: $white
+        border: 2px solid $white
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15)
+        transition: all 0.2s ease-in-out
+        @media screen and ( max-width: 1023px )
+            width: 36px
+            height: 36px
+            margin-left: 20px
+            & svg
+                width: 11px
+        @media screen and ( max-width: 767px )
+            width: 28px
+            height: 28px
+            margin: 0
+            & svg
+                width: 8px
+        &:hover
+            background: transparent
+            border-color: $blue
+    &__arrow-left
+        padding-right: 6px
+        @media screen and ( max-width: 1230px )
+            padding-right: 4px
+        @media screen and ( max-width: 767px )
+            padding-right: 3px
+    &__arrow-right
+        padding-left: 6px
+        @media screen and ( max-width: 1230px )
+            padding-left: 4px
+        @media screen and ( max-width: 767px )
+            padding-left: 3px

@@ -1,0 +1,80 @@
+.faq
+    margin-top: 50px
+    margin-bottom: 50px
+    @media screen and ( max-width: 1230px )
+        margin-top: 30px
+        margin-bottom: 30px
+    @media screen and ( max-width: 767px )
+        margin-top: 20px
+        margin-bottom: 20px
+    &__title
+        margin-bottom: 20px
+        @media screen and ( max-width: 1230px )
+            margin-bottom: 15px
+    &__items
+        display: flex
+        flex-direction: column
+        align-items: stretch
+    &__item
+        padding: 20px
+        background: $white
+        box-shadow: 0px 0px 21.1985px rgba(0, 0, 0, 0.1)
+        border-radius: 5px
+        margin-bottom: 20px
+        cursor: pointer
+        @media screen and ( max-width: 1230px )
+            padding: 10px
+            border-radius: 3px
+    &__question
+        display: flex
+        justify-content: space-between
+        align-items: center
+        font-size: 22px
+        line-height: 26px
+        @media screen and ( max-width: 1230px )
+            font-size: 17px
+            line-height: 20px
+        @media screen and ( max-width: 767px )
+            font-size: 14px
+            line-height: 17px
+    &__sign
+        position: relative
+        height: 20px
+        width: 20px
+        flex-shrink: 0
+        margin-left: 20px
+        @media screen and ( max-width: 767px )
+            width: 14px
+            height: 14px
+        & > span
+            display: block
+            position: absolute
+            left: 50%
+            top: 50%
+            border-radius: 4px
+            background: $grey
+            &:nth-of-type(1)
+                width: 20%
+                height: 100%
+                transform: translate(-50%, -50%)
+                transition: all 0.4s ease-in-out
+            &:nth-of-type(2)
+                width: 100%
+                height: 20%
+                transform: translate(-50%, -50%)
+        &.active > span:nth-of-type(1)
+            transform: translate(-50%, -50%) rotate(360deg)
+            opacity: 0
+            width: 0
+    &__answer
+        font-size: 22px
+        line-height: 26px
+        max-height: 0
+        overflow: hidden
+        transition: all 0.4s ease-in-out
+        @media screen and ( max-width: 1230px )
+            font-size: 17px
+            line-height: 20px
+        @media screen and ( max-width: 767px )
+            font-size: 14px
+            line-height: 17px

@@ -1,0 +1,228 @@
+.item
+    position: relative
+    display: block
+    width: 278px
+    height: 387px
+    @media screen and ( max-width: 1230px )
+        width: 20vw
+        height: 20vw
+        min-width: 145px
+        min-height: 237px
+    @media screen and ( max-width: 768px )
+        width: 145px
+        height: 237px
+    &__buttons
+        position: absolute
+        top: 2px
+        left: 5px
+        z-index: 1
+        display: flex
+        flex-direction: column
+        opacity: 0
+        transition: all 0.2s ease-in-out
+        @media screen and ( max-width: 1230px )
+            top: 8px
+            left: 5px
+    &__button
+        width: 35px
+        height: 35px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: $white
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15)
+        border-radius: 5px
+        margin-bottom: 12px
+        transition: all 0.2s ease-in-out
+        & svg
+            max-width: 75%
+            max-height: 60%
+            & *
+                transition: all 0.2s ease-in-out
+                fill: #C4C4C4
+        &:last-child
+            margin-bottom: 0
+        &:hover
+            background: $blue
+            & svg *
+                fill: $white
+        @media screen and ( max-width: 1230px )
+            width: 23px
+            height: 23px
+            margin-bottom: 8px
+            border-radius: 3px
+    &__container
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        transition: all 0.2s ease-in-out
+        width: 100%
+        height: 100%
+        padding: 10px 20px 65px
+        display: flex
+        flex-direction: column
+        align-items: center
+        background: $white
+        box-shadow: 0px 0px 21.1985px rgba(0, 0, 0, 0.1)
+        border-radius: 5px
+        @media screen and ( max-width: 1230px )
+            padding: 10px 13px 45px
+            border-radius: 3px
+    &__desc
+        position: absolute
+        top: 9px
+        right: 9px
+        z-index: 1
+        border-radius: 11px
+        text-transform: uppercase
+        font-size: 11px
+        line-height: 13px
+        font-weight: 600
+        &_new
+            color: $white
+            background: $blue
+            padding: 4px 10px
+        &_promotion
+            color: $white
+            background: #CD5C5C
+            padding: 4px 10px
+        &_discount
+            border: 1px solid $blue
+            color: $blue
+            padding: 5px 8px
+        @media screen and ( max-width: 1230px )
+            top: 4px
+            right: 4px
+            font-size: 7px
+            line-height: 8px
+            border-radius: 6px
+            &_new
+                padding: 3px 8px
+            &_promotion
+                padding: 3px 8px
+            &_discount
+                padding: 3px 5px
+    &__image
+        position: relative
+        display: block
+        width: 100%
+        height: 200px
+        margin-bottom: 10px
+        overflow: hidden
+        & img
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            max-height: 100%
+            max-width: 100%
+        @media screen and ( max-width: 1230px )
+            height: 120px
+            margin-bottom: 5px
+    &__price
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: nowrap
+        white-space: nowrap
+        margin-bottom: 6px
+        & span
+            font-size: 16px
+            line-height: 125%
+            color: #464646
+            &:first-of-type
+                font-size: 20px
+                color: $blue
+            @media screen and ( max-width: 1230px )
+                font-size: 8px
+                &:first-of-type
+                    font-size: 10px
+    &__price-old
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: nowrap
+        white-space: nowrap
+        padding-left: 19px
+        padding-right: 5px
+        margin-bottom: 7px
+        & span
+            font-size: 13px
+            line-height: 16px
+            color: #EA4242
+            text-decoration-line: line-through
+            @media screen and ( max-width: 1230px )
+                font-size: 8px
+                line-height: 10px
+    &__name
+        flex-grow: 1
+        display: flex
+        width: 100%
+        justify-content: center
+        align-items: center
+        font-size: 16px
+        line-height: 21px
+        font-weight: 600
+        text-align: center
+        color: #464646
+        @media screen and ( max-width: 1230px )
+            font-size: 9px
+            line-height: 11px
+    &__buy
+        position: absolute
+        z-index: 1
+        bottom: 17px
+        left: 50%
+        transform: translateX(-50%)
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 70%
+        padding: 9px 9px
+        font-size: 16px
+        line-height: 19px
+        color: $white
+        background-color: $hover
+        border: 2px solid $hover
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+        border-radius: 5px
+        transition: all 0.2s ease-in-out
+        & svg
+            margin-left: 8px
+            & *
+                fill: $white
+                transition: all 0.2s ease-in-out
+        &:hover
+            background-color: transparent
+            color: $hover
+            & svg *
+                fill: $hover
+        @media screen and ( max-width: 1230px )
+            bottom: 8px
+            padding: 6px 9px
+            border-radius: 3px
+            font-size: 11px
+            line-height: 13px
+            & svg
+                width: 11px
+                height: 11px
+                margin-left: 5px
+    &:hover
+        & .item__buttons
+            opacity: 1
+        & .item__container
+            width: calc(100% + 20px)
+            height: calc(100% + 20px)
+            padding: 10px 30px 65px 30px
+        & .item__buy
+            bottom: 7px
+        @media screen and ( max-width: 1230px )
+            & .item__container
+                width: calc(100% + 10px)
+                height: calc(100% + 10px)
+                padding: 15px 18px 50px
+            & .item__buy
+                bottom: 7px

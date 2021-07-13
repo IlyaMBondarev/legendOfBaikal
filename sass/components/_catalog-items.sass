@@ -1,0 +1,172 @@
+.catalog-items
+    &__top
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        padding-bottom: 13px
+        border-bottom: 1px solid #C4C4C4
+        margin-bottom: 40px
+        @media screen and ( max-width: 1230px )
+            margin-bottom: 20px
+        @media screen and ( max-width: 767px )
+            justify-content: space-between
+    &__filters-opener
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 28px
+        height: 28px
+        background-color: $hover
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1)
+        border-radius: 5px
+        border: 1px solid $hover
+        & svg *
+            fill: $white
+            transition: fill 0.2s ease-in-out
+        &.active
+            background-color: $white
+            & svg *
+                fill: $hover
+    &__sort
+        display: flex
+        justify-content: flex-end
+        align-items: center
+    &__sort-title
+        font-size: 14px
+        line-height: 17px
+        font-weight: 600
+        color: #686868
+        @media screen and ( max-width: 767px )
+            font-size: 10px
+            line-height: 12px
+    &__dropdown
+        position: relative
+        z-index: 5
+        margin-left: 21px
+        transition: all 0.2s ease-in-out
+        &.active &-current
+            border-radius: 5px 5px 0 0
+            color: $hover
+            & span::before
+                opacity: 1
+            & i
+                transform: rotateX(180deg)
+        &.active &-list
+            max-height: 50px
+        @media screen and ( max-width: 767px )
+            margin-left: 13px
+    &__dropdown-current
+        position: relative
+        display: flex
+        align-items: center
+        padding: 5px 10px
+        background: $white
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+        border-radius: 5px
+        font-size: 14px
+        line-height: 17px
+        transition: all 0.2s ease-in-out
+        & span
+            position: relative
+            margin-right: 8px
+            &::before
+                content: attr(data-text)
+                position: absolute
+                z-index: 1
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                font-weight: 600
+                opacity: 0
+                transition: opacity 0.2s ease-in-out
+        & i
+            transition: all 0.2s ease-in-out
+        &:hover
+            color: $hover
+        @media screen and ( max-width: 767px )
+            font-size: 10px
+            line-height: 12px
+            & span
+                margin-right: 5px
+    &__dropdown-list
+        position: absolute
+        top: 100%
+        left: 0
+        width: 100%
+        border-radius: 0 0 5px 5px
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+        background-color: $white
+        max-height: 0
+        overflow: hidden
+        transition: all 0.2s ease-in-out
+    &__dropdown-item
+        width: 100%
+        padding: 2px 8px
+        border-top: 1px solid #D9D9D9
+    &__dropdown-item-label
+        display: block
+        font-size: 10px
+        line-height: 12px
+        color: #686868
+        white-space: nowrap
+        transition: color 0.2s ease-in-out
+        &:hover
+            color: $hover
+    &__items
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 65px
+        & > *
+            margin-left: 9px
+            margin-right: 9px
+            margin-bottom: 22px
+        @media screen and ( max-width: 1230px )
+            & > *
+                margin-left: 5px
+                margin-right: 5px
+                margin-bottom: 10px
+        @media screen and ( max-width: 767px )
+            justify-content: space-around
+            margin-bottom: 25px
+    &__pagination
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        & > *:not(:last-child)
+            margin-right: 2px
+        & span
+            display: inline-block
+            width: 28px
+            height: 28px
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 20px
+            line-height: 24px
+            text-align: center
+            font-weight: 500
+            color: #C4C4C4
+            cursor: pointer
+            border: 2px solid transparent
+            border-radius: 3px
+            transition: all 0.2s ease-in-out
+            &.active
+                border-color: $blue
+                color: $blue
+            &:hover
+                border-color: $blue
+                color: $blue
+            @media screen and ( max-width: 1230px )
+                width: 14px
+                height: 14px
+                border-width: 1px
+                border-radius: 2px
+                font-size: 10px
+                line-height: 12px
+            @media screen and ( max-width: 767px )
+                width: 21px
+                height: 21px
+                border-radius: 3px
+                font-size: 15px
+                line-height: 18px

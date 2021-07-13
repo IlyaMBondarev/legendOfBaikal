@@ -1,0 +1,239 @@
+.cart-item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: $white
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    padding: 7px 20px
+    margin-bottom: 20px
+    @media screen and ( max-width: 1230px )
+        padding: 4px 10px
+        margin-bottom: 13px
+        box-shadow: 0px 0px 15.9516px rgba(0, 0, 0, 0.1)
+        border-radius: 2.65859px
+    @media screen and ( max-width: 767px )
+        padding: 5px 7px
+        margin-bottom: 7px
+        box-shadow: 0px 0px 10.5882px rgba(0, 0, 0, 0.1)
+        border-radius: 1.76471px
+    &__left
+        display: flex
+        align-items: center
+        width: 47%
+        @media screen and ( max-width: 767px )
+            width: auto
+            min-width: 40%
+            flex-grow: 1
+    &__image
+        width: 124px
+        min-width: 124px
+        max-width: 124px
+        height: 124px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 20px
+        & img
+            flex-grow: 1
+            max-width: 100%
+            max-height: 100%
+            cursor: pointer
+        @media screen and ( max-width: 1230px )
+            width: 66px
+            height: 66px
+            min-width: 66px
+            max-width: 66px
+            margin-right: 11px
+        @media screen and ( max-width: 767px )
+            width: 44px
+            height: 44px
+            min-width: 44px
+            max-width: 44px
+            margin-right: 8px
+    &__title
+        font-size: 16px
+        line-height: 20px
+        font-weight: 600
+        color: #464646
+        @media screen and ( max-width: 1230px )
+            font-size: 9px
+            line-height: 10px
+        @media screen and ( max-width: 767px )
+            font-size: 7px
+            line-height: 8px
+    &__single
+        text-align: center
+        margin: 0 5px
+        white-space: nowrap
+    &__single-title
+        font-size: 14px
+        line-height: 18px
+        font-weight: 400
+        @media screen and ( max-width: 1230px )
+            font-size: 9px
+            line-height: 10px
+        @media screen and ( max-width: 767px )
+            font-size: 7px
+            line-height: 8px
+    &__single-price
+        font-size: 22px
+        line-height: 26px
+        font-weight: 600
+        color: $blue
+        @media screen and ( max-width: 1230px )
+            font-size: 12px
+            line-height: 14px
+        @media screen and ( max-width: 767px )
+            font-size: 8px
+            line-height: 9px
+    &__count
+        display: flex
+        justify-content: center
+        align-items: center
+        min-width: 150px
+        @media screen and ( max-width: 1230px )
+            min-width: 100px
+        @media screen and ( max-width: 767px )
+            min-width: 60px
+    &__plus
+        width: 40px
+        min-width: 40px
+        height: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: $white
+        box-shadow: 0px 4.06312px 30px rgba(0, 0, 0, 0.15)
+        border-radius: 5px
+        cursor: pointer
+        transition: all 0.2s ease-in-out
+        & svg
+            max-width: 65%
+            max-height: 65%
+            & *
+                transition: all 0.2s ease-in-out
+                fill: #8D8D8D
+        &:hover
+            background-color: $blue
+            & svg *
+                fill: $white
+        @media screen and ( max-width: 1230px )
+            width: 20px
+            min-width: 20px
+            height: 20px
+            box-shadow: 0px 0px 15.9516px rgba(0, 0, 0, 0.1)
+            border-radius: 3px
+        @media screen and ( max-width: 767px )
+            width: 14px
+            min-width: 14px
+            height: 14px
+            box-shadow: 0px 0px 10.5882px rgba(0, 0, 0, 0.1)
+            border-radius: 2px
+    &__total
+        display: inline-block
+        font-size: 30px
+        line-height: 36px
+        font-weight: 600
+        color: #8D8D8D
+        margin: 0 15px
+        @media screen and ( max-width: 1230px )
+            font-size: 16px
+            line-height: 19px
+            margin: 0 10px
+        @media screen and ( max-width: 767px )
+            font-size: 11px
+            line-height: 13px
+            margin: 0 6px
+    &__minus
+        width: 40px
+        min-width: 40px
+        height: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: $white
+        box-shadow: 0px 4.06312px 30px rgba(0, 0, 0, 0.15)
+        border-radius: 5px
+        cursor: pointer
+        transition: all 0.2s ease-in-out
+        & svg
+            max-width: 65%
+            max-height: 65%
+            & *
+                transition: all 0.2s ease-in-out
+                fill: #8D8D8D
+        &:hover
+            background-color: $blue
+            & svg *
+                fill: $white
+        @media screen and ( max-width: 1230px )
+            width: 20px
+            min-width: 20px
+            height: 20px
+            box-shadow: 0px 0px 15.9516px rgba(0, 0, 0, 0.1)
+            border-radius: 3px
+        @media screen and ( max-width: 767px )
+            width: 14px
+            min-width: 14px
+            height: 14px
+            box-shadow: 0px 0px 10.5882px rgba(0, 0, 0, 0.1)
+            border-radius: 2px
+    &__price
+        display: flex
+        justify-content: center
+        align-items: center
+        min-width: 127px
+        height: 53px
+        background: $white
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1)
+        border-radius: 5px
+        font-size: 22px
+        line-height: 26px
+        font-weight: 600
+        padding: 0 5px
+        color: $blue
+        @media screen and ( max-width: 1230px )
+            min-width: 68px
+            height: 28px
+            border-radius: 3px
+            box-shadow: 0px 0px 15.9516px rgba(0, 0, 0, 0.1)
+            font-size: 12px
+            line-height: 14px
+        @media screen and ( max-width: 767px )
+            margin: 0 5px
+            height: 19px
+            min-width: 45px
+            box-shadow: 0px 0px 10.5882px rgba(0, 0, 0, 0.1)
+            border-radius: 1.76471px
+            font-size: 8px
+            line-height: 9px
+    &__remove
+        align-self: flex-start
+        flex-shrink: 0
+        width: 24px
+        height: 24px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: $white
+        border-radius: 50%  
+        box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.2)
+        margin-top: 12px
+        cursor: pointer
+        transition: all 0.2s ease-in-out
+        & svg
+            max-width: 60%
+            max-height: 60%
+            & *
+                fill: $blue
+                transition: all 0.2s ease-in-out
+        &:hover
+            background: $blue
+            & svg *
+                fill: $white
+        @media screen and ( max-width: 1230px )
+            width: 13px
+            height: 13px
+            box-shadow: 0px 0px 19.1419px rgba(0, 0, 0, 0.2)
+            margin-top: 6px

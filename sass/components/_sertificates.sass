@@ -1,0 +1,88 @@
+.sertificates
+    margin-top: 50px
+    margin-bottom: 50px
+    @media screen and ( max-width: 1230px )
+        margin-top: 30px
+        margin-bottom: 30px
+    @media screen and ( max-width: 767px )
+        margin-top: 20px
+        margin-bottom: 20px
+    &__main
+        position: relative
+        background: $white
+        box-shadow: 0px 0px 21.1985px rgba(0, 0, 0, 0.1)
+        border-radius: 5px
+        @media screen and ( max-width: 1230px )
+            padding: 10px
+            border-radius: 3px
+    &__slider
+        padding: 20px 0
+        margin: 0 50px
+        @media screen and ( max-width: 767px )
+            margin: 0 25px
+        & .swiper-slide
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: center
+            & img
+                max-width: 100%
+                cursor: pointer
+            & p
+                padding-top: 5px
+                font-size: 14px
+                line-height: 16px
+                text-align: center
+                @media screen and ( max-width: 767px )
+                    font-size: 10px
+                    line-height: 12px
+    &__arrow
+        width: 45px
+        height: 45px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        background: $white
+        border: 2px solid $white
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15)
+        transition: all 0.2s ease-in-out
+        @media screen and ( max-width: 1230px )
+            width: 36px
+            height: 36px
+            & svg
+                width: 11px
+        @media screen and ( max-width: 767px )
+            width: 28px
+            height: 28px
+            & svg
+                width: 8px
+        &:hover
+            background: transparent
+            border-color: $blue
+    &__arrow-left
+        position: absolute
+        z-index: 1
+        top: 50%
+        left: 20px
+        transform: translateY(-50%)
+        padding-right: 6px
+        @media screen and ( max-width: 1370px )
+            left: 10px
+        @media screen and ( max-width: 1230px )
+            padding-right: 4px
+        @media screen and ( max-width: 767px )
+            padding-right: 3px
+    &__arrow-right
+        position: absolute
+        z-index: 1
+        top: 50%
+        right: 20px
+        transform: translateY(-50%)
+        padding-left: 6px
+        @media screen and ( max-width: 1370px )
+            right: 10px
+        @media screen and ( max-width: 1230px )
+            padding-left: 4px
+        @media screen and ( max-width: 767px )
+            padding-left: 3px

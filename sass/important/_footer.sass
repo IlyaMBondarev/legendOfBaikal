@@ -1,0 +1,199 @@
+.footer
+    position: relative
+    background: $white
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1)
+    padding: 31px 0
+    @media screen and ( max-width: 1230px )
+        padding: 22px 0
+    @media screen and ( max-width: 767px )
+        padding: 12px 0
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 38px 0
+        border-bottom: 3px solid #E9E9E9
+        @media screen and ( max-width: 1230px )
+            padding: 23px 0
+        @media screen and ( max-width: 767px )
+            flex-direction: column
+            padding: 11px 0
+    &__bottom
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        padding: 36px 0 30px
+        & > *:not(:last-child)
+            margin-right: 15px
+        @media screen and ( max-width: 1230px )
+            padding: 22px 0 15px
+        @media screen and ( max-width: 767px )
+            padding: 20px 0 11px
+            flex-wrap: wrap
+        @media screen and ( max-width: 480px )
+            & > *:not(:last-child)
+                margin-right: 5px
+    &__left
+        width: 33%
+        text-align: left
+        @media screen and ( max-width: 767px )
+            width: auto
+            text-align: center
+            margin-top: 20px
+            margin-bottom: 20px
+    &__center
+        width: 33%
+        display: flex
+        flex-direction: column
+        align-items: center
+        @media screen and ( max-width: 767px )
+            width: auto
+            text-align: center
+            order: -1
+    &__right
+        width: 33%
+        text-align: right
+        @media screen and ( max-width: 767px )
+            width: auto
+            text-align: center
+    &__content
+        font-size: 34px
+        line-height: 40px
+        color: #8D8D8D
+        margin-bottom: 17px
+        @media screen and ( max-width: 1230px )
+            font-size: 21px
+            line-height: 25px
+        @media screen and ( max-width: 767px )
+            font-size: 12px
+            line-height: 15px
+            margin-bottom: 4px
+    &__link-mail
+        font-size: 24px
+        line-height: 28px
+        text-decoration-line: underline
+        color: $blue
+        transition: all 0.2s ease-in-out
+        &:hover
+            color: #8D8D8D
+            text-decoration-line: underline
+        @media screen and ( max-width: 1230px )
+            font-size: 15px
+            line-height: 18px
+        @media screen and ( max-width: 767px )
+            font-size: 12px
+            line-height: 15px
+    &__link-phone
+        font-size: 25px
+        line-height: 29px
+        color: $blue
+        transition: all 0.2s ease-in-out
+        &:hover
+            color: #8D8D8D
+        @media screen and ( max-width: 1230px )
+            font-size: 15px
+            line-height: 18px
+        @media screen and ( max-width: 767px )
+            font-size: 12px
+            line-height: 15px
+    &__logo
+        display: block
+        width: 284px
+        & img
+            width: 100%
+        @media screen and ( max-width: 1230px )
+            width: 175px
+        @media screen and ( max-width: 767px )
+            width: 114px
+    &__social
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 58px
+        & > *:not(:last-child)
+            margin-right: 45px
+        @media screen and ( max-width: 1230px )
+            margin-top: 36px
+            & > *:not(:last-child)
+                margin-right: 30px
+        @media screen and ( max-width: 767px )
+            margin-top: 16px
+            & > *:not(:last-child)
+                margin-right: 18px
+    &__social-link
+        width: 67px
+        height: 67px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: $white
+        border: 3px solid $white
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1)
+        border-radius: 50%
+        transition: all 0.2s ease-in-out
+        & svg
+            max-height: 40px
+            max-width: 40px
+            & *
+                fill: $hover
+        &:hover
+            border: 3px solid $hover
+        @media screen and ( max-width: 1230px )
+            width: 41px
+            height: 41px
+            & svg
+                max-height: 25px
+                max-width: 25px
+        @media screen and ( max-width: 767px )
+            width: 24px
+            height: 24px
+            & svg
+                max-height: 14px
+                max-width: 14px
+    &__column
+        @media screen and ( max-width: 767px )
+            width: 30%
+            margin-bottom: 20px
+        @media screen and ( max-width: 480px )
+            width: auto
+            &:first-of-type //костыль
+                .footer__list
+                    max-width: 80px
+            &:last-of-type //костыль
+                width: 50%
+                margin-top: -75px
+    &__title-link
+        display: inline-block
+        font-size: 24px
+        line-height: 28px
+        font-weight: 600
+        color: #8D8D8D
+        text-transform: uppercase
+        margin-bottom: 30px
+        transition: all 0.2s ease-in-out
+        &:hover
+            color: $blue
+        @media screen and ( max-width: 1230px )
+            font-size: 15px
+            line-height: 17px
+            margin-bottom: 17px
+        @media screen and ( max-width: 767px )
+            margin-bottom: 8px
+    &__list
+        @media screen and ( max-width: 480px )
+            max-width: 105px
+    &__list-item
+        &:not(:last-of-type)
+            margin-bottom: 15px
+            @media screen and ( max-width: 1230px )
+                margin-bottom: 10px
+    &__link
+        font-size: 17px
+        line-height: 20px
+        color: #8D8D8D
+        transition: all 0.2s ease-in-out
+        &:hover
+            color: $blue
+        @media screen and ( max-width: 1230px )
+            font-size: 13px
+            line-height: 15px

@@ -1,0 +1,21 @@
+.catalog-main
+    display: flex
+    justify-content: space-between
+    margin-bottom: 60px
+    @media screen and ( max-width: 767px )
+        margin-bottom: 25px
+    &__left
+        width: 256px
+        margin-right: 25px
+        @media screen and ( max-width: 1230px )
+            width: 221px
+            margin-right: 10px
+        @media screen and ( max-width: 767px )
+            width: 0
+            margin-right: 0px
+    &__right
+        width: calc(100% - 256px - 25px)
+        @media screen and ( max-width: 1230px )
+            width: calc(100% - 221px - 10px)
+        @media screen and ( max-width: 767px )
+            width: 100%

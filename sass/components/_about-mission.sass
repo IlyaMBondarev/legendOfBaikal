@@ -1,0 +1,51 @@
+.about-mission
+    position: relative
+    @media screen and ( max-width: 560px )
+        padding-bottom: 55px
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        & > *:not(:last-child)
+            margin-right: 70px
+        @media screen and ( max-width: 1023px )
+            justify-content: flex-start
+    &__main
+        position: relative
+        z-index: 1
+        @media screen and ( max-width: 1023px )
+            max-width: 50%
+        @media screen and ( max-width: 560px )
+            max-width: 85%
+    &__title
+        margin-top: 30px
+        margin-bottom: 35px
+        @media screen and ( max-width: 1023px )
+            margin-top: 15px
+            margin-bottom: 25px
+        @media screen and ( max-width: 767px )
+            margin-top: 0
+            margin-bottom: 20px
+    &__content
+        font-size: 23px
+        line-height: 27px
+        @media screen and ( max-width: 1023px )
+            font-size: 16px
+            line-height: 19px
+        @media screen and ( max-width: 767px )
+            font-size: 14px
+            line-height: 16px
+    &__image
+        width: 340px
+        min-width: 340px
+        & img
+            width: 100%
+        @media screen and ( max-width: 1023px )
+            min-width: 177px
+            width: 177px
+        @media screen and ( max-width: 560px )
+            position: absolute
+            width: 100px
+            min-width: 100px
+            right: 0
+            bottom: 0
