@@ -173,6 +173,14 @@
         font-weight: 600
         text-transform: uppercase
         color: #21487B
+        @media screen and ( max-width: 767px )
+            top: -5px
+            right: -6px
+            min-width: 13px
+            height: 13px
+            font-size: 10px
+            line-height: 12px
+            color: $blue
     &__cart
         &:hover &-text
             color: $hover
@@ -262,7 +270,7 @@
     @media screen and ( max-width: 767px )
         justify-content: center
         height: 35px
-        margin-bottom: 25px
+        margin-bottom: 20px
         & > *:not(:last-child)
             margin-right: 15px
     &__submit
@@ -540,7 +548,7 @@
         display: flex
         flex-direction: column
         align-items: stretch
-        max-height: calc(100vh - 75px)
+        max-height: 100%
         overflow: auto
         scrollbar-width: 2px
         scrollbar-color: $white
@@ -558,21 +566,23 @@
         display: flex
         flex-direction: column
         align-items: center
-        margin-bottom: 25px
+        margin-bottom: 20px
     &__logo
         margin-bottom: 12px
-    &__list
+    &__lists
         display: flex
         justify-content: space-between
-        align-items: center
-        flex-wrap: wrap
-        & > *:not(:nth-child(2n))
-            margin-right: 10px
+        align-items: flex-start
+    &__list
+        display: flex
+        flex-direction: column
         & > *:not(:last-child)
-            margin-bottom: 20px
+            margin-bottom: 15px
     &__item
         min-width: 40%
+        margin-right: 10px
     &__link
+        position: relative
         font-size: 18px
         line-height: 22px
         font-weight: 600
@@ -584,3 +594,43 @@
         color: $white
         & i
             margin-right: 4px
+    &__dropdown
+        position: relative
+        & label
+            position: relative
+            font-size: 18px
+            line-height: 22px
+            font-weight: 600
+            text-transform: uppercase
+            color: $white
+            & > span
+                margin-right: 10px
+            & > svg
+                transition: transform 0.2s ease-in-out
+                transform: rotateX(180deg)
+        & input
+            position: absolute
+            left: -100vw
+            width: 0
+            height: 0
+        & input:checked + label > svg
+            transform: rotateX(360deg)
+        & input:checked ~ &-list
+            max-height: 500px
+    &__dropdown-list
+        max-height: 0
+        overflow: auto
+        scrollbar-width: 0px
+        scrollbar-color: transparent
+        transition: max-height 0.2s ease-in-out
+        &:-webkit-scrollbar
+            width: 0px
+            background-color: transparent
+    &__dropdown-item
+        margin-top: 10px
+    &__dropdown-link
+        font-size: 11px
+        line-height: 13px
+        color: $white
+        text-decoration-line: underline
+        text-transform: uppercase
