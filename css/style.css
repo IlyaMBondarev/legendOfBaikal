@@ -469,6 +469,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #0083C3;
   }
 }
+.header__cart-count_invert {
+  background: #21487B;
+  color: #ffffff;
+}
 .header__cart:hover .header__cart-text {
   color: #008DD2;
 }
