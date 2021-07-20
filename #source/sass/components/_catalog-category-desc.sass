@@ -3,22 +3,24 @@
     @media screen and ( max-width: 1023px )
         margin-top: 20px
     &__container
-        display: flex
-        justify-content: space-between
-        flex-wrap: wrap
+        display: block
+        max-height: 320px
+        overflow: hidden
         transition: max-height 0.4s ease-in-out
         @media screen and ( max-width: 767px )
-            display: block
             max-height: 36vw
             min-height: 110px
-            overflow: hidden
     &__left
         width: calc(33.3333% - 6px)
         display: flex
         justify-content: space-between
         align-items: stretch
         border-radius: 5px
+        height: 320px
         overflow: hidden
+        float: left
+        margin-right: 12px
+        margin-bottom: 12px
         @media screen and ( max-width: 1023px )
             width: calc(50% - 11px)
         @media screen and ( max-width: 767px )
@@ -28,23 +30,16 @@
             float: right
             margin-left: 3px
     &__right
-        width: calc(66.6667% - 6px)
-        @media screen and ( max-width: 1023px )
-            width: calc(50% - 11px)
-        @media screen and ( max-width: 767px )
-            width: auto
+        width: auto
     &__image
         position: relative
         width: calc(50% - 2px)
         height: 100%
         overflow: hidden
         & img
-            position: absolute
-            left: 50%
-            top: 50%
-            transform: translate(-50%, -50%)
-            min-width: 100%
-            min-height: 100%
+            object-fit: cover
+            width: 100%
+            height: 100%
     &__title
         font-size: 24px
         line-height: 30px
@@ -71,10 +66,15 @@
             font-weight: 500
             margin-top: 8px
     &__more
+        display: block
         margin-top: 6px
-        font-size: 10px
-        line-height: 12px
+        margin-left: auto
+        font-size: 18px
+        line-height: 22px
         font-weight: 500
         text-decoration-line: underline
         color: $hover
         background-color: transparent
+        @media screen and ( max-width: 767px )
+            font-size: 10px
+            line-height: 12px

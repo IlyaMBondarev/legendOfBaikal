@@ -1,0 +1,99 @@
+.categories
+    margin-bottom: 100px
+    @media screen and ( max-width: 1230px )
+        margin-bottom: 80px
+    @media screen and ( max-width: 767px )
+        margin-bottom: 20px
+    &__items
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        flex-wrap: wrap
+    &__item
+        position: relative
+        z-index: 1
+        border-radius: 10px
+        width: calc(20% - 12px)
+        height: 222px
+        margin-bottom: 25px
+        transition: z-index 0.2s
+        &:not(:nth-of-type(5n))
+            margin-right: 14px
+        @media screen and ( max-width: 1230px )
+            width: calc(25% - 8px)
+            &:not(:nth-of-type(5n))
+                margin-right: 0
+            &:not(:nth-of-type(4n))
+                margin-right: 10px
+        @media screen and ( max-width: 950px )
+            height: 170px
+        @media screen and ( max-width: 767px )
+            height: auto
+            width: calc((100% - 16px)/3)
+            margin-bottom: 20px
+            &:not(:nth-of-type(4n))
+                margin-right: 0
+            &:not(:nth-of-type(3n))
+                margin-right: 8px
+        @media screen and ( max-width: 580px )
+            width: calc((100% - 10px)/2)
+            &:not(:nth-of-type(3n))
+                margin-right: 0
+            &:not(:nth-of-type(2n))
+                margin-right: 10px
+        &:hover
+            z-index: 5
+        &:hover &-container
+            border-color: $hover
+            max-height: 360px
+    &__item-container
+        width: 100%
+        min-height: 100%
+        max-height: 222px
+        overflow: hidden
+        border-radius: 10px
+        border: 2px solid transparent
+        background: $white
+        padding: 10px
+        transition: all 0.2s ease-in-out
+        @media screen and ( max-width: 950px )
+            max-height: 170px
+            padding: 5px
+        @media screen and ( max-width: 767px )
+            max-height: none
+            border-width: 0
+            padding: 0
+            border-radius: 0
+    &__item-image
+        width: 100%
+        height: 169px
+        margin-bottom: 12px
+        overflow: hidden
+        @media screen and ( max-width: 950px )
+            height: 120px
+        @media screen and ( max-width: 400px )
+            height: 100px
+        & > a
+            display: block
+            width: 100%
+            height: 100%
+        & img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__item-name
+        font-size: 17px
+        line-height: 100%
+        font-weight: 700
+        color: $blue
+        & a
+            color: inherit
+        @media screen and ( max-width: 1230px )
+            font-size: 14px
+            line-height: 17px
+    &__item-content
+        margin-top: 12px
+        padding-right: 20px
+        font-size: 10px
+        line-height: 12px
+        color: #8c8c8c
