@@ -166,12 +166,14 @@ if (document.querySelector('.screen') && document.querySelector('.main-paginatio
 
 if (document.querySelector('.catalog-category-desc')) {
     let description = document.querySelector('.catalog-category-desc');
+    let descriptionLeft = description.querySelector('.catalog-category-desc__left');
     let descriptionContent = description.querySelector('.catalog-category-desc__container');
     let moreButton = description.querySelector('.catalog-category-desc__more');
     moreButton.addEventListener('click', () => {
         descriptionContent.style.maxHeight = `${descriptionContent.scrollHeight}px`;
         moreButton.classList.add('hidden');
     })
+    descriptionContent.style.maxHeight = `${descriptionLeft.scrollHeight}px`
     if (descriptionContent.scrollHeight > descriptionContent.clientHeight) {
         moreButton.classList.remove('hidden');
     }
